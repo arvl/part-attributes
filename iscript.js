@@ -172,12 +172,12 @@ var newcontent =
 <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
 <div class="column quarter light mono">
 <h2 class="mono lower">
-<span name="animated-text" class="type-text" style="--n:56">
+<span name="animated-text" class="type-text" style="--n:66">
 Every part has a set of associated attributes.
 </span>
 </h2>
 <h2 class="mono lower">
-<span name="animated-text" class="type-text" style="--n:100;animation-delay:8s;">
+<span name="animated-text" class="type-text" style="--n:110;animation-delay:8s;">
 These are added to a part to provide specific additional information relevant to the part.
 </span>
 </h2>
@@ -219,7 +219,7 @@ var newcontent =
 <div name="section1a" class="slide dark"><!--Start Overlay-->
 <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
 <div class="column quarter light mono">
-<h2 class="mono lower"><span name="animated-text" class="type-text" style="--n:70;animation-delay:2.5s;">Attributes determine how the part fits in to the wider project.</span>
+<h2 class="mono lower"><span name="animated-text" class="type-text" style="--n:80;animation-delay:2.5s;">Attributes determine how the part fits in to the wider project.</span>
 </h2>
 </div><!--Close Button-->
 <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
@@ -246,7 +246,7 @@ var newcontent =
 <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
 <div class="column quarter light mono">
 <h2 class="mono lower">
-<span name="animated-text" class="type-text" style="--n:125;animation-delay:4.5s;">
+<span name="animated-text" class="type-text" style="--n:135;animation-delay:4.5s;">
 Missing or incorrect attributes could result in:
 <br>
 <br>
@@ -279,7 +279,7 @@ var newcontent =
 <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
 <div class="column quarter light mono">
 <h2 class="mono lower">
-<span name="animated-text" class="type-text" style="--n:116;animation-delay:3s;">
+<span name="animated-text" class="type-text" style="--n:126;animation-delay:3s;">
 It is the responsibility of the design engineer to populate part attributes correctly for all new parts.
 </span>
 </h2>
@@ -313,7 +313,7 @@ function sectionOned(){
   <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
   <div class="column quarter light mono">
   <h2 class="mono lower">
-  <span name="animated-text" class="type-text" style="--n:130;animation-delay:3s;">
+  <span name="animated-text" class="type-text" style="--n:140;animation-delay:3s;">
   This training will familiarise you with the different attributes, inputting & updating... etc.
   </span>
   </h2>

@@ -9,14 +9,14 @@ h2.mono.lower{
   opacity:0;
   color:#0000;
   background:
-  linear-gradient(-90deg,#000000 2px,#0000 0) 10px 0,
+  linear-gradient(-90deg,#000000 0px,#0000 0) 10px 0,
   linear-gradient(#000000 0 0) 0 0;
   background-size:calc(var(--n)*1ch) 200%;
   -webkit-background-clip:padding-box,text;
   background-clip:padding-box,text;
   background-repeat:no-repeat;
   animation: 
-  b .7s infinite steps(1),  
+  b .0s infinite steps(1),  
   t calc(var(--n)*.055s) steps(var(--n)) forwards,
   o 0.5s;
   animation-fill-mode: forwards;
@@ -37,6 +37,6 @@ h2.mono.lower{
   /* Media Queries*/
   @media only screen and (max-width: 768px){
     h2.mono.lower{
-      font-size:1.15em!important;
+      font-size:1.25em!important;
     }
     }
