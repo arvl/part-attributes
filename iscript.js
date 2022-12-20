@@ -95,14 +95,14 @@ var newcontent =
 <div class="column fill white overflow"><!--Section Cards Container-->
 <h1>Sections in this Module</h1><!--Heading-->
 <div class="row"><!--First row of cards-->
-<span class="card btn light" onclick="sectionOne();hideOverlays();"><p class="mono">Section 1</p><p>Introduction</p></span><!--Section-->
-<span class="card btn light" onclick="hideOverlays();"><p class="mono">Section 2</p><p>When</p></span><!--Section-->
-<span class="card btn light" onclick="hideOverlays();"><p class="mono">Section 3</p><p>What</p></span><!--Section-->
+<span class="card btn light" onclick="sectionOne();hideOverlays();"><p class="mono">Section 1</p><p style="font-size:16px;font-weight:800;">Introduction</p></span><!--Section-->
+<span class="card btn light" onclick="hideOverlays();"><p class="mono">Section 2</p><p style="font-size:16px;font-weight:800;">When</p></span><!--Section-->
+<span class="card btn light" onclick="hideOverlays();"><p class="mono">Section 3</p><p style="font-size:16px;font-weight:800;">What</p></span><!--Section-->
 </div><!--End First row of cards-->
 <div class="row"><!--Second row of cards-->
-<span class="card btn light" onclick="hideOverlays();"><p class="mono">Section 4</p><p>What if</p></span><!--Section-->
-<span class="card btn light" onclick="hideOverlays();"><p class="mono">Section 5</p><p>How</p></span><!--Section-->
-<span class="card btn light"onclick="hideOverlays();"><p class="mono">Section 6</p><p>Resources</p></span><!--Section-->
+<span class="card btn light" onclick="hideOverlays();"><p class="mono">Section 4</p><p style="font-size:16px;font-weight:800;">What if</p></span><!--Section-->
+<span class="card btn light" onclick="hideOverlays();"><p class="mono">Section 5</p><p style="font-size:16px;font-weight:800;">How</p></span><!--Section-->
+<span class="card btn light"onclick="hideOverlays();"><p class="mono">Section 6</p><p style="font-size:16px;font-weight:800;">Resources</p></span><!--Section-->
 </div><!--End Second row of cards-->
 </div><!--End Section Cards Container-->
 </div><!--End Columns Container-->
