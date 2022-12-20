@@ -331,6 +331,9 @@ flex:1 0 50%;
 .column.quarter {
 flex:1 0 25%;
 }
+.column.mini {
+flex:1 0 12.5%;
+}
 .column.third {
 flex:1 0 33.33%;
 }

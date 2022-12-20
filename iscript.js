@@ -172,7 +172,7 @@ var newcontent =
 `
 <div name="intro1" class="slide dark"><!--Start Overlay-->
 <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
-<div class="column quarter light mono">
+<div class="column third light mono overflow-icon">
 <h2 class="mono lower">
 <span name="animated-text" class="type-text" style="--n:66">
 Every part has a set of associated attributes.
@@ -201,7 +201,7 @@ They include information about a part's:
 <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
 <video autoplay playsinline muted src="Media/Attributes-intro-1.mp4"></video>
 </div>
-<div class="column quarter blue mono btn" onclick="sectionOnea()">move forward</div><!--Close Button-->
+<div class="column mini blue mono btn" onclick="sectionOnea()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
 </div><!--End Content-->
 `
@@ -220,14 +220,14 @@ var newcontent =
 `
 <div name="section1a" class="slide dark"><!--Start Overlay-->
 <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
-<div class="column quarter light mono">
+<div class="column third light mono overflow-icon">
 <h2 class="mono lower"><span name="animated-text" class="type-text" style="--n:80;animation-delay:2.5s;">Attributes determine how the part fits in to the wider project.</span>
 </h2>
 </div><!--Close Button-->
 <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
 <video autoplay playsinline muted src="Media/Attributes-intro-2.mp4"></video>
 </div>
-<div class="column quarter blue mono btn" onclick="sectionOneb()">move forward</div><!--Close Button-->
+<div class="column mini blue mono btn" onclick="sectionOneb()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
 </div><!--End Content-->
 `
@@ -246,7 +246,7 @@ var newcontent =
 `
 <div name="section1b" class="slide dark"><!--Start Overlay-->
 <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
-<div class="column quarter light mono">
+<div class="column third light mono overflow-icon">
 <h2 class="mono lower">
 <span name="animated-text" class="type-text" style="--n:135;animation-delay:4.5s;">
 Missing or incorrect attributes could result in:
@@ -261,7 +261,7 @@ Missing or incorrect attributes could result in:
 <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
 <video autoplay playsinline muted src="Media/Attributes-intro-3.mp4"></video>
 </div>
-<div class="column quarter blue mono btn" onclick="sectionOnec()">move forward</div><!--Close Button-->
+<div class="column mini blue mono btn" onclick="sectionOnec()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
 </div><!--End Content-->
 `
@@ -280,7 +280,7 @@ var newcontent =
 `
 <div name="section1c" class="slide dark"><!--Start Overlay-->
 <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
-<div class="column quarter light mono">
+<div class="column third light mono overflow-icon">
 <h2 class="mono lower">
 <span name="animated-text" class="type-text" style="--n:126;animation-delay:3s;">
 It is the responsibility of the design engineer to populate part attributes correctly for all new parts.
@@ -295,7 +295,7 @@ Your actions here can enable Arrival to operate more efficiently and avoid unnec
 <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
 <video autoplay playsinline muted src="Media/Attributes-intro-4.mp4"></video>
 </div>
-<div class="column quarter blue mono btn" onclick="sectionOned()">move forward</div><!--Close Button-->
+<div class="column mini blue mono btn" onclick="sectionOned()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
 </div><!--End Content-->
 `
@@ -314,7 +314,7 @@ function sectionOned(){
   `
   <div name="section1d" class="slide dark"><!--Start Overlay-->
   <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
-  <div class="column quarter light mono">
+  <div class="column third light mono overflow-icon">
   <h2 class="mono lower">
   <span name="animated-text" class="type-text" style="--n:140;animation-delay:3s;">
   This training will familiarise you with the different attributes, inputting & updating... etc.
@@ -324,7 +324,7 @@ function sectionOned(){
   <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
   <video autoplay playsinline muted src="Media/Attributes-intro-5.mp4"></video>
   </div>
-  <div class="column quarter blue mono btn" onclick="sectionOnee()">move forward</div><!--Close Button-->
+  <div class="column mini blue mono btn" onclick="sectionOnee()">move forward</div><!--Close Button-->
   </div><!--End Columns Container-->
   </div><!--End Content-->
   `
@@ -343,7 +343,7 @@ function sectionOnee(){
   `
   <div name="section1e" class="slide dark"><!--Start Overlay-->
   <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
-  <div class="column quarter light mono overflow-icon">
+  <div class="column third light mono overflow-icon">
   <h2 class="mono lower">
   <span name="animated-text" class="type-text" style="--n:237;animation-delay:4.5s;">
   Each section will start with a question to check your familiarity with the topic. If you get the answer right, you will have the opportunity to skip to the next section without viewing the training material.
@@ -358,7 +358,7 @@ function sectionOnee(){
   <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
   <video autoplay playsinline muted src="Media/Attributes-intro-6.mp4"></video>
   </div>
-  <div class="column quarter blue mono btn" onclick="sectionOnef()">move forward</div><!--Close Button-->
+  <div class="column mini blue mono btn" onclick="sectionOnef()">move forward</div><!--Close Button-->
   </div><!--End Columns Container-->
   </div><!--End Content-->
   `
@@ -377,7 +377,7 @@ function sectionOnef(){
   `
   <div name="section1f" class="slide dark"><!--Start Overlay-->
   <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
-  <div class="column quarter light mono overflow-icon">
+  <div class="column third light mono overflow-icon">
   <h2 class="mono lower">
   <span name="animated-text" class="type-text" style="--n:137;animation-delay:3.5s;">
   If you are returning to the training, or simply need to use it as a reference, you may access different sections from the menu.
@@ -387,7 +387,7 @@ function sectionOnef(){
   <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
   <video autoplay playsinline muted src="Media/Attributes-intro-7.mp4"></video>
   </div>
-  <div class="column quarter blue mono btn" onclick="sectionOneEnd()">move forward</div><!--Close Button-->
+  <div class="column mini blue mono btn" onclick="sectionOneEnd()">move forward</div><!--Close Button-->
   </div><!--End Columns Container-->
   </div><!--End Content-->
   `
@@ -909,7 +909,7 @@ var newcontent =
 <div name="scroll" class="column fill black"><!--Start Section Container-->
 <h2 class="mono">You must test your speed and distance on a non-critical area of the panel before proceeding to flame treat the bond path.</h2><!--Heading-->
 </div>
-<div class="column quarter blue mono btn" onclick="sectionThreee()">move forward</div><!--Close Button-->
+<div class="column mini blue mono btn" onclick="sectionThreee()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
 
 </div><!--End Content-->
