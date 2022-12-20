@@ -201,7 +201,7 @@ They include information about a part's:
 <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
 <video autoplay playsinline muted src="Media/Attributes-intro-1.mp4"></video>
 </div>
-<div class="column mini blue mono btn" onclick="sectionOnea()">move forward</div><!--Close Button-->
+<div class="column mini blue-light mono btn" onclick="sectionOnea()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
 </div><!--End Content-->
 `
@@ -227,7 +227,7 @@ var newcontent =
 <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
 <video autoplay playsinline muted src="Media/Attributes-intro-2.mp4"></video>
 </div>
-<div class="column mini blue mono btn" onclick="sectionOneb()">move forward</div><!--Close Button-->
+<div class="column mini blue-light mono btn" onclick="sectionOneb()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
 </div><!--End Content-->
 `
@@ -261,7 +261,7 @@ Missing or incorrect attributes could result in:
 <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
 <video autoplay playsinline muted src="Media/Attributes-intro-3.mp4"></video>
 </div>
-<div class="column mini blue mono btn" onclick="sectionOnec()">move forward</div><!--Close Button-->
+<div class="column mini blue-light mono btn" onclick="sectionOnec()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
 </div><!--End Content-->
 `
@@ -295,7 +295,7 @@ Your actions here can enable Arrival to operate more efficiently and avoid unnec
 <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
 <video autoplay playsinline muted src="Media/Attributes-intro-4.mp4"></video>
 </div>
-<div class="column mini blue mono btn" onclick="sectionOned()">move forward</div><!--Close Button-->
+<div class="column mini blue-light mono btn" onclick="sectionOned()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
 </div><!--End Content-->
 `
@@ -324,7 +324,7 @@ function sectionOned(){
   <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
   <video autoplay playsinline muted src="Media/Attributes-intro-5.mp4"></video>
   </div>
-  <div class="column mini blue mono btn" onclick="sectionOnee()">move forward</div><!--Close Button-->
+  <div class="column mini blue-light mono btn" onclick="sectionOnee()">move forward</div><!--Close Button-->
   </div><!--End Columns Container-->
   </div><!--End Content-->
   `
@@ -358,7 +358,7 @@ function sectionOnee(){
   <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
   <video autoplay playsinline muted src="Media/Attributes-intro-6.mp4"></video>
   </div>
-  <div class="column mini blue mono btn" onclick="sectionOnef()">move forward</div><!--Close Button-->
+  <div class="column mini blue-light mono btn" onclick="sectionOnef()">move forward</div><!--Close Button-->
   </div><!--End Columns Container-->
   </div><!--End Content-->
   `
@@ -387,7 +387,7 @@ function sectionOnef(){
   <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
   <video autoplay playsinline muted src="Media/Attributes-intro-7.mp4"></video>
   </div>
-  <div class="column mini blue mono btn" onclick="sectionOneEnd()">move forward</div><!--Close Button-->
+  <div class="column mini blue-light mono btn" onclick="sectionOneEnd()">move forward</div><!--Close Button-->
   </div><!--End Columns Container-->
   </div><!--End Content-->
   `
@@ -909,7 +909,7 @@ var newcontent =
 <div name="scroll" class="column fill black"><!--Start Section Container-->
 <h2 class="mono">You must test your speed and distance on a non-critical area of the panel before proceeding to flame treat the bond path.</h2><!--Heading-->
 </div>
-<div class="column mini blue mono btn" onclick="sectionThreee()">move forward</div><!--Close Button-->
+<div class="column mini blue-light mono btn" onclick="sectionThreee()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
 
 </div><!--End Content-->
