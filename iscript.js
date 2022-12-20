@@ -402,7 +402,7 @@ function sectionOnef(){
 function sectionOneEnd(){
 var newcontent =
 `
-<div name="section1end" class="slide cyan-light">
+<div name="section1end" class="slide dark">
 <div class="columns success animate__animated animate__slideInUp"><!--Columns Container-->
 <div class="column"><!--Start Section Container-->
 <h2 class="mono">That's it for the Introduction. Let's get started!</h2><!--Heading-->
@@ -415,7 +415,7 @@ var newcontent =
 // insert Html
 learningcontent.innerHTML = newcontent;
 sectionname.innerHTML = section1; // Update with section name
-document.getElementById('i-step-back').setAttribute('onclick','sectionOnef'); // Update with previous content
+document.getElementById('i-step-back').setAttribute('onclick','sectionOnef();noTextAnimate()'); // Update with previous content
 document.getElementById('i-forward').classList.remove('disabled-btn');
 document.getElementById('i-forward').setAttribute('onclick', 'sectionTwoa()');
 lastView(); // Update local storage with current page
