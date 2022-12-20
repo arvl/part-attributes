@@ -520,6 +520,12 @@ flex-direction:column;
 max-height:100%;
 height:100%;
 }
+.reverse{
+display:flex;
+min-height:100%;
+height:100%;
+flex-direction:column-reverse;
+}
 .column.img-center img{
 max-width:auto;
 max-height:100%;
@@ -532,7 +538,7 @@ margin-bottom:0.5em;
 margin-right:0em;
 }
 .column.mini {
-flex:1 0 12.5%;
+flex:0 0 12.5%;
 }
 .column.larger {
 flex:1 0 45%;

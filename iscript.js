@@ -172,6 +172,7 @@ var newcontent =
 `
 <div name="intro1" class="slide dark"><!--Start Overlay-->
 <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+<div class="reverse">
 <div class="column larger light mono overflow-icon">
 <h2 class="mono lower">
 <span name="animated-text" class="type-text" style="--n:66">
@@ -197,9 +198,10 @@ They include information about a part's:
 - Colour
 </span>
 </h2>
-</div><!--Close Button-->
+</div>
 <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
 <video autoplay playsinline muted src="Media/Attributes-intro-1.mp4"></video>
+</div>
 </div>
 <div class="column mini blue-light mono btn" onclick="sectionOnea()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
@@ -220,12 +222,14 @@ var newcontent =
 `
 <div name="section1a" class="slide dark"><!--Start Overlay-->
 <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
+<div class="reverse">
 <div class="column larger light mono overflow-icon">
 <h2 class="mono lower"><span name="animated-text" class="type-text" style="--n:80;animation-delay:2.5s;">Attributes determine how the part fits in to the wider project.</span>
 </h2>
-</div><!--Close Button-->
+</div>
 <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
 <video autoplay playsinline muted src="Media/Attributes-intro-2.mp4"></video>
+</div>
 </div>
 <div class="column mini blue-light mono btn" onclick="sectionOneb()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
@@ -246,6 +250,7 @@ var newcontent =
 `
 <div name="section1b" class="slide dark"><!--Start Overlay-->
 <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
+<div class="reverse">
 <div class="column larger light mono overflow-icon">
 <h2 class="mono lower">
 <span name="animated-text" class="type-text" style="--n:135;animation-delay:4.5s;">
@@ -260,6 +265,7 @@ Missing or incorrect attributes could result in:
 </div><!--Close Button-->
 <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
 <video autoplay playsinline muted src="Media/Attributes-intro-3.mp4"></video>
+</div>
 </div>
 <div class="column mini blue-light mono btn" onclick="sectionOnec()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
@@ -280,6 +286,7 @@ var newcontent =
 `
 <div name="section1c" class="slide dark"><!--Start Overlay-->
 <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+<div class="reverse overflow-icon">
 <div class="column larger light mono overflow-icon">
 <h2 class="mono lower">
 <span name="animated-text" class="type-text" style="--n:126;animation-delay:3s;">
@@ -291,9 +298,10 @@ It is the responsibility of the design engineer to populate part attributes corr
 Your actions here can enable Arrival to operate more efficiently and avoid unnecessary questions/problems further down the line.
 </span>
 </h2>
-</div><!--Close Button-->
+</div>
 <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
 <video autoplay playsinline muted src="Media/Attributes-intro-4.mp4"></video>
+</div>
 </div>
 <div class="column mini blue-light mono btn" onclick="sectionOned()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
@@ -314,6 +322,7 @@ function sectionOned(){
   `
   <div name="section1d" class="slide dark"><!--Start Overlay-->
   <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
+  <div class="reverse overflow-icon">
   <div class="column larger light mono overflow-icon">
   <h2 class="mono lower">
   <span name="animated-text" class="type-text" style="--n:140;animation-delay:3s;">
@@ -323,6 +332,7 @@ function sectionOned(){
   </div><!--Close Button-->
   <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
   <video autoplay playsinline muted src="Media/Attributes-intro-5.mp4"></video>
+  </div>
   </div>
   <div class="column mini blue-light mono btn" onclick="sectionOnee()">move forward</div><!--Close Button-->
   </div><!--End Columns Container-->
@@ -343,6 +353,7 @@ function sectionOnee(){
   `
   <div name="section1e" class="slide dark"><!--Start Overlay-->
   <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+  <div class="reverse">
   <div class="column larger light mono overflow-icon">
   <h2 class="mono lower">
   <span name="animated-text" class="type-text" style="--n:237;animation-delay:4.5s;">
@@ -357,6 +368,7 @@ function sectionOnee(){
   </div><!--Close Button-->
   <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
   <video autoplay playsinline muted src="Media/Attributes-intro-6.mp4"></video>
+  </div>
   </div>
   <div class="column mini blue-light mono btn" onclick="sectionOnef()">move forward</div><!--Close Button-->
   </div><!--End Columns Container-->
@@ -377,6 +389,7 @@ function sectionOnef(){
   `
   <div name="section1f" class="slide dark"><!--Start Overlay-->
   <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+  <div class="reverse">
   <div class="column larger light mono overflow-icon">
   <h2 class="mono lower">
   <span name="animated-text" class="type-text" style="--n:137;animation-delay:3.5s;">
@@ -386,6 +399,7 @@ function sectionOnef(){
   </div><!--Close Button-->
   <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
   <video autoplay playsinline muted src="Media/Attributes-intro-7.mp4"></video>
+  </div>
   </div>
   <div class="column mini blue-light mono btn" onclick="sectionOneEnd()">move forward</div><!--Close Button-->
   </div><!--End Columns Container-->
