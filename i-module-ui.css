@@ -332,8 +332,11 @@ flex:1 0 50%;
 flex:1 0 25%;
 }
 .column.mini {
-flex:1 0 12.5%;
+flex:1 0 20%;
 }
+.column.larger {
+flex:1 0 35%;
+  }
 .column.third {
 flex:1 0 33.33%;
 }
@@ -528,8 +531,11 @@ flex-wrap:wrap;
 margin-bottom:0.5em;
 margin-right:0em;
 }
-h2.mono.lower{
-  font-size:1.15em!important;
+.column.mini {
+flex:1 0 12.5%;
+}
+.column.larger {
+flex:1 0 45%;
 }
 }
 @media only screen and (max-width: 780px){

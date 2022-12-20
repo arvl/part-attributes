@@ -172,7 +172,7 @@ var newcontent =
 `
 <div name="intro1" class="slide dark"><!--Start Overlay-->
 <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
-<div class="column third light mono overflow-icon">
+<div class="column larger light mono overflow-icon">
 <h2 class="mono lower">
 <span name="animated-text" class="type-text" style="--n:66">
 Every part has a set of associated attributes.
