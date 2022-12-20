@@ -37,6 +37,6 @@ h2.mono.lower{
   /* Media Queries*/
   @media only screen and (max-width: 768px){
     h2.mono.lower{
-      font-size:1.25em!important;
+      font-size:1.5em!important;
     }
     }

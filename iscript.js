@@ -182,7 +182,7 @@ These are added to a part to provide specific additional information relevant to
 </span>
 </h2>
 <h2 class="mono lower">
-<span name="animated-text" class="type-text" style="--n:82;animation-delay:16s;">
+<span name="animated-text" class="type-text" style="--n:92;animation-delay:16s;">
 They include information about a part's:
 <br>
 <br>
@@ -251,6 +251,7 @@ Missing or incorrect attributes could result in:
 <br>
 <br>
 - regulatory goals missed
+<br>
 - performance/attribute targets
 </span>
 </h2>
