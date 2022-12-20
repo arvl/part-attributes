@@ -1,10 +1,10 @@
 const thismodulename = 'Part Attributes &#47;'
 const thismoduleshortname = 'partattr';
 const startsection = 'Welcome';
-const section1 = 'Introduction &#47; 1 of 4';
-const section2 = 'Surface Treatment &#47; 2 of 4';
-const section3 = 'Flame Treatment &#47; 3 of 4';
-const section4 = 'Resources &#47; 4 of 4';
+const section1 = 'Introduction &#47; 1 of 6';
+const section2 = 'Surface Treatment &#47; 2 of 6';
+const section3 = 'Flame Treatment &#47; 3 of 6';
+const section4 = 'Resources &#47; 4 of 6';
 
 const learningcontent = document.getElementById('i-content'); // Content container where content will be replaced
 const imenu = document.getElementById('i-menu'); // Menu
