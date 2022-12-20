@@ -395,7 +395,7 @@ function sectionOnef(){
   // insert Html
   learningcontent.innerHTML = newcontent;
   sectionname.innerHTML = section1; // Update with section name
-  document.getElementById('i-step-back').setAttribute('onclick','sectionOne();noTextAnimate()'); // Update with previous content
+  document.getElementById('i-step-back').setAttribute('onclick','sectionOnee();noTextAnimate()'); // Update with previous content
   lastView(); // Update local storage with current page
   };
   //**********************************************************************************************************************************************************
