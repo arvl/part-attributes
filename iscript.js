@@ -1,7 +1,7 @@
-const thismodulename = 'Manual Flame Treatment of Composite Panels &#47;'
-const thismoduleshortname = 'flametreat';
+const thismodulename = 'Part Attributes &#47;'
+const thismoduleshortname = 'partattr';
 const startsection = 'Welcome';
-const section1 = 'Equipment &#47; 1 of 4';
+const section1 = 'Introduction &#47; 1 of 4';
 const section2 = 'Surface Treatment &#47; 2 of 4';
 const section3 = 'Flame Treatment &#47; 3 of 4';
 const section4 = 'Resources &#47; 4 of 4';
@@ -77,6 +77,12 @@ localStorage.setItem(thismoduleshortname+'nextsectionmarkup',document.getElement
 return false;
 };
 
+function noTextAnimate(){
+const animatedtext = document.querySelectorAll('[name="animated-text"]');
+for (i = 0; i < animatedtext.length; i++) {
+animatedtext[i].classList.toggle('type-text');
+}
+};
 //
 //
 //****************************************************************MENU**********************************************************************************
@@ -115,14 +121,17 @@ var newcontent =
 <div class="column white overflow-icon"><!--Start Section Container-->
 <h1>Welcome!</h1><!--Heading-->
 <h2>Are you ready to begin?</h2><!--Heading-->
-<p>In this short Module we will explore the process of carrying out Manual Flame Treatment on composite panels.</p>
-<p>This treatment process is extremely important and must be carried out precisely.</p>
+<p>In this short Module we will explore Part Attributes.</p>
 <h3>The Module is split into the following sections:</h3>
 <div class="row wrap"><!--First row of cards-->
-<span class="card small light"><p class="mono">Section 1</p><p>Equipment</p></span><!--Section-->
-<span class="card small light"><p class="mono">Section 2</p><p>Surface Treatment</p></span><!--Section-->
-<span class="card small light"><p class="mono">Section 3</p><p>Flame Treatment</p></span><!--Section-->
-<span class="card small light btn" onclick="sectionFoura()"><p class="mono">Section 4</p><p>Resources</p></span><!--Section-->
+<span class="card small light"><p class="mono">Section 1</p><p>Introduction</p></span><!--Section-->
+<span class="card small light"><p class="mono">Section 2</p><p>When</p></span><!--Section-->
+<span class="card small light"><p class="mono">Section 3</p><p>What</p></span><!--Section-->
+</div><!--End First row of cards-->
+<div class="row wrap"><!--Second row of cards-->
+<span class="card small light"><p class="mono">Section 4</p><p>What if</p></span><!--Section-->
+<span class="card small light"><p class="mono">Section 5</p><p>How</p></span><!--Section-->
+<span class="card small light btn" onclick="sectionFoura()"><p class="mono">Section 6</p><p>Resources</p></span><!--Section-->
 </div><!--End First row of cards-->
 <p>When you have completed all sections, you can return to the Topic and complete the Quiz.</p>
 </div><!--End Start Section Container-->
@@ -159,15 +168,36 @@ sectionname.innerHTML = 'Welcome Back';
 function sectionOne(){
 var newcontent =
 `
-<div name="section1" class="slide light"><!--Start Overlay-->
+<div name="intro1" class="slide dark"><!--Start Overlay-->
 <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
-<div name="scroll" class="column overflow-icon gray"><!--Start Section Container-->
-<p class="mono">\ What is flame treatment and why do we need to do it?</p><!--Heading-->
+<div class="column quarter light mono">
+<h2 class="mono lower">
+<span name="animated-text" class="type-text" style="--n:56">
+Every part has a set of associated attributes.
+</span>
+</h2>
+<h2 class="mono lower">
+<span name="animated-text" class="type-text" style="--n:100;animation-delay:8s;">
+These are added to a part to provide specific additional information relevant to the part.
+</span>
+</h2>
+<h2 class="mono lower">
+<span name="animated-text" class="type-text" style="--n:82;animation-delay:16s;">
+They include information about a part's:
 <br>
-<h2 class="mono">Flame Treatment is a process that chemically modifies the surface to prepare it for adhesion.</h2><!--Heading-->
 <br>
+- Origin
 <br>
-<p>When bonding composite parts together or to other parts, it is important to ensure that there is good adhesion. Particularly when parts contribute to structural integrity. Flame treating a composite panel is a critical process that must be carried out manually, or automatically by robot, to ensure that the panel surface is properly prepared to enable better adhesion.</p>
+- Type
+<br>
+- Material
+<br>
+- Colour
+</span>
+</h2>
+</div><!--Close Button-->
+<div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+<video autoplay playsinline muted src="Media/Attributes-intro-1.mp4"></video>
 </div>
 <div class="column quarter blue mono btn" onclick="sectionOnea()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
@@ -176,7 +206,7 @@ var newcontent =
 ;
 // insert Html
 learningcontent.innerHTML = newcontent;
-sectionname.innerHTML = startsection; // Update with section name
+sectionname.innerHTML = section1; // Update with section name
 stepback.setAttribute('onclick','startFrame()'); // Update with previous content
 lastView(); // Update local storage with current page
 };
@@ -186,24 +216,24 @@ lastView(); // Update local storage with current page
 function sectionOnea(){
 var newcontent =
 `
-<div name="section1a" class="slide light"><!--Start Overlay-->
-<div id="slide1" class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
-<div class="column overflow"><!--Start Section Container-->
-<h1>Getting ready</h1><!--Heading-->
-<h2>\ Preparation</h2><!--Heading-->
-<p>Before beginning the Flame Treatment process, it is important to ensure that your working area is properly prepared.</p>
-<p>You must ensure that all required protective equipment and tooling is available before beginning work.</p>
-<h3>Move forward and select the equipment that you think is required to complete the process.</h3>
+<div name="section1a" class="slide dark"><!--Start Overlay-->
+<div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
+<div class="column quarter light mono">
+<h2 class="mono lower"><span name="animated-text" class="type-text" style="--n:70;animation-delay:2.5s;">Attributes determine how the part fits in to the wider project.</span>
+</h2>
+</div><!--Close Button-->
+<div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+<video autoplay playsinline muted src="Media/Attributes-intro-2.mp4"></video>
 </div>
-<div class="column third cyan-light mono btn" onclick="sectionOneb();">move forward</div><!--Close Button-->
+<div class="column quarter blue mono btn" onclick="sectionOneb()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
-</div><!--End Slide Overlay-->
+</div><!--End Content-->
 `
 ;
 // insert Html
 learningcontent.innerHTML = newcontent;
 sectionname.innerHTML = section1; // Update with section name
-document.getElementById('i-step-back').setAttribute('onclick','sectionOne()'); // Update with previous content
+document.getElementById('i-step-back').setAttribute('onclick','sectionOne();noTextAnimate()'); // Update with previous content
 lastView(); // Update local storage with current page
 };
 //**********************************************************************************************************************************************************
@@ -212,360 +242,162 @@ lastView(); // Update local storage with current page
 function sectionOneb(){
 var newcontent =
 `
-<div id="section1b" name="section1b" class="container light"><!--Learning Content Container-->
-<div class="columns drag animate__animated animate__slideInLeft"><!--Columns Container-->
-<div id="collect" class="column half white"><!--Left (Desktop) Column Container-->
-<h1 class="not-mobile">Collect your equipment!</h1>
-<h2>Take a look at the items and move them into your toolbag.</h2>
-<div class="row"><!--First row of cards-->
-<span id="object" name="gloves" class="card small light btn"><!--Card-->
-<p class="mono">gloves</p><!--Card mono title-->
-</span><!--End Card-->
-<span id="object2" name="eyeprotection" class="card small light btn"><!--Card-->
-<p class="mono">eye protection</p><!--Card mono title-->
-</span><!--End Card-->
-<span id="object3" name="brush" class="card small light btn"><!--Card-->
-<p class="mono">soft brush</p><!--Card mono title-->
-</span><!--End Card-->
-<span id="object4" name="propanetorch" class="card small light btn"><!--Card-->
-<p class="mono">propane torch</p><!--Card mono title-->
-</span><!--End Card-->
-</div><!--End first row-->
-<div class="row"><!--Second row of cards-->
-<span id="objectwrong" name="scraper" class="card small light btn"><!--Card-->
-<p class="mono">scraper</p><!--Card mono title-->
-</span><!--End Card-->
-<span id="object5" name="cloth" class="card small light btn"><!--Card-->
-<p class="mono">lint free cloth</p><!--Card mono title-->
-</span><!--End Card-->
-<span id="object6" name="alcohol" class="card small light btn"><!--Card-->
-<p class="mono">ipa alcohol</p><!--Card mono title-->
-</span><!--End Card-->
-</div><!--End Second row of cards-->
-</div><!--End Left (Desktop) Column Container-->
-<div id="dropzone" class="column half dark mono"><!--Right (Desktop) Column Container-->
-<div class="img-center"><!--Image center container-->
-<img src="Media/tool-bag.svg"><!--Image-->
-</div><!--End Image center container-->
-</div><!--End Right (Desktop) Column Container-->
-<div id="dropsuccess" class="column half success mono btn hide" onclick="sectionOnec();">move forward</div><!--Close Button-->
+<div name="section1b" class="slide dark"><!--Start Overlay-->
+<div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
+<div class="column quarter light mono">
+<h2 class="mono lower">
+<span name="animated-text" class="type-text" style="--n:125;animation-delay:4.5s;">
+Missing or incorrect attributes could result in:
+<br>
+<br>
+- regulatory goals missed
+- performance/attribute targets
+</span>
+</h2>
+</div><!--Close Button-->
+<div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+<video autoplay playsinline muted src="Media/Attributes-intro-3.mp4"></video>
+</div>
+<div class="column quarter blue mono btn" onclick="sectionOnec()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
-</div><!--End Learning Content Container-->
+</div><!--End Content-->
 `
 ;
 // insert Html
 learningcontent.innerHTML = newcontent;
 sectionname.innerHTML = section1; // Update with section name
-document.getElementById('i-step-back').setAttribute('onclick','sectionOnea()'); // Update with previous content
+document.getElementById('i-step-back').setAttribute('onclick','sectionOnea();noTextAnimate()'); // Update with previous content
 lastView(); // Update local storage with current page
 };
-//**********************************************************************************************************************************************************
-//
-// ***********************************************************SECTION 1 B INTERACTION DRAG AND DROP******************************************************************************************
-$("body").on('DOMSubtreeModified', "#i-content", function() {
-if($('#section1b').length){
-  //defines object as being draggable
-      $("#object").draggable();
-      $("#object2").draggable();
-      $("#object3").draggable();
-      $("#object4").draggable();
-      $("#object5").draggable();
-      $("#object6").draggable();
-      $("#object7").draggable();
-      $("#objectwrong").draggable();
-      $("#dropzone,#dropsuccess").droppable({
-      //defines what to do when object is dropped
-      drop: function(event, ui) {
-      //defines what to do when object is dropped
-      $(this).addClass('change').removeClass('over');
-      //if all CORRECT objects are dropped:
-      if (($("#object").is(".dropped"))&&($("#object2").is(".dropped"))&&($("#object3").is(".dropped"))&&($("#object4").is(".dropped"))&&($("#object5").is(".dropped"))&&($("#object6").is(".dropped"))) {
-      // change color
-      $("#dropzone").addClass('hide');
-      $("#dropsuccess").removeClass('hide');
-      }
-      //if INCORRECT objects are dropped:
-      if ($("#objectwrong").is(".dropped")) {
-      // remove color
-      $("#dropsuccess").addClass('hide');
-      $("#dropzone").removeClass('hide').addClass('error');
-      }
-      },
-      over: function(event, ui) {
-      // add hover color to dropzone
-      $(this).addClass('over');
-      // if objects are dragged over dropzone add dropped class
-      if($("#object").is('.ui-draggable-dragging')){$("#object").addClass('dropped')};
-      if($("#object2").is('.ui-draggable-dragging')){$("#object2").addClass('dropped')};
-      if($("#object3").is('.ui-draggable-dragging')){$("#object3").addClass('dropped')};
-      if($("#object4").is('.ui-draggable-dragging')){$("#object4").addClass('dropped')};
-      if($("#object5").is('.ui-draggable-dragging')){$("#object5").addClass('dropped')};
-      if($("#object6").is('.ui-draggable-dragging')){$("#object6").addClass('dropped')};
-      if($("#object7").is('.ui-draggable-dragging')){$("#object7").addClass('dropped')};
-      if($("#objectwrong").is('.ui-draggable-dragging')){$("#objectwrong").addClass('dropped')};
-      },
-      out: function(event, ui) {
-      //remove class when object moves outside dropzone
-      $(this).removeClass('over');
-      // remove complete color and hide button when object leaves dropzone
-      $("#dropzone").removeClass('hide');
-      $("#dropsuccess").addClass('hide');
-      //if object moves out of dropzone AND is dragging AND has been dropped, remove dropped class
-      if(($("#object").is('.ui-draggable-dragging'))&&($("#object").is('.dropped'))){$("#object").removeClass('dropped')};
-      if(($("#object2").is('.ui-draggable-dragging'))&&($("#object2").is('.dropped'))){$("#object2").removeClass('dropped')};
-      if(($("#object3").is('.ui-draggable-dragging'))&&($("#object3").is('.dropped'))){$("#object3").removeClass('dropped')};
-      if(($("#object4").is('.ui-draggable-dragging'))&&($("#object4").is('.dropped'))){$("#object4").removeClass('dropped')};
-      if(($("#object5").is('.ui-draggable-dragging'))&&($("#object5").is('.dropped'))){$("#object5").removeClass('dropped')};
-      if(($("#object6").is('.ui-draggable-dragging'))&&($("#object6").is('.dropped'))){$("#object6").removeClass('dropped')};
-      if(($("#object7").is('.ui-draggable-dragging'))&&($("#object7").is('.dropped'))){$("#object7").removeClass('dropped')};
-      if(($("#objectwrong").is('.ui-draggable-dragging'))&&($("#objectwrong").is('.dropped'))){$("#objectwrong").removeClass('dropped');$("#dropzone").removeClass('error')};
-      // if all CORRECT objects remain in dropzone reinstate complete color and button
-      if (($("#object").is(".dropped"))&&($("#object2").is(".dropped"))&&($("#object3").is(".dropped"))&&($("#object4").is(".dropped"))&&($("#object5").is(".dropped"))&&($("#object6").is(".dropped"))) {
-      $("#dropzone").addClass('hide');
-      $("#dropsuccess").removeClass('hide');
-      };
-      }
-      });
-    }
-});
 //**********************************************************************************************************************************************************
 //
 // ***********************************************************SECTION 1 C ******************************************************************************************
 function sectionOnec(){
 var newcontent =
 `
-<div name="section1c" class="slide light"><!--Start Overlay-->
-<div id="section1slide1" class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
-<div name="scroll" class="column overflow-icon"><!--Start Section Container-->
-<h1>Great!</h1><!--Heading-->
-<h2>You selected the correct equipment!</h2><!--Heading-->
-<p>Let's find out why this equipment is important.</p>
-<h3>Move forward to find out more.</h3>
+<div name="section1c" class="slide dark"><!--Start Overlay-->
+<div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+<div class="column quarter light mono">
+<h2 class="mono lower">
+<span name="animated-text" class="type-text" style="--n:116;animation-delay:3s;">
+It is the responsibility of the design engineer to populate part attributes correctly for all new parts.
+</span>
+</h2>
+<h2 class="mono lower">
+<span name="animated-text" class="type-text" style="--n:143;animation-delay:10s;">
+Your actions here can enable Arrival to operate more efficiently and avoid unnecessary questions/problems further down the line.
+</span>
+</h2>
+</div><!--Close Button-->
+<div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+<video autoplay playsinline muted src="Media/Attributes-intro-4.mp4"></video>
 </div>
-<div class="column third purple-dark mono btn" onclick="sectionOnecSlideTwo()">move forward</div><!--Close Button-->
+<div class="column quarter blue mono btn" onclick="sectionOned()">move forward</div><!--Close Button-->
 </div><!--End Columns Container-->
-</div><!--End Slide Overlay-->
-<!--LEARNING CONTENT END-->
+</div><!--End Content-->
 `
 ;
 // insert Html
 learningcontent.innerHTML = newcontent;
 sectionname.innerHTML = section1; // Update with section name
-document.getElementById('i-step-back').setAttribute('onclick','sectionOneb()'); // Update with previous content
+document.getElementById('i-step-back').setAttribute('onclick','sectionOneb();noTextAnimate()'); // Update with previous content
 lastView(); // Update local storage with current page
 };
 //**********************************************************************************************************************************************************
 //
-// ***********************************************************SECTION 1 C SLIDE 2******************************************************************************************
-function sectionOnecSlideTwo(){
-var newcontent =
-`
-<div name="section1cslidetwo" class="slide cyan-light"><!--Start Overlay-->
-<div id="section1slide2" class="columns light animate__animated animate__slideInUp"><!--Columns Container-->
-<div name="scroll" class="column overflow-icon">
-<h2>Propane Torch</h2><!--Heading-->
-<p>Perhaps an obvious choice but needless to say, the Flame Treatment process is not possible without a flame!</p>
-<div class="row"><!--First row of cards-->
-<span class="card black"><p class="mono">selected equipment</p><p>Propane Torch</p></span>
-<span name="propanetorch" class="card white img-only"></span>
-</div><!--End First row -->
-<p>During the Flame Treatment process, the propane torch will be used to apply the flame to the composite panel.</p>
-<p>You must ensure that the propane torch is in suitable for use before you begin. Check for damage to the equipment or missing parts. If the propane torch is not fit for purpose, do not continue using the equipment. Find an replacement so that the work can continue.</p>
-<p>Ensure that the propane cartridge is securely fitted to the device and that you have enough supply to complete the task.</p>
-</div><!--End Start Section Container-->
-<div class="column third cyan-dark mono btn" onclick="sectionOnecSlideThree()">move forward</div><!--Close Button-->
-</div><!--End Columns Container-->
-</div><!--End Slide Overlay-->
-<!--LEARNING CONTENT END-->
-`
-;
-// insert Html
-learningcontent.innerHTML = newcontent;
-sectionname.innerHTML = section1; // Update with section name
-document.getElementById('i-step-back').setAttribute('onclick','sectionOnec()'); // Update with previous content
-lastView(); // Update local storage with current page
-};
-//**********************************************************************************************************************************************************
-//
-// ***********************************************************SECTION 1 C SLIDE 3******************************************************************************************
-function sectionOnecSlideThree(){
-var newcontent =
-`
-<div name="section1cslidethree" class="slide cyan-light"><!--Start Overlay-->
-<div id="section1slide3" class="columns light animate__animated animate__slideInRight"><!--Columns Container-->
-<div class="column overflow-icon"><!--Start Section Container-->
-<h2>Gloves</h2><!--Heading-->
-<p>Your personal protection is always the highest priority.</p>
-<div class="row"><!--First row of cards-->
-<span name="gloves" class="card white img-only"></span>
-<span class="card black"><p class="mono">selected equipment</p><p>Gloves</p></span>
-</div><!--End First row -->
-<p>Gloves will help protect your hands in case of sharp objects when handling the composite panels and your equipment.</p>
-<p>Before beginning the task, check that the gloves are fit for purpose and have no damage or contamination that would prevent them providing protection.</p>
-</div><!--End Start Section Container-->
-<div class="column third purple-dark mono btn" onclick="sectionOnecSlideFour()">move forward</div><!--Close Button-->
-</div><!--End Columns Container-->
-</div><!--End Slide Overlay-->
-<!--LEARNING CONTENT END-->
-`
-;
-// insert Html
-learningcontent.innerHTML = newcontent;
-sectionname.innerHTML = section1; // Update with section name
-document.getElementById('i-step-back').setAttribute('onclick','sectionOnecSlideTwo()'); // Update with previous content
-lastView(); // Update local storage with current page
-};
-//**********************************************************************************************************************************************************
-//
-// ***********************************************************SECTION 1 C SLIDE 4******************************************************************************************
-function sectionOnecSlideFour(){
-var newcontent =
-`
-<div name="section1cslidefour" class="slide cyan-light"><!--Start Overlay-->
-<div id="section1slide4" class="columns light animate__animated animate__slideInRight"><!--Columns Container-->
-<div class="column overflow-icon"><!--Start Section Container-->
-<h2>Eye Protection</h2><!--Heading-->
-<p>It is extremely important that we keep our eyes protected.</p>
-<div class="row"><!--First row of cards-->
-<span class="card black"><p class="mono">selected equipment</p><p>Eye Protection</p></span>
-<span name="eyeprotection" class="card white img-only"></span>
-</div><!--End First row -->
-<p>Protecting our eyes helps to ensure that we can carry out our tasks to an exceptional standard but also ensures that we are able to observe any dangers that may occur in and around our work environment.</p>
-<p>There can be many unknown factors in a manufacturing environment and we should not take any unnecessary risks. If a procedure explicitly states the use of eye protection, never ignore this statement.</p>
-</div><!--End Start Section Container-->
-<div class="column third cyan-dark mono btn" onclick="sectionOnecSlideFive()">move forward</div><!--Close Button-->
-</div><!--End Columns Container-->
-</div><!--End Slide Overlay-->
-<!--LEARNING CONTENT END-->
-`
-;
-// insert Html
-learningcontent.innerHTML = newcontent;
-sectionname.innerHTML = section1; // Update with section name
-document.getElementById('i-step-back').setAttribute('onclick','sectionOnecSlideThree()'); // Update with previous content
-lastView(); // Update local storage with current page
-};
-//**********************************************************************************************************************************************************
-//
-// ***********************************************************SECTION 1 C SLIDE 5******************************************************************************************
-function sectionOnecSlideFive(){
-var newcontent =
-`
-<div name="section1cslidefour" class="slide cyan-light"><!--Start Overlay-->
-<div id="section1slide5" class="columns light animate__animated animate__slideInRight"><!--Columns Container-->
-<div class="column overflow-icon"><!--Start Section Container-->
-<h2>Soft Brush</h2><!--Heading-->
-<p>Like many tasks, correct preparation is the key to success.</p>
-<div class="row"><!--First row of cards-->
-<span name="brush" class="card white img-only"></span>
-<span class="card black"><p class="mono">selected equipment</p><p>Soft Brush</p></span>
-</div><!--End First row -->
-<p>Preparing the composite panel prior to Flame Treatment is a crucial step.</p>
-<p>A soft brush is used to lightly brush the composite panel to remove any dust or debris that may have settled on the panel.</p>
-</div><!--End Start Section Container-->
-<div class="column third purple-dark mono btn" onclick="sectionOnecSlideSix()">move forward</div><!--Close Button-->
-</div><!--End Columns Container-->
-</div><!--End Slide Overlay-->
-<!--LEARNING CONTENT END-->
-`
-;
-// insert Html
-learningcontent.innerHTML = newcontent;
-sectionname.innerHTML = section1; // Update with section name
-document.getElementById('i-step-back').setAttribute('onclick','sectionOnecSlideFour()'); // Update with previous content
-lastView(); // Update local storage with current page
-};
-//**********************************************************************************************************************************************************
-//
-// ***********************************************************SECTION 1 C SLIDE 6******************************************************************************************
-function sectionOnecSlideSix(){
-var newcontent =
-`
-<div name="section1cslidesix" class="slide cyan-light"><!--Start Overlay-->
-<div id="section1slide6" class="columns light animate__animated animate__slideInRight"><!--Columns Container-->
-<div class="column overflow-icon"><!--Start Section Container-->
-<h2>Lint-free Cloth</h2><!--Heading-->
-<p>Like many tasks, correct preparation is the key to success.</p>
-<div class="row"><!--First row of cards-->
-<span class="card black"><p class="mono">selected equipment</p><p>Cloth</p></span>
-<span name="cloth" class="card white img-only"></span>
-</div><!--End First row -->
-<p>A soft brush will safely remove larger particles of dust and debris from the composite panel but a thorough cleanse of the panel is required before beginning the Flame Treatment process.</p>
-<p>The lint-free cloth is used in conjunction with IPA alcohol to wipe down the panel and remove contaminants prior to Flame Treatment.</p>
-</div><!--End Start Section Container-->
-<div class="column third cyan-dark mono btn" onclick="sectionOnecSlideSeven()">move forward</div><!--Close Button-->
-</div><!--End Columns Container-->
-</div><!--End Slide Overlay-->
-<!--LEARNING CONTENT END-->
-`
-;
-// insert Html
-learningcontent.innerHTML = newcontent;
-sectionname.innerHTML = section1; // Update with section name
-document.getElementById('i-step-back').setAttribute('onclick','sectionOnecSlideFive()'); // Update with previous content
-lastView(); // Update local storage with current page
-};
-//**********************************************************************************************************************************************************
-//
-// ***********************************************************SECTION 1 C SLIDE 7******************************************************************************************
-function sectionOnecSlideSeven(){
-var newcontent =
-`
-<div name="section1cslideseven" class="slide cyan-light"><!--Start Overlay-->
-<div id="section1slide7" class="columns light animate__animated animate__slideInRight"><!--Columns Container-->
-<div class="column overflow-icon"><!--Start Section Container-->
-<h2>IPA Alcohol</h2><!--Heading-->
-<p>IPA Alcohol is used in conjunction with the lint-free cloth.</p>
-<div class="row"><!--First row of cards-->
-<span class="card white"><p class="mono">selected equipment</p><p>IPA Alcohol</p></span>
-<span name="alcohol" class="card black img-only"></span>
-</div><!--End First row -->
-<p>Isopropyl alcohol (IPA) is a colourless, flammable chemical with a strong odour.</p>
-<p>To ensure that the composite panel is thoroughly cleansed before Flame Treatment, a high purity, high strength (>95%) IPA must be used to wipe down the composite panel.</p>
-</div><!--End Start Section Container-->
-<div class="column third purple-dark mono btn" onclick="sectionOnecSlideEight()">move forward</div><!--Close Button-->
-</div><!--End Columns Container-->
-</div><!--End Slide Overlay-->
-<!--LEARNING CONTENT END-->
-`
-;
-// insert Html
-learningcontent.innerHTML = newcontent;
-sectionname.innerHTML = section1; // Update with section name
-document.getElementById('i-step-back').setAttribute('onclick','sectionOnecSlideSix()'); // Update with previous content
-lastView(); // Update local storage with current page
-};
-//**********************************************************************************************************************************************************
-//
-// ***********************************************************SECTION 1 C SLIDE 8******************************************************************************************
-function sectionOnecSlideEight(){
-var newcontent =
-`
-<div name="section1cslideeight" class="slide cyan-light"><!--Start Overlay-->
-<div id="section1slide8" class="columns light animate__animated animate__slideInRight"><!--Columns Container-->
-<div class="column overflow-icon"><!--Start Section Container-->
-<h2>Jigs & Fixtures</h2><!--Heading-->
-<p>Jigs & Fixtures may be required for certain tasks.</p>
-<div class="row"><!--First row of cards-->
-<span class="card black"><p class="mono">selected equipment</p><p>Jigs & Fixtures</p></span>
-</div><!--End First row -->
-<p>Whilst we didn't not explicitly list jigs & fixtures in our equipment list at the start of this section, it must be noted that certain tasks may require the use of these items.</p>
-<p>If a treatment area is large or there are areas that are hard to reach jigs & fixtures are used to make the task easier and safer to complete.</p>
-</div><!--End Start Section Container-->
-<div class="column third cyan-dark mono btn" onclick="sectionOneEnd()">move forward</div><!--Close Button-->
-</div><!--End Columns Container-->
-</div><!--End Slide Overlay-->
-<!--LEARNING CONTENT END-->
-`
-;
-// insert Html
-learningcontent.innerHTML = newcontent;
-sectionname.innerHTML = section1; // Update with section name
-document.getElementById('i-step-back').setAttribute('onclick','sectionOnecSlideSeven()'); // Update with previous content
-lastView(); // Update local storage with current page
-};
-//**********************************************************************************************************************************************************
-//
+// ***********************************************************SECTION 1 D ******************************************************************************************
+function sectionOned(){
+  var newcontent =
+  `
+  <div name="section1d" class="slide dark"><!--Start Overlay-->
+  <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
+  <div class="column quarter light mono">
+  <h2 class="mono lower">
+  <span name="animated-text" class="type-text" style="--n:130;animation-delay:3s;">
+  This training will familiarise you with the different attributes, inputting & updating... etc.
+  </span>
+  </h2>
+  </div><!--Close Button-->
+  <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+  <video autoplay playsinline muted src="Media/Attributes-intro-5.mp4"></video>
+  </div>
+  <div class="column quarter blue mono btn" onclick="sectionOnee()">move forward</div><!--Close Button-->
+  </div><!--End Columns Container-->
+  </div><!--End Content-->
+  `
+  ;
+  // insert Html
+  learningcontent.innerHTML = newcontent;
+  sectionname.innerHTML = section1; // Update with section name
+  document.getElementById('i-step-back').setAttribute('onclick','sectionOnec();noTextAnimate()'); // Update with previous content
+  lastView(); // Update local storage with current page
+  };
+  //**********************************************************************************************************************************************************
+  //
+// ***********************************************************SECTION 1 E ******************************************************************************************
+function sectionOnee(){
+  var newcontent =
+  `
+  <div name="section1e" class="slide dark"><!--Start Overlay-->
+  <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+  <div class="column quarter light mono overflow-icon">
+  <h2 class="mono lower">
+  <span name="animated-text" class="type-text" style="--n:237;animation-delay:4.5s;">
+  Each section will start with a question to check your familiarity with the topic. If you get the answer right, you will have the opportunity to skip to the next section without viewing the training material.
+  </span>
+  </h2>
+  <h2 class="mono lower">
+  <span name="animated-text" class="type-text" style="--n:165;animation-delay:18s;">
+  It is crucial that you understand the topic before skipping ahead. If you're just guessing, you won't gain anything from this training!
+  </span>
+  </h2>
+  </div><!--Close Button-->
+  <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+  <video autoplay playsinline muted src="Media/Attributes-intro-6.mp4"></video>
+  </div>
+  <div class="column quarter blue mono btn" onclick="sectionOnef()">move forward</div><!--Close Button-->
+  </div><!--End Columns Container-->
+  </div><!--End Content-->
+  `
+  ;
+  // insert Html
+  learningcontent.innerHTML = newcontent;
+  sectionname.innerHTML = section1; // Update with section name
+  document.getElementById('i-step-back').setAttribute('onclick','sectionOned();noTextAnimate()'); // Update with previous content
+  lastView(); // Update local storage with current page
+  };
+  //**********************************************************************************************************************************************************
+  //
+// ***********************************************************SECTION 1 F ******************************************************************************************
+function sectionOnef(){
+  var newcontent =
+  `
+  <div name="section1f" class="slide dark"><!--Start Overlay-->
+  <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+  <div class="column quarter light mono overflow-icon">
+  <h2 class="mono lower">
+  <span name="animated-text" class="type-text" style="--n:137;animation-delay:3.5s;">
+  If you are returning to the training, or simply need to use it as a reference, you may access different sections from the menu.
+  </span>
+  </h2>
+  </div><!--Close Button-->
+  <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+  <video autoplay playsinline muted src="Media/Attributes-intro-7.mp4"></video>
+  </div>
+  <div class="column quarter blue mono btn" onclick="sectionOneEnd()">move forward</div><!--Close Button-->
+  </div><!--End Columns Container-->
+  </div><!--End Content-->
+  `
+  ;
+  // insert Html
+  learningcontent.innerHTML = newcontent;
+  sectionname.innerHTML = section1; // Update with section name
+  document.getElementById('i-step-back').setAttribute('onclick','sectionOne();noTextAnimate()'); // Update with previous content
+  lastView(); // Update local storage with current page
+  };
+  //**********************************************************************************************************************************************************
+  //
+
 // ***********************************************************SECTION 1 END ******************************************************************************************
 function sectionOneEnd(){
 var newcontent =
@@ -573,7 +405,7 @@ var newcontent =
 <div name="section1end" class="slide cyan-light">
 <div class="columns success animate__animated animate__slideInUp"><!--Columns Container-->
 <div class="column"><!--Start Section Container-->
-<h2 class="mono">That's it for this section.</h2><!--Heading-->
+<h2 class="mono">That's it for the Introduction. Let's get started!</h2><!--Heading-->
 <p class="mono">select next section to continue.</p>
 </div><!--End Start Section -->
 </div><!--End Columns Container-->
@@ -583,7 +415,7 @@ var newcontent =
 // insert Html
 learningcontent.innerHTML = newcontent;
 sectionname.innerHTML = section1; // Update with section name
-document.getElementById('i-step-back').setAttribute('onclick','sectionOnecSlideEight()'); // Update with previous content
+document.getElementById('i-step-back').setAttribute('onclick','sectionOnef'); // Update with previous content
 document.getElementById('i-forward').classList.remove('disabled-btn');
 document.getElementById('i-forward').setAttribute('onclick', 'sectionTwoa()');
 lastView(); // Update local storage with current page

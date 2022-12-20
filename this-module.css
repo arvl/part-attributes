@@ -1,0 +1,42 @@
+/* lowercase mono heading font*/
+h2.mono.lower{
+    font-size:1.75em!important;
+    text-transform: none;
+    padding:1em;
+  }
+/* animated typing text*/
+  .type-text {
+  opacity:0;
+  color:#0000;
+  background:
+  linear-gradient(-90deg,#000000 2px,#0000 0) 10px 0,
+  linear-gradient(#000000 0 0) 0 0;
+  background-size:calc(var(--n)*1ch) 200%;
+  -webkit-background-clip:padding-box,text;
+  background-clip:padding-box,text;
+  background-repeat:no-repeat;
+  animation: 
+  b .7s infinite steps(1),  
+  t calc(var(--n)*.055s) steps(var(--n)) forwards,
+  o 0.5s;
+  animation-fill-mode: forwards;
+  animation-delay:4s;   
+  }
+  @keyframes t{
+    from {background-size:0 200%;}
+  }
+  @keyframes b{
+    50% {background-position:0 -100%,0 0;}
+  }
+  @keyframes o{
+     0% {opacity:0}
+  }
+  @keyframes o{
+    100% {opacity:1}
+  }
+  /* Media Queries*/
+  @media only screen and (max-width: 768px){
+    h2.mono.lower{
+      font-size:1.15em!important;
+    }
+    }

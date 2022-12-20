@@ -18,6 +18,7 @@ src: url("https://static.arrival.com/fonts/5.014-0/ArrivalApercuPro-Medium.woff2
 --white: #ffffff;
 --error:#F34E16;
 --success:#00B469;
+--media-bg-gray:#e2e2e2;
 --light-gray:#f4f4f4;
 --medium-gray:#e9e9e9;
 --dark-gray:#404040;
@@ -153,6 +154,11 @@ color:var(--white)!important;
 background-color:var(--medium-gray);
 color:var(--black);
 }
+/* Color style for Media BG Gray - adds background and text color*/
+.media-gray{
+  background-color:var(--media-bg-gray);
+  color:var(--black);
+  }
 .dark{
 background-color:var(--dark-gray);
 color:var(--white);
@@ -518,6 +524,9 @@ flex-wrap:wrap;
 .row.wrap > .card{
 margin-bottom:0.5em;
 margin-right:0em;
+}
+h2.mono.lower{
+  font-size:1.15em!important;
 }
 }
 @media only screen and (max-width: 780px){

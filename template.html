@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <link rel="stylesheet" href="i-module-ui.css"><!--interface stylesheet-->
+<link rel="stylesheet" href="this-module.css"><!--this module stylesheet-->
 <link rel="stylesheet" href="rangeslider.css"><!--interface stylesheet-->
 </head>
 <body>
@@ -26,12 +27,28 @@
 
 <!-- CONTENT -->
 <div id="i-content-template"><!--Test your content between these tags-->
-  <div id="revisit" class="overlay hide show animate pop">
-  <div class="columns"><!--Columns Container-->
-  <div class="column quarter light mono btn" onclick="sectionOne();">restart<h2 class="mono">< Start from the beginning</h2></div><!--Close Button-->
-  <div class="column quarter blue mono btn" onclick="sectionOne();">continue<h2 class="mono">Continue where you left off ></h2></div><!--Close Button-->
-  </div><!--End Columns Container-->
-  </div>
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+  <div name="section1e" class="slide light"><!--Start Overlay-->
+    <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+    <div class="column quarter light mono overflow-icon">
+    <h2 class="mono lower">
+    <span name="animated-text" class="type-text" style="--n:237;animation-delay:4.5s;">
+    Each section will start with a question to check your familiarity with the topic. If you get the answer right, you will have the opportunity to skip to the next section without viewing the training material.
+    </span>
+    </h2>
+    <h2 class="mono lower">
+    <span name="animated-text" class="type-text" style="--n:165;animation-delay:18s;">
+    It is crucial that you understand the topic before skipping ahead. If you're just guessing, you won't gain anything from this training!
+    </span>
+    </h2>
+    </div><!--Close Button-->
+    <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+    <video autoplay playsinline muted src="Media/Attributes-intro-6.mp4"></video>
+    </div>
+    <div class="column quarter blue mono btn" onclick="sectionOnef()">move forward</div><!--Close Button-->
+    </div><!--End Columns Container-->
+    </div><!--End Content-->
+<!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 </div><!--Test your content between these tags-->
 <!-- CONTENT END -->
 
@@ -45,7 +62,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js" integrity="sha512-0bEtK0USNd96MnO4XhH8jhv3nyRF0eK87pJke6pkYf3cM0uDIhNJy9ltuzqgypoIFXw3JSuiy04tVk4AjpZdZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="flamescript.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="iscript.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 </body>
