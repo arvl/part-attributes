@@ -95,12 +95,14 @@ var newcontent =
 <div class="column fill white overflow"><!--Section Cards Container-->
 <h1>Sections in this Module</h1><!--Heading-->
 <div class="row"><!--First row of cards-->
-<span class="card btn light" onclick="sectionOnea();hideOverlays();"><p class="mono">Section 1</p><p>Equipment</p></span><!--Section-->
-<span class="card btn light" onclick="sectionTwoa();hideOverlays();"><p class="mono">Section 2</p><p>Surface Treatment</p></span><!--Section-->
-<span class="card btn light" onclick="sectionThreea();hideOverlays();"><p class="mono">Section 3</p><p>Flame Treatment</p></span><!--Section-->
+<span class="card btn light" onclick="sectionOne();hideOverlays();"><p class="mono">Section 1</p><p>Introduction</p></span><!--Section-->
+<span class="card btn light" onclick="hideOverlays();"><p class="mono">Section 2</p><p>When</p></span><!--Section-->
+<span class="card btn light" onclick="hideOverlays();"><p class="mono">Section 3</p><p>What</p></span><!--Section-->
 </div><!--End First row of cards-->
 <div class="row"><!--Second row of cards-->
-<span class="card btn light"onclick="sectionFoura();hideOverlays();"><p class="mono">Section 4</p><p>Resources</p></span><!--Section-->
+<span class="card btn light" onclick="hideOverlays();"><p class="mono">Section 4</p><p>What if</p></span><!--Section-->
+<span class="card btn light" onclick="hideOverlays();"><p class="mono">Section 5</p><p>How</p></span><!--Section-->
+<span class="card btn light"onclick="hideOverlays();"><p class="mono">Section 6</p><p>Resources</p></span><!--Section-->
 </div><!--End Second row of cards-->
 </div><!--End Section Cards Container-->
 </div><!--End Columns Container-->
@@ -182,7 +184,7 @@ These are added to a part to provide specific additional information relevant to
 </span>
 </h2>
 <h2 class="mono lower">
-<span name="animated-text" class="type-text" style="--n:92;animation-delay:16s;">
+<span name="animated-text" class="type-text" style="--n:100;animation-delay:16s;">
 They include information about a part's:
 <br>
 <br>
