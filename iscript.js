@@ -392,7 +392,7 @@ function sectionOnef(){
   <div class="reverse">
   <div class="column larger light mono overflow-icon">
   <h2 class="mono lower">
-  <span name="animated-text" class="type-text" style="--n:137;animation-delay:3.5s;">
+  <span name="animated-text" class="type-text" style="--n:147;animation-delay:3.5s;">
   If you are returning to the training, or simply need to use it as a reference, you may access different sections from the menu.
   </span>
   </h2>
