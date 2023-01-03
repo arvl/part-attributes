@@ -166,7 +166,7 @@ function startFrame(){
     </span>
     </h2>
     <h2 class="mono lower">
-    <span name="animated-text" class="type-text" style="--n:143;animation-delay:10s;">
+    <span name="animated-text" class="type-text" style="--n:148;animation-delay:10s;">
     Your actions here can enable Arrival to operate more efficiently and avoid unnecessary questions/problems further down the line.
     </span>
     </h2>
@@ -347,28 +347,24 @@ function startFrame(){
     `
     <div name="section2checkpointstart" class="slide dark"><!--Learning Content Container-->
     <div class="columns drag animate__animated animate__slideInRight"><!--Columns Container-->
-    <div class="column third light overflow-icon"><!--Left (Desktop) Column Container-->
+    <div class="column third light"><!--Left (Desktop) Column Container-->
     <p>You need to add the correct attributes to a part before it is released. Where should attributes be added or amended (other than Material)?</p>
     <div class="row"><!--First row of cards-->
     <span name="response" class="card small cp black btn" onclick="disableCpResponse();this.classList.add('cp-correct');document.getElementById('correct').classList.remove('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.add('hide')"><!--Card-->
     <p class="mono">Teamcenter AWC (Web or Embedded in NX)</p><!--Card mono title-->
+    </span><!--End Card-->
+    <span name="response" class="card small cp black btn" onclick="disableCpResponse();this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('cp-error-feedback').innerHTML = 'Teamcenter Visualisation is a tool for exploring CAD.'"><!--Card-->
+    <p class="mono">Teamcenter Visualisation</p><!--Card mono title-->
     </span><!--End Card-->
     </div><!--End first row-->
     <div class="row"><!--Second Row-->
     <span name="response" class="card small cp black btn" onclick="disableCpResponse();this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('cp-error-feedback').innerHTML = 'Although it is possible using NX Interface, it is not a method that we promote.'"><!--Card-->
     <p class="mono">NX</p><!--Card mono title-->
     </span><!--End Card-->
-    </div><!--End second row-->
-    <div class="row"><!--Third Row-->
-    <span name="response" class="card small cp black btn" onclick="disableCpResponse();this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('cp-error-feedback').innerHTML = 'Teamcenter Visualisation is a tool for exploring CAD.'"><!--Card-->
-    <p class="mono">Teamcenter Visualisation</p><!--Card mono title-->
-    </span><!--End Card-->
-    </div><!--End Third row-->
-    <div class="row"><!--Fourth Row-->
     <span name="response" class="card small cp black btn" onclick="disableCpResponse();this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('cp-error-feedback').innerHTML = 'Part Attributes are not entered using Odoo.'"><!--Card-->
     <p class="mono">Odoo</p><!--Card mono title-->
     </span><!--End Card-->
-    </div><!--End Fourth row-->
+    </div><!--End Second row-->
     </div><!--End Left (Desktop) Column Container-->
     
     <div id="normal" class="column fill dark mono"><!--Right (Desktop) Column Container-->
@@ -475,7 +471,7 @@ function startFrame(){
         <div class="reverse">
         <div class="column larger light mono overflow-icon">
         <h2 class="mono lower">
-        <span name="animated-text" class="type-text" style="--n:194;animation-delay:4.5s;">
+        <span name="animated-text" class="type-text" style="--n:204;animation-delay:4.5s;">
         Once a part has been created, part attributes can be entered or edited at any point in the development cycle. But they must be accurately completed before a part is released.
         </span>
         </h2>
