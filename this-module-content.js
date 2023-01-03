@@ -45,7 +45,7 @@ function startFrame(){
     <div name="intro1" class="slide dark"><!--Start Overlay-->
     <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
     <div class="reverse">
-    <div class="column larger light mono overflow-icon">
+    <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
     <h2 class="mono lower">
     <span name="animated-text" class="type-text" style="--n:66">
     Every part has a set of associated attributes.
@@ -95,7 +95,7 @@ function startFrame(){
     <div name="section1a" class="slide dark"><!--Start Overlay-->
     <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
     <div class="reverse">
-    <div class="column larger light mono overflow-icon">
+    <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
     <h2 class="mono lower"><span name="animated-text" class="type-text" style="--n:80;animation-delay:2.5s;">Attributes determine how the part fits in to the wider project.</span>
     </h2>
     </div>
@@ -123,7 +123,7 @@ function startFrame(){
     <div name="section1b" class="slide dark"><!--Start Overlay-->
     <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
     <div class="reverse">
-    <div class="column larger light mono overflow-icon">
+    <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
     <h2 class="mono lower">
     <span name="animated-text" class="type-text" style="--n:135;animation-delay:4.5s;">
     Missing or incorrect attributes could result in:
@@ -159,7 +159,7 @@ function startFrame(){
     <div name="section1c" class="slide dark"><!--Start Overlay-->
     <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
     <div class="reverse overflow-icon">
-    <div class="column larger light mono overflow-icon">
+    <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
     <h2 class="mono lower">
     <span name="animated-text" class="type-text" style="--n:126;animation-delay:3s;">
     It is the responsibility of the design engineer to populate part attributes correctly for all new parts.
@@ -195,7 +195,7 @@ function startFrame(){
       <div name="section1d" class="slide dark"><!--Start Overlay-->
       <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
       <div class="reverse overflow-icon">
-      <div class="column larger light mono overflow-icon">
+      <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
       <h2 class="mono lower">
       <span name="animated-text" class="type-text" style="--n:140;animation-delay:3s;">
       This training will familiarise you with the different attributes, inputting & updating... etc.
@@ -226,7 +226,7 @@ function startFrame(){
       <div name="section1e" class="slide dark"><!--Start Overlay-->
       <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
       <div class="reverse">
-      <div class="column larger light mono overflow-icon">
+      <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
       <h2 class="mono lower">
       <span name="animated-text" class="type-text" style="--n:237;animation-delay:4.5s;">
       Each section will start with a question to check your familiarity with the topic. If you get the answer right, you will have the opportunity to skip to the next section without viewing the training material.
@@ -262,7 +262,7 @@ function startFrame(){
       <div name="section1f" class="slide dark"><!--Start Overlay-->
       <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
       <div class="reverse">
-      <div class="column larger light mono overflow-icon">
+      <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
       <h2 class="mono lower">
       <span name="animated-text" class="type-text" style="--n:147;animation-delay:3.5s;">
       If you are returning to the training, or simply need to use it as a reference, you may access different sections from the menu.
@@ -469,7 +469,7 @@ function startFrame(){
         <div name="section2a" class="slide dark"><!--Start Overlay-->
         <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
         <div class="reverse">
-        <div class="column larger light mono overflow-icon">
+        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
         <span name="animated-text" class="type-text" style="--n:204;animation-delay:4.5s;">
         Once a part has been created, part attributes can be entered or edited at any point in the development cycle. But they must be accurately completed before a part is released.
@@ -500,7 +500,7 @@ function startFrame(){
         <div name="section2b" class="slide dark"><!--Start Overlay-->
         <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
         <div class="reverse">
-        <div name="static-img" class="column larger light mono overflow-icon">
+        <div name="static-img" class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
         <span name="animated-text" class="type-text" style="--n:94;animation-delay:1s;">
         Attributes are entered or updated using Active Workspace (AWC).
@@ -542,7 +542,7 @@ function startFrame(){
       <div name="section2c" class="slide dark"><!--Start Overlay-->
       <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
       <div class="reverse">
-      <div class="column larger light mono overflow-icon">
+      <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
       <h2 class="mono lower">
       <span name="animated-text" class="type-text" style="--n:199;animation-delay:4.5s;">
       As a Design Engineer, you can have a big impact on the quality of 'downstream' data by ensuring all parts that you design are populated with the necessary attributes.
@@ -573,7 +573,7 @@ function startFrame(){
     <div name="section2d" class="slide dark"><!--Start Overlay-->
     <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
     <div class="reverse">
-    <div class="column larger light mono overflow-icon">
+    <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
     <h2 class="mono lower">
     <span name="animated-text" class="type-text" style="--n:199;animation-delay:4.5s;">
     <strong>Before</strong> entering a part release cycle, you should thoroughly check your part for any missing or inaccurate attributes. You can use Active Workspace (AWC) for this.
@@ -604,7 +604,7 @@ function startFrame(){
     <div name="section2e" class="slide dark"><!--Start Overlay-->
     <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
     <div class="reverse">
-    <div class="column larger light mono overflow-icon">
+    <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
     <h2 class="mono lower">
     <span name="animated-text" class="type-text" style="--n:199;animation-delay:4s;">
     <strong>During</strong> the part release cycle, part attributes must be peer-reviewed to eliminate the likelihood of missing or inaccurate part attributes.
