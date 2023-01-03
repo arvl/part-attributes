@@ -367,7 +367,7 @@ function startFrame(){
     </div><!--End Second row-->
     </div><!--End Left (Desktop) Column Container-->
     
-    <div id="normal" class="column fill dark mono"><!--Right (Desktop) Column Container-->
+    <div id="normal" class="column fill dark mono" style="background-image:url('Media/Checkpoint-bg.png');background-repeat:no-repeat;background-size:contain;background-position:center;"><!--Right (Desktop) Column Container-->
     </div><!--End Right (Desktop) Column Container-->
     
     <div id="incorrect" class="column fill error mono hide btn" onclick="sectionTwoa()"><!--Right (Desktop) Column Container-->
@@ -431,7 +431,7 @@ function startFrame(){
     </div><!--End Third row-->
     </div><!--End Left (Desktop) Column Container-->
     
-    <div id="normal" class="column fill dark mono"><!--Right (Desktop) Column Container-->
+    <div id="normal" class="column fill dark mono" style="background-image:url('Media/Checkpoint-bg.png');background-repeat:no-repeat;background-size:contain;background-position:center;"><!--Right (Desktop) Column Container-->
     </div><!--End Right (Desktop) Column Container-->
     
     <div id="incorrect" class="column fill error mono hide btn" onclick="sectionTwoa()"><!--Right (Desktop) Column Container-->
