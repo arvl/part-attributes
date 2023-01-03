@@ -34,9 +34,57 @@ h2.mono.lower{
   @keyframes o{
     100% {opacity:1}
   }
+  /*Checkpoint Question Card*/
+  .card.small.cp{
+    min-height:3.5em;
+    }
+    /*Checkpoint incorrect background color*/
+  .cp-incorrect{
+  background-color:var(--error);
+  }
+   /*Checkpoint correct background color*/
+  .cp-correct{
+    background-color:var(--success);
+    }
+   /*Checkpoint disabled repsonse*/
+  .cp-disabled{
+  pointer-events:none;
+  }
+  .static-img{
+  display:block;
+  height:100%;
+  width:auto;
+  max-width:100%;
+  }
+  .static-img.buttons{
+    max-height:calc(100% - 64px);
+    }
+  .static-img > img{
+    display:block;
+    max-height:100%;
+    max-width:100%;
+    margin:auto;
+    }
+  .img-select{
+  display:inline-block;
+  height:64px;
+  width:50%;
+  padding:1em;
+  }
+  .img-select-container{
+    display:flex;
+    margin-top:1em;
+    height:64px;
+    width:calc(100% + 2em);
+    transform:translateX(-1em);
+    }
   /* Media Queries*/
   @media only screen and (max-width: 768px){
     h2.mono.lower{
       font-size:1.35em!important;
     }
+    [name="static-img"].column.larger {
+      flex:1 0 35%;
+      }
     }
+    

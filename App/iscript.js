@@ -98,7 +98,7 @@ var newcontent =
 <h1>Sections in this Module</h1><!--Heading-->
 <div class="row wrap"><!--First row of cards-->
 <span class="card small btn light" onclick="sectionOne();hideOverlays();"><p class="mono">Section 1</p><p id="menu-section1"></p></span><!--Section-->
-<span class="card small btn light" onclick="hideOverlays();"><p class="mono">Section 2</p><p id="menu-section2"></p></span><!--Section-->
+<span class="card small btn light" onclick="sectionTwo();hideOverlays();"><p class="mono">Section 2</p><p id="menu-section2"></p></span><!--Section-->
 <span class="card small btn light" onclick="hideOverlays();"><p class="mono">Section 3</p><p id="menu-section3"></p></span><!--Section-->
 </div><!--End First row of cards-->
 <div class="row wrap"><!--Second row of cards-->

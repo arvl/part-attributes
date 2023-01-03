@@ -38,7 +38,7 @@ function startFrame(){
     };
     //**********************************************************************************************************************************************************
     //
-    // ***********************************************************SECTION 1******************************************************************************************
+    // ***********************************************************SECTION 1 - INTRODUCTION******************************************************************************************
     function sectionOne(){
     var newcontent =
     `
@@ -260,7 +260,7 @@ function startFrame(){
       var newcontent =
       `
       <div name="section1f" class="slide dark"><!--Start Overlay-->
-      <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+      <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
       <div class="reverse">
       <div class="column larger light mono overflow-icon">
       <h2 class="mono lower">
@@ -306,75 +306,84 @@ function startFrame(){
     sectionname.innerHTML = section1; // Update with section name
     document.getElementById('i-step-back').setAttribute('onclick','sectionOnef();noTextAnimate()'); // Update with previous content
     document.getElementById('i-forward').classList.remove('disabled-btn');
-    document.getElementById('i-forward').setAttribute('onclick', 'sectionTwoa()');
+    document.getElementById('i-forward').setAttribute('onclick', 'sectionTwo()');
     lastView(); // Update local storage with current page
     };
     //**********************************************************************************************************************************************************
     //
-    // ***********************************************************SECTION 2 A ******************************************************************************************
-    function sectionTwoa(){
-    var newcontent =
-    `
-    <div name="section2a" class="slide light"><!--Start Overlay-->
-    <div id="slide1" class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
-    <div class="column overflow-icon"><!--Start Section Container-->
-    <h1>Next Stage</h1><!--Heading-->
-    <h2>\ Surface Treatment</h2><!--Heading-->
-    <p>In the previous section we collected our equipment and learnt what the equipment will be used for.</p>
-    <p>Now it's time to prepare for Flame Treatment.</p>
-    <p>You must carry out a thorough visual inspection of the panels to check that there are no defects in the bond areas that will affect the bonding operation. For example, wrinkles in the bond areas, or regions where dry fibres are visible</p>
-    <p>If the visual inspection does not highlight any defects, we can continue to prepare the composite panel. It is important that the composite panel is correctly treated prior to beginning the Flame Treatment process.</p>
-    <h3>Move forward and we will explore the surface treatment of the composite panel.</h3>
-    </div>
-    <div class="column third blue mono btn" onclick="sectionTwob();">move forward</div><!--Close Button-->
-    </div><!--End Columns Container-->
-    </div><!--End Slide Overlay-->
-    <!--LEARNING CONTENT END-->
-    `
-    ;
-    // insert Html
-    learningcontent.innerHTML = newcontent;
-    sectionname.innerHTML = section2; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionOnec()'); // Update with previous content
-    deactivateNext(); //De-activate next section button
-    lastView(); // Update local storage with current page
+    // ***********************************************************SECTION 2 START - The When ******************************************************************************************
+    function sectionTwo(){
+      var newcontent =
+      `
+      <div name="section2start" class="slide dark">
+      <div class="columns blue-light animate__animated animate__slideInLeft"><!--Columns Container-->
+      <div class="column"><!--Start Section Container-->
+      <h2 class="mono">Section 2. </h2><!--Heading-->
+      <p class="mono">This Section begins with a knowledge check. If you answer the questions correctly, you have the opportunity to skip the section content. However we recommend that you view the content to refresh your knowledge.</p>
+      </div><!--End Start Section -->
+      </div><!--End Columns Container-->
+      </div>
+      `
+      ;
+      // insert Html
+      learningcontent.innerHTML = newcontent;
+      sectionname.innerHTML = section2 + section2indicator; // Update with section name
+      document.getElementById('i-step-back').setAttribute('onclick','sectionOneEnd()'); // Update with previous content
+      document.getElementById('i-forward').classList.remove('disabled-btn');
+      document.getElementById('i-forward').innerHTML = 'Begin';
+      document.getElementById('i-forward').setAttribute('onclick', 'sectionTwoStartCheckpoint()');
+      lastView(); // Update local storage with current page
+      };
+      //**********************************************************************************************************************************************************
+      //
+   // ***********************************************************SECTION 2 First Checkpoint Question ******************************************************************************************
+   function disableCpResponse(){  // Disable responses after first selection
+    var responses = document.querySelectorAll('[name="response"]');
+    for (let i = 0; i < responses.length; i++){
+    responses[i].classList.add('cp-disabled');document.getElementById('i-step-back').setAttribute('onclick','');} // Disable clicking other options and prevent going back}
     };
-    //**********************************************************************************************************************************************************
-    //
-    // ***********************************************************SECTION 2 B ******************************************************************************************
-    function sectionTwob(){
-    var newcontent =
+   function sectionTwoStartCheckpoint(){
+      var newcontent =
     `
-    <div name="section2b" class="slide light"><!--Learning Content Container-->
-    <div class="columns drag animate__animated animate__slideInLeft"><!--Columns Container-->
-    <div class="column third light"><!--Left (Desktop) Column Container-->
-    <h2>Select the first process to carry out:</h2>
+    <div name="section2checkpointstart" class="slide dark"><!--Learning Content Container-->
+    <div class="columns drag animate__animated animate__slideInRight"><!--Columns Container-->
+    <div class="column third light overflow-icon"><!--Left (Desktop) Column Container-->
+    <p>You need to add the correct attributes to a part before it is released. Where should attributes be added or amended (other than Material)?</p>
     <div class="row"><!--First row of cards-->
-    <span class="card small black btn" onclick="this.style.backgroundColor = 'var(--error)';document.getElementById('incorrect').classList.remove('hide');document.getElementById('normal').classList.add('hide');;document.getElementById('correct').classList.add('hide')"><!--Card-->
-    <p class="mono">Wipe & Cleanse with IPA alcohol</p><!--Card mono title-->
+    <span name="response" class="card small cp black btn" onclick="disableCpResponse();this.classList.add('cp-correct');document.getElementById('correct').classList.remove('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.add('hide')"><!--Card-->
+    <p class="mono">Teamcenter AWC (Web or Embedded in NX)</p><!--Card mono title-->
     </span><!--End Card-->
     </div><!--End first row-->
     <div class="row"><!--Second Row-->
-    <span class="card small black btn" onclick="this.style.backgroundColor = 'var(--success)';document.getElementById('correct').classList.remove('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.add('hide')"><!--Card-->
-    <p class="mono">Remove dust & debris from the panel surface</p><!--Card mono title-->
+    <span name="response" class="card small cp black btn" onclick="disableCpResponse();this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('cp-error-feedback').innerHTML = 'Although it is possible using NX Interface, it is not a method that we promote.'"><!--Card-->
+    <p class="mono">NX</p><!--Card mono title-->
     </span><!--End Card-->
     </div><!--End second row-->
+    <div class="row"><!--Third Row-->
+    <span name="response" class="card small cp black btn" onclick="disableCpResponse();this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('cp-error-feedback').innerHTML = 'Teamcenter Visualisation is a tool for exploring CAD.'"><!--Card-->
+    <p class="mono">Teamcenter Visualisation</p><!--Card mono title-->
+    </span><!--End Card-->
+    </div><!--End Third row-->
+    <div class="row"><!--Fourth Row-->
+    <span name="response" class="card small cp black btn" onclick="disableCpResponse();this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('cp-error-feedback').innerHTML = 'Part Attributes are not entered using Odoo.'"><!--Card-->
+    <p class="mono">Odoo</p><!--Card mono title-->
+    </span><!--End Card-->
+    </div><!--End Fourth row-->
     </div><!--End Left (Desktop) Column Container-->
     
     <div id="normal" class="column fill dark mono"><!--Right (Desktop) Column Container-->
     </div><!--End Right (Desktop) Column Container-->
     
-    <div id="incorrect" class="column fill error mono hide"><!--Right (Desktop) Column Container-->
-    <h2 class="mono">An important step</h2>
-    <h2 class="mono">but it's not the first</h2>
-    <br>
-    <h2 class="mono">try again</h2>
+    <div id="incorrect" class="column fill error mono hide btn" onclick="sectionTwoa()"><!--Right (Desktop) Column Container-->
+    move forward
+    <h2 class="mono">Incorrect</h2>
+    <h2 id="cp-error-feedback" class="mono"></h2>
     </div><!--End Right (Desktop) Column Container-->
     
-    <div id="correct" class="column fill success mono hide btn" onclick="sectionTwoc()"><!--Right (Desktop) Column Container-->
+    <div id="correct" class="column fill success mono hide btn" onclick="sectionTwoCorrectPath()"><!--Right (Desktop) Column Container-->
     move forward
-    <h2 class="mono">That's right</h2>
-    <h2 class="mono">Let's remove the dust & debris--></h2>
+    <h2 class="mono">That's right!</h2>
+    <h2 class="mono">It is strongly recommended to use Active Workspace to enter or update Attributes.</h2>
     </div><!--End Right (Desktop) Column Container-->
     
     
@@ -386,105 +395,207 @@ function startFrame(){
     ;
     // insert Html
     learningcontent.innerHTML = newcontent;
-    sectionname.innerHTML = section2; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionTwoa()'); // Update with previous content
+    sectionname.innerHTML = section2 + section2indicator; // Update with section name
+    document.getElementById('i-step-back').setAttribute('onclick','sectionTwo()'); // Update with previous content
+    document.getElementById('i-forward').innerHTML = 'Next Section';
+    deactivateNext(); //De-activate next section button
     lastView(); // Update local storage with current page
     };
+    //**********************************************************************************************************************************************************
+    //
+   // ***********************************************************SECTION 2 Correct Path -  If user gets first checkpoint correct...******************************************************************************************
+   function secTwocorrectCpResponse(){
+   var correctresponseone = document.querySelector('[data-response="one"]');
+   var incorrectresponse = document.querySelector('[data-response="two"]');
+   var correctresponsethree = document.querySelector('[data-response="three"]');
+   var nextsection = document.getElementById('i-forward');
+   if (correctresponseone.classList.contains('cp-correct')+correctresponsethree.classList.contains('cp-correct')){document.getElementById('normal').classList.add('hide');document.getElementById('correct').classList.remove('hide');incorrectresponse.classList.add('cp-disabled');nextsection.classList.remove('disabled-btn');}
+   }
+   function sectionTwoCorrectPath(){
+      var newcontent =
+    `
+    <div name="section2correctpath" class="slide dark"><!--Learning Content Container-->
+    <div class="columns drag animate__animated animate__slideInDown"><!--Columns Container-->
+    <div class="column third light"><!--Left (Desktop) Column Container-->
+    <p>When should part attributes be entered? (More than one answer may be correct)</p>
+    <div class="row"><!--First row of cards-->
+    <span name="response" data-response="one" class="card small cp black btn" onclick="secTwocorrectCpResponse();this.classList.add('cp-correct')"><!--Card-->
+    <p class="mono">At any point during the development of a part</p><!--Card mono title-->
+    </span><!--End Card-->
+    </div><!--End first row-->
+    <div class="row"><!--Second Row-->
+    <span name="response" data-response="two" class="card small cp black btn" onclick="disableCpResponse();this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('cp-error-feedback').innerHTML = 'It is not possible to enter Part Attributes before the part is created.'"><!--Card-->
+    <p class="mono">Before a part is created</p><!--Card mono title-->
+    </span><!--End Card-->
+    </div><!--End second row-->
+    <div class="row"><!--Third Row-->
+    <span name="response" data-response="three" class="card small cp black btn" onclick="secTwocorrectCpResponse();this.classList.add('cp-correct');"><!--Card-->
+    <p class="mono">Before releasing a part</p><!--Card mono title-->
+    </span><!--End Card-->
+    </div><!--End Third row-->
+    </div><!--End Left (Desktop) Column Container-->
+    
+    <div id="normal" class="column fill dark mono"><!--Right (Desktop) Column Container-->
+    </div><!--End Right (Desktop) Column Container-->
+    
+    <div id="incorrect" class="column fill error mono hide btn" onclick="sectionTwoa()"><!--Right (Desktop) Column Container-->
+    move forward
+    <h2 class="mono">Incorrect</h2>
+    <h2 id="cp-error-feedback" class="mono"></h2>
+    </div><!--End Right (Desktop) Column Container-->
+    
+    <div id="correct" class="column fill success mono hide btn" onclick="sectionTwoa()"><!--Right (Desktop) Column Container-->
+    move forward
+    <h2 class="mono">It appears that you have a good knowledge of this section!</h2>
+    <h2 class="mono">You can continue to view this section by clicking here or move to the next section using the button below.</h2>
+    </div><!--End Right (Desktop) Column Container-->
+    
+    
+    </div><!--End Columns Container-->
+    </div><!--End Learning Content Container-->
+    
+    <!--LEARNING CONTENT END-->
+    `
+    ;
+    // insert Html
+    learningcontent.innerHTML = newcontent;
+    sectionname.innerHTML = section2 + section2indicator; // Update with section name
+    document.getElementById('i-step-back').setAttribute('onclick','sectionTwoStartCheckpoint()'); // Update with previous content
+    document.getElementById('i-forward').setAttribute('onclick', 'sectionThree()');
+    lastView(); // Update local storage with current page
+    };
+    //**********************************************************************************************************************************************************
+    //
+    // ***********************************************************SECTION 2 A ******************************************************************************************
+      function sectionTwoa(){
+        var newcontent =
+        `
+        <div name="section2a" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+        <div class="reverse">
+        <div class="column larger light mono overflow-icon">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:194;animation-delay:4.5s;">
+        Once a part has been created, part attributes can be entered or edited at any point in the development cycle. But they must be accurately completed before a part is released.
+        </span>
+        </h2>
+        </div>
+        <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+        <video autoplay playsinline muted src="Media/Attributes-section1.mp4"></video>
+        </div>
+        </div>
+        <div class="column mini blue-light mono btn" onclick="sectionTwob()">move forward</div><!--Close Button-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section2 + section2indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionTwoStartCheckpoint();noTextAnimate()'); // Update with previous content
+        lastView(); // Update local storage with current page
+        };
+    //**********************************************************************************************************************************************************
+    //
+      // ***********************************************************SECTION 2 B ******************************************************************************************
+      function sectionTwob(){
+        var newcontent =
+        `
+        <div name="section2b" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
+        <div class="reverse">
+        <div name="static-img" class="column larger light mono overflow-icon">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:94;animation-delay:1s;">
+        Attributes are entered or updated using Active Workspace (AWC).
+        </span>
+        </h2>
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:220;animation-delay:5.5s;">
+        It is technically possible to enter or update attributes using Computer Aided Design (CAD) software, for example Siemens NX, but we strongly recommend the use of Active Workspace.
+        </span>
+        </h2>
+        </div>
+        <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+        <div class="static-img buttons">
+        <img id="attr-screen" src="Media/Attributes-section1-awcscreen.png">
+        <div class="img-select-container">
+        <button class="button img-select dark success" onclick="this.classList.add('success');this.nextElementSibling.classList.remove('success');document.getElementById('attr-screen').src = 'Media/Attributes-section1-awcscreen.png';">AWC attributes screen</button>
+        <button class="button img-select dark" onclick="this.classList.add('success');this.previousElementSibling.classList.remove('success');document.getElementById('attr-screen').src = 'Media/Attributes-section1-nxscreen.png';">NX attributes screen</button>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div class="column mini blue-light mono btn" onclick="sectionTwoc()">move forward</div><!--Close Button-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section2 + section2indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionTwoa();noTextAnimate()'); // Update with previous content
+        lastView(); // Update local storage with current page
+        };
     //**********************************************************************************************************************************************************
     //
     // ***********************************************************SECTION 2 C ******************************************************************************************
     function sectionTwoc(){
-    var newcontent =
-    `
-    <div name="section2c" class="container"><!--Learning Content Container-->
-    <div class="columns animate__animated animate__slideInUp"><!--Columns Container-->
-    
-    <div id="normal" class="column fill white mono overflow"><!--Right (Desktop) Column Container-->
-    <video id="remove-dust" playsinline muted src="Media/flame-treatment-brush-panel.mp4"></video>
-    </div><!--End Right (Desktop) Column Container-->
-    
-    <button id="play" class="button media-action btn invisible" onclick="document.getElementById('remove-dust').currentTime = '0';document.getElementById('remove-dust').play()"></button><!--re play button-->
-    
-    <div id="start-dust" class="column quarter blue btn" onclick="startDust()"><!--Left (Desktop) Column Container-->
-    <p id="start-text" class="mono">start</p>
-    <br>
-    <h2 id="process-text" class="mono">Remove Dust & Debris</h2>
-    </div><!--End Left (Desktop) Column Container-->
-    
-    <div id="dust-continue" class="column quarter success btn hide" onclick="sectionTwod()"><!--Success move forward button container-->
-    <p class="mono">move forward</p>
-    <br>
-    <h2 class="mono">Dust & debris removed</h2>
-    </div><!--End move forward button container-->
-    
-    </div><!--End Columns Container-->
-    </div><!--End Learning Content Container-->
-    
-    <!--LEARNING CONTENT END-->
-    `
-    ;
-    // insert Html
-    learningcontent.innerHTML = newcontent;
-    sectionname.innerHTML = section2; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionTwob()'); // Update with previous content
-    lastView(); // Update local storage with current page
-    };
-    //**********************************************************************************************************************************************************
-    //
-    // ***********************************************************SECTION 2 C REMOVE DUST VIDEO******************************************************************************************
-    // Section 2c remove dust video
-    function startDust(){
-    var dustVideo = document.getElementById('remove-dust');
-    var dustContinue = document.getElementById('dust-continue');
-    var startDust = document.getElementById('start-dust');
-    var startText = document.getElementById('start-text');
-    var processText = document.getElementById('process-text');
-    var restart = document.getElementById('play');
-    dustVideo.play();
-    startDust.classList.remove('btn');
-    startDust.classList.add('blue-light');
-    startText.innerHTML = '&nbsp;';
-    processText.innerHTML = 'removing dust with soft brush';
-    dustVideo.addEventListener('ended', function () {
-    dustVideo.currentTime = 9.5;
-    restart.classList.remove('invisible');
-    startDust.classList.add('hide');
-    dustContinue.classList.remove('hide')
-    }, false);
-    };
-    //**********************************************************************************************************************************************************
-    //
+      var newcontent =
+      `
+      <div name="section2c" class="slide dark"><!--Start Overlay-->
+      <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
+      <div class="reverse">
+      <div class="column larger light mono overflow-icon">
+      <h2 class="mono lower">
+      <span name="animated-text" class="type-text" style="--n:199;animation-delay:4.5s;">
+      As a Design Engineer, you can have a big impact on the quality of 'downstream' data by ensuring all parts that you design are populated with the necessary attributes.
+      </span>
+      </h2>
+      </div>
+      <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+      <video autoplay playsinline muted src="Media/Attributes-section1-1.mp4"></video>
+      </div>
+      </div>
+      <div class="column mini blue-light mono btn" onclick="sectionTwod()">move forward</div><!--Close Button-->
+      </div><!--End Columns Container-->
+      </div><!--End Content-->
+      `
+      ;
+      // insert Html
+      learningcontent.innerHTML = newcontent;
+      sectionname.innerHTML = section2 + section2indicator; // Update with section name
+      document.getElementById('i-step-back').setAttribute('onclick','sectionTwob();noTextAnimate()'); // Update with previous content
+      lastView(); // Update local storage with current page
+      };
+  //**********************************************************************************************************************************************************
+  //
     // ***********************************************************SECTION 2 D ******************************************************************************************
     function sectionTwod(){
     var newcontent =
     `
-    <div name="section2d" class="slide light animate__animated animate__slideInLeft"><!--Start Overlay-->
-    <div id="section1slide1" class="columns light"><!--Columns Container-->
-    <div class="column white overflow-icon"><!--Start Section Container-->
-    <h1>Great!</h1><!--Heading-->
-    <h2>Dust & debris removed.</h2><!--Heading-->
-    <div class="row"><!--First row of cards-->
-    <span name="brush" class="card small black"><!--Card-->
-    <p class="mono">Soft Brush</p><!--Card mono title-->
-    </span><!--End Card-->
-    </div><!--End first row-->
-    <p>You selected the Soft Brush in Section 1. The soft brush is used to remove larger particles of dust and debris from the composite panel and is the first stage of our surface treatment.</p>
-    <h3>Move forward to begin stage 2.</h3>
+    <div name="section2d" class="slide dark"><!--Start Overlay-->
+    <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+    <div class="reverse">
+    <div class="column larger light mono overflow-icon">
+    <h2 class="mono lower">
+    <span name="animated-text" class="type-text" style="--n:199;animation-delay:4.5s;">
+    <strong>Before</strong> entering a part release cycle, you should thoroughly check your part for any missing or inaccurate attributes. You can use Active Workspace (AWC) for this.
+    </span>
+    </h2>
     </div>
-    <div class="column third cyan-light mono btn" onclick="sectionTwoe()">move forward
-    </div><!--Close Button-->
+    <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+    <video autoplay playsinline muted src="Media/Attributes-section1-2.mp4"></video>
+    </div>
+    </div>
+    <div class="column mini blue-light mono btn" onclick="sectionTwoe()">move forward</div><!--Close Button-->
     </div><!--End Columns Container-->
-    
-    
-    </div><!--End Columns Container-->
-    </div><!--End Learning Content Container-->
-    
-    <!--LEARNING CONTENT END-->
+    </div><!--End Content-->
     `
     ;
     // insert Html
     learningcontent.innerHTML = newcontent;
-    sectionname.innerHTML = section2; // Update with section name
+    sectionname.innerHTML = section2 + section2indicator; // Update with section name
     document.getElementById('i-step-back').setAttribute('onclick','sectionTwoc()'); // Update with previous content
     lastView(); // Update local storage with current page
     };
@@ -494,100 +605,56 @@ function startFrame(){
     function sectionTwoe(){
     var newcontent =
     `
-    <div name="section2e" class="container"><!--Learning Content Container-->
-    <div class="columns animate__animated animate__slideInUp"><!--Columns Container-->
-    
-    <div id="normal" class="column fill white mono overflow"><!--Right (Desktop) Column Container-->
-    <video id="clean-panel" playsinline muted src="Media/Flame-treatment-clean-panel-edit.mp4"></video>
-    </div><!--End Right (Desktop) Column Container-->
-    
-    <button id="play" class="button media-action btn invisible" onclick="document.getElementById('clean-panel').currentTime = '0';document.getElementById('clean-panel').play();"></button><!--re play button-->
-    
-    <div id="start-clean" class="column quarter btn blue" onclick="startCleanse()"><!--Left (Desktop) Column Container-->
-    <p id="start-text" class="mono">start</p>
-    <br>
-    <h2 id="process-text" class="mono">Cleanse & Wipe</h2>
-    </div><!--End Left (Desktop) Column Container-->
-    
-    <div id="clean-continue" class="column quarter success btn hide" onclick="sectionTwof()"><!--Success move forward button container-->
-    <p class="mono">move forward</p>
-    <br>
-    <h2 class="mono">cleanse complete</h2>
-    </div><!--End move forward button container-->
-    
-    
+    <div name="section2e" class="slide dark"><!--Start Overlay-->
+    <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
+    <div class="reverse">
+    <div class="column larger light mono overflow-icon">
+    <h2 class="mono lower">
+    <span name="animated-text" class="type-text" style="--n:199;animation-delay:4s;">
+    <strong>During</strong> the part release cycle, part attributes must be peer-reviewed to eliminate the likelihood of missing or inaccurate part attributes.
+    </span>
+    </h2>
+    <h2 class="mono lower">
+    <span name="animated-text" class="type-text" style="--n:199;animation-delay:12.5s;">
+    Missing or inaccurate attributes must be rectified before the part is released.
+    </span>
+    </h2>
+    </div>
+    <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+    <video autoplay playsinline muted src="Media/Attributes-section1-3.mp4"></video>
+    </div>
+    </div>
+    <div class="column mini blue-light mono btn" onclick="sectionTwof()">move forward</div><!--Close Button-->
     </div><!--End Columns Container-->
-    </div><!--End Learning Content Container-->
-    
-    <!--LEARNING CONTENT END-->
+    </div><!--End Content-->
     `
     ;
     // insert Html
     learningcontent.innerHTML = newcontent;
-    sectionname.innerHTML = section2; // Update with section name
+    sectionname.innerHTML = section2 + section2indicator; // Update with section name
     document.getElementById('i-step-back').setAttribute('onclick','sectionTwod()'); // Update with previous content
     lastView(); // Update local storage with current page
     };
     //**********************************************************************************************************************************************************
     //
-    // ***********************************************************SECTION 2 E CLEANSE PANEL VIDEO******************************************************************************************
-    // Section 2e cleanse video
-    function startCleanse(){
-    var cleanseVideo = document.getElementById('clean-panel');
-    var cleanContinue = document.getElementById('clean-continue');
-    var startClean = document.getElementById('start-clean');
-    var startText = document.getElementById('start-text');
-    var processText = document.getElementById('process-text');
-    var restart = document.getElementById('play');
-    cleanseVideo.play();
-    startClean.classList.remove('btn');
-    startClean.classList.add('blue-light');
-    startText.innerHTML = '&nbsp;';
-    processText.innerHTML = 'cleaning panel';
-    cleanseVideo.addEventListener('ended', function () {
-    cleanseVideo.currentTime = 11;
-    restart.classList.remove('invisible');
-    startClean.classList.add('hide');
-    cleanContinue.classList.remove('hide')
-    }, false);
-    };
-    //**********************************************************************************************************************************************************
-    //
-    // ***********************************************************SECTION 2 F ******************************************************************************************
-    function sectionTwof(){
+  // ***********************************************************SECTION 2 F - Caution release parts... ******************************************************************************************
+  function sectionTwof(){
     var newcontent =
     `
-    <div name="section2f" class="slide light animate__animated animate__slideInUp"><!--Start Overlay-->
-    <div id="section2fslide1" class="columns lightp"><!--Columns Container-->
-    <div class="column white overflow-icon"><!--Left Column Container-->
-    <h1>Great!</h1><!--Heading-->
-    <h2>The panel is cleansed and prepared.</h2><!--Heading-->
-    <div class="row"><!--First row of cards-->
-    <span name="cloth" class="card small black"><!--Card-->
-    <p class="mono">Lint-free cloth</p><!--Card mono title-->
-    </span><!--End Card-->
-    <span name="alcohol" class="card small black"><!--Card-->
-    <p class="mono">IPA alcohol</p><!--Card mono title-->
-    </span><!--End Card-->
-    </div><!--End first row-->
-    <div class="admonition caution">
-    <div class="title"></div>
-    <h3>Important:</h3>
-    <p>You must wait 5 minutes afters cleansing the composite panel with the IPA alcohol. This ensures that the solvent is fully flashed off.</p>
+    <div name="section2f" class="slide dark"><!--Start Overlay-->
+    <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+    <div name="scroll" class="column fill caution-color"><!--Start Section Container-->
+    <h2 id="caution-title" class="mono">caution</h2><!--Heading-->
+    <h2 class="mono">Parts must not be released with incorrect or missing attributes.</h2><!--Heading-->
     </div>
-    <p>The lint-free cloth and IPA alcohol is used to cleanse the panel prior to Flame Treatment to ensure that all contaminants are removed. Ensure that you use the correct high purity (>95%), high concentration industrial IPA Alcohol.</p>
-    <h3>Let's move forward.</h3>
-    </div><!--End Left Column Container-->
-    <div class="column third cyan-dark mono btn" onclick="sectionTwoEnd()">move forward</div><!--Move forward - right column-->
+    <div class="column quarter purple-dark mono btn" onclick="sectionTwoEnd()">move forward</div><!--Close Button-->
     </div><!--End Columns Container-->
-    </div><!--End Learning Content Container-->
-    
-    <!--LEARNING CONTENT END-->
+    </div><!--End Content-->
     `
     ;
     // insert Html
     learningcontent.innerHTML = newcontent;
-    sectionname.innerHTML = section2; // Update with section name
+    sectionname.innerHTML = section2 + section2indicator; // Update with section name
     document.getElementById('i-step-back').setAttribute('onclick','sectionTwoe()'); // Update with previous content
     lastView(); // Update local storage with current page
     };
@@ -595,31 +662,28 @@ function startFrame(){
     //
     // ***********************************************************SECTION 2 END ******************************************************************************************
     function sectionTwoEnd(){
-    var newcontent =
-    `
-    <div name="section2end" class="slide light"><!--Start Overlay-->
-    <div id="section2end" class="columns success animate__animated animate__slideInDown"><!--Columns Container-->
-    <div class="column"><!--Start Section Container-->
-    <h2 class="mono">That's it for this section.</h2><!--Heading-->
-    <p class="mono">select next section to continue.</p>
-    </div><!--End Start Section -->
-    </div><!--End Columns Container-->
-    
-    </div><!--End Learning Content Container-->
-    
-    <!--LEARNING CONTENT END-->
-    `
-    ;
-    // insert Html
-    learningcontent.innerHTML = newcontent;
-    sectionname.innerHTML = section2; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionTwof()'); // Update with previous content
-    document.getElementById('i-forward').classList.remove('disabled-btn');
-    document.getElementById('i-forward').setAttribute('onclick', 'sectionThreea()');
-    lastView(); // Update local storage with current page
-    };
-    //**********************************************************************************************************************************************************
-    //
+      var newcontent =
+      `
+      <div name="section2end" class="slide dark">
+      <div class="columns success animate__animated animate__slideInUp"><!--Columns Container-->
+      <div class="column"><!--Start Section Container-->
+      <h2 class="mono">That's it for this section!</h2><!--Heading-->
+      <p class="mono">select next section to continue.</p>
+      </div><!--End Start Section -->
+      </div><!--End Columns Container-->
+      </div>
+      `
+      ;
+      // insert Html
+      learningcontent.innerHTML = newcontent;
+      sectionname.innerHTML = section2 + section2indicator; // Update with section name
+      document.getElementById('i-step-back').setAttribute('onclick','sectionTwof();noTextAnimate()'); // Update with previous content
+      document.getElementById('i-forward').classList.remove('disabled-btn');
+      document.getElementById('i-forward').setAttribute('onclick', 'sectionThree()');
+      lastView(); // Update local storage with current page
+      };
+      //**********************************************************************************************************************************************************
+      //
     // ***********************************************************SECTION 3 A ******************************************************************************************
     function sectionThreea(){
     var newcontent =
