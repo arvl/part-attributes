@@ -592,7 +592,7 @@ function startFrame(){
     // insert Html
     learningcontent.innerHTML = newcontent;
     sectionname.innerHTML = section2 + section2indicator; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionTwoc()'); // Update with previous content
+    document.getElementById('i-step-back').setAttribute('onclick','sectionTwoc();noTextAnimate()'); // Update with previous content
     lastView(); // Update local storage with current page
     };
     //**********************************************************************************************************************************************************
@@ -628,7 +628,7 @@ function startFrame(){
     // insert Html
     learningcontent.innerHTML = newcontent;
     sectionname.innerHTML = section2 + section2indicator; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionTwod()'); // Update with previous content
+    document.getElementById('i-step-back').setAttribute('onclick','sectionTwod();noTextAnimate()'); // Update with previous content
     lastView(); // Update local storage with current page
     };
     //**********************************************************************************************************************************************************
@@ -651,7 +651,7 @@ function startFrame(){
     // insert Html
     learningcontent.innerHTML = newcontent;
     sectionname.innerHTML = section2 + section2indicator; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionTwoe()'); // Update with previous content
+    document.getElementById('i-step-back').setAttribute('onclick','sectionTwoe();noTextAnimate()'); // Update with previous content
     lastView(); // Update local storage with current page
     };
     //**********************************************************************************************************************************************************
@@ -675,407 +675,430 @@ function startFrame(){
       sectionname.innerHTML = section2 + section2indicator; // Update with section name
       document.getElementById('i-step-back').setAttribute('onclick','sectionTwof();noTextAnimate()'); // Update with previous content
       document.getElementById('i-forward').classList.remove('disabled-btn');
-      document.getElementById('i-forward').setAttribute('onclick', 'sectionThree()');
+      document.getElementById('i-forward').setAttribute('onclick', 'sectionThreea();');
       lastView(); // Update local storage with current page
       };
       //**********************************************************************************************************************************************************
       //
-    // ***********************************************************SECTION 3 A ******************************************************************************************
-    function sectionThreea(){
+      // ***********************************************************SECTION 3 START - The Attributes ******************************************************************************************
+      function sectionThree(){
+        var newcontent =
+        `
+        <div name="section3start" class="slide dark">
+        <div class="columns blue-light animate__animated animate__slideInLeft"><!--Columns Container-->
+        <div class="column"><!--Start Section Container-->
+        <h2 class="mono">Section 3. </h2><!--Heading-->
+        <p class="mono">In this section we will introduce the critical part attributes that you will use when designing parts</p>
+        </div><!--End Start Section -->
+        </div><!--End Columns Container-->
+        </div>
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section3 + section3indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionTwoEnd()'); // Update with previous content
+        document.getElementById('i-forward').classList.remove('disabled-btn');
+        document.getElementById('i-forward').innerHTML = 'Begin';
+        document.getElementById('i-forward').setAttribute('onclick', 'sectionThreea()');
+        lastView(); // Update local storage with current page
+        };
+        //**********************************************************************************************************************************************************
+        //
+   // ***********************************************************SECTION 3 A - INTRODUCTION To Section 3 - the attributes******************************************************************************************
+   function sectionThreea(){
     var newcontent =
     `
-    <div name="section3a" class="slide purple-light animate__animated animate__slideInLeft"><!--Start Overlay-->
-    <div id="slide1" class="columns white"><!--Columns Container-->
-    <div class="column overflow-icon"><!--Start Section Container-->
-    <h1>Next Stage</h1><!--Heading-->
-    <h2>\ Flame Treatment</h2><!--Heading-->
-    <p>In the previous section we treated the surface of our composite panel ready for Flame Treatment.</p>
-    <p>Now it's time to carry out the Flame Treatment process.</p>
-    <br>
-    <h3>Move forward to begin.</h3>
-    </div>
-    <div class="column third blue mono btn" onclick="sectionThreeb();">move forward</div><!--Close Button-->
-    </div><!--End Columns Container-->
-    </div><!--End Slide Overlay-->
-    <!--LEARNING CONTENT END-->
-    `
-    ;
-    // insert Html
-    learningcontent.innerHTML = newcontent;
-    sectionname.innerHTML = section3; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionTwof()'); // Update with previous content
-    deactivateNext(); // De-activate Next Section Button
-    lastView(); // Update local storage with current page
-    };
-    //**********************************************************************************************************************************************************
-    //
-    // ***********************************************************SECTION 3 B ******************************************************************************************
-    function sectionThreeb(){
-    var newcontent =
-    `
-    <div name="section3b" class="slide purple-light"><!--Start Overlay-->
-    <div id="slide1" class="columns fill light animate__animated animate__slideInRight"><!--Columns Container-->
-    <div id="flame-content" class="column half fixed overflow-icon"><!--Blow torch container-->
-    <h1 id="flame-h1">Ready to begin?</h1>
-    <h2 id="flame-h2">Let's ignite our burner.</h2>
-    <img id="flame" src="Media/flame1.png">
-    <img id="torch" src="Media/Propane torch.png"/>
-    </div><!--End Blow torch container-->
-    <div id="ignite-flame" class="column quarter fixed blue mono btn" onclick="igniteFlame()"><h2 class="mono">--> Ignite</h2></div><!--Ignite Button-->
-    <span id="range">0</span>
-    <div id="adjust-flame" class="column quarter fixed dark mono hide"><!--Adjust flame container-->
-    <div id="flame-correct" class="row fifty hide btn blue" onclick="sectionThreec()"><!--Row - Move forward when correct button-->
-    move forward
-    </div><!--End Row - Move forward when correct button-->
-    <div id="flame-not-correct" class="row fifty"><!--Row - Move forward placeholder when incorrect-->
-    &nbsp;
-    </div><!--End Row - move forward placeholder when incorrect-->
-    <div class="row fifty"><!--Row - Flame slider row-->
-    <div class="flame-range">
-    <h2 class="mono">flame&nbsp;</h2>
-    <input id="valR" type="range" min="1" max="12" value="1" step="1" oninput="showVal(this.value)" onchange="showVal(this.value)" />
-    </div>
-    </div><!--End Row - Flame slider row-->
-    </div><!--End Adjust flame container-->
-    
-    </div><!--End Columns Container-->
-    
-    </div><!--End Content-->
-    
-    <!--LEARNING CONTENT END-->
-    `
-    ;
-    // insert Html
-    learningcontent.innerHTML = newcontent;
-    sectionname.innerHTML = section3; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionThreea()'); // Update with previous content
-    lastView(); // Update local storage with current page
-    };
-    //**********************************************************************************************************************************************************
-    //
-    // ***********************************************************SECTION 3 B FLAME ADJUST ******************************************************************************************
-    // Section 3b Flame
-    function igniteFlame(){
-    document.getElementById('flame').style.opacity = '1';// Show flame
-    document.getElementById('adjust-flame').classList.remove('hide');// Show adjust flame section
-    document.getElementById('ignite-flame').classList.add('hide');// Hide ignite flame section
-    document.getElementById('flame-h1').innerHTML = 'Is the flame correct?';// Update text
-    document.getElementById('flame-h2').innerHTML = 'Adjust the flame';// Update text
-    }
-    function showVal(newVal){
-    var path = 'Media/';
-    var val = document.getElementById("valR").value;
-    document.getElementById("range").innerHTML=val;
-    document.getElementById("flame").src = path + val + ".png";
-    document.getElementById("range").innerHTML=newVal;
-    document.getElementById("flame").src = path + newVal + ".png";
-    // If slider is above 11...
-    if(val > 11){document.getElementById('flame-content').classList.add('success');
-    document.getElementById('flame').classList.add('flame-complete');
-    document.getElementById('flame-not-correct').classList.add('hide');
-    document.getElementById('flame-correct').classList.remove('hide');
-    document.getElementById('adjust-flame').classList.add('blue');
-    document.getElementById('flame-h1').innerHTML = 'Great!';
-    document.getElementById('flame-h2').innerHTML = 'The flame is set.';
-    }
-    // If slider is below 11...
-    if(val < 11){document.getElementById('flame-content').classList.remove('success');
-    document.getElementById('flame').classList.remove('flame-complete');
-    document.getElementById('flame-not-correct').classList.remove('hide');
-    document.getElementById('flame-correct').classList.add('hide');
-    document.getElementById('adjust-flame').classList.remove('blue');
-    document.getElementById('flame-h1').innerHTML = 'Is the flame correct?';
-    document.getElementById('flame-h2').innerHTML = 'Adjust the flame';
-    }
-    }
-    //**********************************************************************************************************************************************************
-    //
-    // ***********************************************************SECTION 3 C ******************************************************************************************
-    function sectionThreec(){
-    var newcontent =
-    `
-    <div name="section3c" class="slide purple-light"><!--Start Overlay-->
+    <div name="section3a" class="slide dark"><!--Start Overlay-->
     <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
-    <div name="scroll" class="column fill caution-color"><!--Start Section Container-->
-    <h2 id="caution-title" class="mono">caution</h2><!--Heading-->
-    <h2 class="mono">Shield any sensitive areas from the flame</h2><!--Heading-->
-    <p class="mono">E.g. electronics</p>
+    <div class="reverse">
+    <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+    <h2 class="mono lower">
+    <span name="animated-text" class="type-text" style="--n:181">
+    Part attributes are metadata attached to each part. At Arrival we have defined a list of attributes that are considered critical to the operation of our business.
+    </span>
+    </h2>
+    <h2 class="mono lower">
+    <span name="animated-text" class="type-text" style="--n:125;animation-delay:14s;">
+    As a Design Engineer, you must ensure that every part that you design has the correct attributes applied.
+    </span>
+    </h2>
     </div>
-    <div class="column quarter purple-dark mono btn" onclick="sectionThreed()">move forward</div><!--Close Button-->
+    <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+    <video autoplay playsinline muted src="Media/Attributes-intro-1.mp4"></video>
+    </div>
+    </div>
+    <div class="column mini blue-light mono btn" onclick="sectionThreeb()">move forward</div><!--Close Button-->
     </div><!--End Columns Container-->
-    
     </div><!--End Content-->
-    
-    <!--LEARNING CONTENT END-->
     `
     ;
     // insert Html
     learningcontent.innerHTML = newcontent;
-    sectionname.innerHTML = section3; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionThreeb()'); // Update with previous content
+    sectionname.innerHTML = section3 + section3indicator; // Update with section name
+    stepback.setAttribute('onclick','sectionThree()'); // Update with previous content
+    document.getElementById('i-forward').innerHTML = 'Next Section';
+    deactivateNext();
     lastView(); // Update local storage with current page
     };
     //**********************************************************************************************************************************************************
     //
-    // ***********************************************************SECTION 3 D ******************************************************************************************
+   // ***********************************************************SECTION 3 B - INTRODUCTION To Section 3 - the attributes******************************************************************************************
+   function sectionThreeb(){
+    var newcontent =
+    `
+    <div name="section3b" class="slide dark"><!--Start Overlay-->
+    <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
+    <div class="reverse overflow-icon">
+    <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+    <h2 class="mono lower">
+    <span name="animated-text" class="type-text" style="--n:140;animation-delay:3s;">
+    Each part that you design may have a different requirement for the set of attributes that should be entered on the part.
+    </span>
+    </h2>
+    <h2 class="mono lower">
+    <span name="animated-text" class="type-text" style="--n:266;animation-delay:11s;">
+    In this section we will introduce the critical part attributes that you will use when designing parts. We will also explain how you can locate the most recent master list of attributes to ensure that you are always up-to-date.
+    </span>
+    </h2>
+    </div>
+    <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+    <video autoplay playsinline muted src="Media/Attributes-intro-5.mp4"></video>
+    </div>
+    </div>
+    <div class="column mini blue-light mono btn" onclick="sectionThreec()">move forward</div><!--Close Button-->
+    </div><!--End Columns Container-->
+    </div><!--End Content-->
+    `
+    ;
+    // insert Html
+    learningcontent.innerHTML = newcontent;
+    sectionname.innerHTML = section3 + section3indicator; // Update with section name
+    stepback.setAttribute('onclick','sectionThreea();noTextAnimate()'); // Update with previous content
+    lastView(); // Update local storage with current page
+    };
+    //**********************************************************************************************************************************************************
+    //
+  // ***********************************************************SECTION 3 C - INTRODUCTION To Section 3 - the attributes ******************************************************************************************
+   function sectionThreec(){
+    var newcontent =
+    `
+    <div name="section3c" class="slide dark"><!--Start Overlay-->
+    <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
+    <div class="reverse overflow-icon">
+    <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+    <h2 class="mono lower">
+    <span name="animated-text" class="type-text" style="--n:83;animation-delay:3s;">
+    You should select each attribute, in any order that you prefer.
+    </span>
+    </h2>
+    <h2 class="mono lower">
+    <span name="animated-text" class="type-text" style="--n:230;animation-delay:8s;">
+    A link to the Arrival Wiki is provided after selecting each attribute. You should use the Wiki as the source of truth. Selecting the link will open Wiki in a new window (this Module will remain open).
+    </span>
+    </h2>
+    </div>
+    <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+    <video autoplay playsinline muted src="Media/Attributes-section1-2.mp4"></video>
+    </div>
+    </div>
+    <div class="column mini blue-light mono btn" onclick="sectionThreed()">move forward</div><!--Close Button-->
+    </div><!--End Columns Container-->
+    </div><!--End Content-->
+    `
+    ;
+    // insert Html
+    learningcontent.innerHTML = newcontent;
+    sectionname.innerHTML = section3 + section3indicator; // Update with section name
+    stepback.setAttribute('onclick','sectionThreeb();noTextAnimate()'); // Update with previous content
+    lastView(); // Update local storage with current page
+    };
+    //**********************************************************************************************************************************************************
+    //
+    // ***********************************************************SECTION 3 D - THE ATTRIBUTES!!!! ******************************************************************************************
+    function attrVisited(val){ // Set local storage key when attribute visited
+    localStorage.setItem(val+':Visited',true);
+    document.getElementById(val).classList.add('indicator');
+    lastView(); // Update last view
+    }
+    function checkAttrVisited(){ // Check local storage key and update card with indicator
+    if ("attr-part-type:Visited" in localStorage) {document.getElementById('attr-part-type').classList.add('indicator')};
+    if ("attr-sourcing-category:Visited" in localStorage) {document.getElementById('attr-sourcing-category').classList.add('indicator')};
+    if ("attr-development-strategy:Visited" in localStorage) {document.getElementById('attr-development-strategy').classList.add('indicator')};
+    if ("attr-characteristic:Visited" in localStorage) {document.getElementById('attr-characteristic').classList.add('indicator')};
+    if ("attr-traceability:Visited" in localStorage) {document.getElementById('attr-traceability').classList.add('indicator')};
+    if ("attr-requires-power:Visited" in localStorage) {document.getElementById('attr-requires-power').classList.add('indicator')};
+    if ("attr-supplier-name:Visited" in localStorage) {document.getElementById('attr-supplier-name').classList.add('indicator')};
+    if ("attr-supplier-part-number:Visited" in localStorage) {document.getElementById('attr-supplier-part-number').classList.add('indicator')};
+    if ("attr-material:Visited" in localStorage) {document.getElementById('attr-material').classList.add('indicator')};
+    if ("attr-finish:Visited" in localStorage) {document.getElementById('attr-finish').classList.add('indicator')};
+    if ("attr-colour:Visited" in localStorage) {document.getElementById('attr-colour').classList.add('indicator')};
+    if ("attr-colour-sensitive:Visited" in localStorage) {document.getElementById('attr-colour-sensitive').classList.add('indicator')};
+    if ("attr-measured-mass:Visited" in localStorage) {document.getElementById('attr-measured-mass').classList.add('indicator')};
+    }
+    function checkAttrCompleted(){
+    if ("attr-part-type:Visited" in localStorage 
+    && "attr-sourcing-category:Visited" in localStorage
+    && "attr-development-strategy:Visited" in localStorage
+    && "attr-characteristic:Visited" in localStorage
+    && "attr-traceability:Visited" in localStorage
+    && "attr-requires-power:Visited" in localStorage
+    && "attr-supplier-name:Visited" in localStorage
+    && "attr-supplier-part-number:Visited" in localStorage
+    && "attr-material:Visited" in localStorage
+    && "attr-finish:Visited" in localStorage
+    && "attr-colour:Visited" in localStorage
+    && "attr-colour-sensitive:Visited" in localStorage
+    && "attr-measured-mass:Visited" in localStorage
+    )
+    {document.getElementById('i-forward').classList.remove('disabled-btn');document.getElementById('i-forward').setAttribute('onclick', 'sectionFour();');lastView();}
+   }
+
     function sectionThreed(){
     var newcontent =
     `
-    <div id="section3d" name="section3d" class="slide purple-light"><!--Start Overlay-->
-    <div id="move" class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
-    <div name="scroll" class="column fill light"><!--Start Section Container-->
-    <div style="width:100%;height:100%;position:relative;">
-    <h1>Let's get started!</h1>
-    <div id="bad">
-    <div id="good">
-    <div id="close"></div>
-    <img name="composite-panel" id="panel" src="Media/panel-flat.svg">
-    </div>
-    </div>
-    <img id="torch-with-flame" src="Media/torch-with-flame.svg">
-    </div>
-    </div>
-    <div id="move-burner" class="column third dark mono"><h2 class="mono">Move the flame to the panel</h2></div><!--Close Button-->
-    <div id="move-forward" class="column third success mono btn hide" onclick="document.getElementById('move').classList.add('hide');document.getElementById('flame-important').classList.remove('hide');">move forward
+    <div name="section3d" class="slide dark">
+    <div class="columns animate__animated animate__slideInRight"><!--Columns Container-->
+    <div class="column fill white overflow"><!--Section Cards Container-->
+    <div class="row wrap"><!--First row of cards-->
+    <span id="attr-part-type" class="card small btn light" onclick="parttype.showModal();attrVisited(this.id);"><p class="mono">Part Type</p></span>
+    <span id="attr-sourcing-category" class="card small btn light" onclick="sourcingcategory.showModal();attrVisited(this.id);"><p class="mono">Sourcing Category</p></span>
+    <span id="attr-development-strategy" class="card small btn light" onclick="developmentstrategy.showModal();attrVisited(this.id);"><p class="mono">Development Strategy</p></span>
+    <span id="attr-characteristic" class="card small btn light" onclick="characteristic.showModal();attrVisited(this.id);"><p class="mono">Characteristic</p></span>
+    <span id="attr-traceability" class="card small btn light" onclick="traceability.showModal();attrVisited(this.id);"><p class="mono">Traceability Requirement</p></span>
+    </div><!--End First row of cards-->
+    <div class="row wrap"><!--Second row of cards-->
+    <span id="attr-requires-power" class="card small btn light" onclick="requirespower.showModal();attrVisited(this.id);"><p class="mono">Requires Electrical Power</p></span><!--Section-->
+    <span id="attr-supplier-name" class="card small btn light" onclick="suppliername.showModal();attrVisited(this.id);"><p class="mono">Supplier Name</p></span><!--Section-->
+    <span id="attr-supplier-part-number" class="card small btn light"onclick="supplierpartnumber.showModal();attrVisited(this.id);"><p class="mono">Supplier Part Number</p></span><!--Section-->
+    <span id="attr-material" class="card small btn light"onclick="material.showModal();attrVisited(this.id);"><p class="mono">Material</p></span><!--Section-->
+    <span id="attr-finish" class="card small btn light"onclick="finish.showModal();attrVisited(this.id);"><p class="mono">Finish</p></span><!--Section-->
+    </div><!--End Second row of cards-->
+    <div class="row wrap"><!--Third row of cards-->
+    <span id="attr-colour" class="card small btn light" onclick="colourattr.showModal();attrVisited(this.id);"><p class="mono">Colour</p></span><!--Section-->
+    <span id="attr-colour-sensitive" class="card small btn light" onclick="coloursensitive.showModal();attrVisited(this.id);"><p class="mono">Colour Sensitive</p></span><!--Section-->
+    <span id="attr-measured-mass" class="card small btn light"onclick="measuredmass.showModal();attrVisited(this.id);"><p class="mono">Measured Mass</p></span><!--Section-->
+    <span style="visibility:hidden" class="card small btn light"><p class="mono"></p></span><!--Section-->
+    <span style="visibility:hidden" class="card small btn light"><p class="mono"></p></span><!--Section-->
+    </div><!--End third row of cards-->
+    </div><!--End Section Cards Container-->
+    </div><!--End Columns Container-->
+    
+    <!--PART TYPE COMMODITY MODAL-->
+    <dialog class="attr-modal" id="parttype">
+    <button class="attr-modal-close" onclick="parttype.close();checkAttrCompleted();"></button>
+    <button class="button error sm-btn not-btn tag">Mandatory on creation</button>
+    <button class="button light sm-btn not-btn tag">Depends on:</button>
+    <button class="button dark sm-btn tag" onclick="sourcingcategory.showModal();">Sourcing Category</button>
+    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts#:~:text=Examples%20and%20Special%20Use%20Cases', '_blank').focus()">Exceptions and special use cases</button>
+    <h3>Part Type (Commodity)</h3>
+    <p>This attribute should be populated on all parts with the exception of those that have a Sourcing Category set to None. In this scenario, it is still acceptable for the part type to be populated however it is not mandated.</p>
+    <p>The attribute describes the type of part based on its type, raw materials and manufacturing process.</p>
+    <p>The value that you enter for the part type attribute is selected from a pre-populated list in Active Workspace.</p>
+    <p>Here are a few examples of values that could be selected for the part type attribute:
     <br>
     <br>
-    <h2 class="mono">Great!</h2>
-    </div><!--Close Button-->
-    </div><!--End Columns Container-->
-    
-    <div id="flame-important" class="columns white animate__animated animate__slideInRight hide"><!--Columns Container-->
-    <div id="caution-distance" name="scroll" class="column fill caution-color"><!--Start Section Container-->
-    <h2 id="caution-title" class="mono">caution</h2><!--Heading-->
-    <h2 class="mono">The distance of the flame from the panel is critical. The blue part of the flame should just touch the panel.</h2><!--Heading-->
+    - Aluminium Extrusions
+    <br>
+    - Adhesives
+    <br>
+    - Control Arms
+    <br>
+    - Partitions
+    <br>
+    - Tyre Mobility Kit
+    <br>
+    </p>
+    <p>There are some special cases and exceptions when using this attribute. You should regularly check if these exceptions and use cases apply to the part you are designing.</p>
+    </dialog>
+
+    <!--SOURCING CATEGORY MODAL-->
+    <dialog class="attr-modal" id="sourcingcategory">
+    <button class="attr-modal-close" onclick="sourcingcategory.close();checkAttrCompleted();"></button>
+    <button class="button error sm-btn not-btn tag">Mandatory on creation</button>
+    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts#:~:text=The%20values%20for%20Sourcing%20Category%20will%20depend%20upon%20the%20Tier%20of%20the%20supplier%3A', '_blank').focus()">Sourcing Category Supplier Tier Table</button>
+    <h3>Sourcing Category</h3>
+    <p>This attribute should be populated if a part needs a Purchase Order (PO) raised for it.</p>
+    <p>The value that you enter for this attribute will depend on the Tier of the supplier. For example, Tier 1 supplier, Tier 2 supplier.</p>
+    <p>The value that you enter for the part type attribute is selected from a pre-populated list in Active Workspace.</p>
+    <p>Here are a few examples of values that could be selected for the part type attribute:
+    <br>
+    <br>
+    - Purchased External
+    <br>
+    - Directly Sourced Component - Supplier
+    <br>
+    - None
+    <br>
+    </p>
+    <p>A part that has a sourcing category value of "none" would indicate that no PO is required for this part.</p>
+    </dialog>
+
+    <!--DEVELOPMENT STRATEGY MODAL-->
+    <dialog class="attr-modal" id="developmentstrategy">
+    <button class="attr-modal-close" onclick="developmentstrategy.close();checkAttrCompleted();"></button>
+    <button class="button light sm-btn not-btn tag">Depends on:</button>
+    <button class="button dark sm-btn tag" onclick="sourcingcategory.showModal();">Sourcing Category</button>
+    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts#:~:text=Definition-,1A,-%2D%20Arrival%20IP%20%7C%20Arrival', '_blank').focus()">Development Strategy Table</button>
+    <h3>Development Strategy</h3>
+    <p>The development strategy attribute identifies if a part is <strong>designed by Arrival</strong>, <strong>designed for Arrival</strong> or if it is an <strong>off-the-shelf</strong> part or component.</p>
+    <p>This attribute must be correctly populated on all parts except when the Sourcing Category is "None".</p>
+    </dialog>
+  
+    <!--CHARATERISTIC MODAL-->
+    <dialog class="attr-modal" id="characteristic">
+    <button class="attr-modal-close" onclick="characteristic.close();checkAttrCompleted();"></button>
+    <button class="button light sm-btn not-btn tag">Depends on:</button>
+    <button class="button dark sm-btn tag" onclick="sourcingcategory.showModal();">Sourcing Category</button>
+    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts#:~:text=Should%20be%20set%20on%20Purchased%20Parts.', '_blank').focus()">Notes for populating characteristic attribute</button>
+    <h3>Characteristic</h3>
+    <p>This attribute is used to identify if a failure of the part could contribute to a  safety, regulatory or performance issue.</p>
+    <p>A value for this attribute should be set on all purchased parts. The value is selected based on the severity score of the Design Failure Mode and Effect Analysis (DFMEA).</p>
+    <p>For example, a DFMEA severity score of 10 would equal a characteristic value of CC (Critical Characteristic).</p>
+    </dialog>
+
+    <!--TRACEABILITY MODAL-->
+    <dialog class="attr-modal" id="traceability">
+    <button class="attr-modal-close" onclick="traceability.close();checkAttrCompleted();"></button>
+    <button class="button light sm-btn not-btn tag">Depends on:</button>
+    <button class="button dark sm-btn tag" onclick="characteristic.showModal();">Characteristic</button>
+    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts#:~:text=Example-,Serial,-Individual%20serial%20numbers', '_blank').focus()">Traceability value guidance</button>
+    <h3>Traceability Requirement</h3>
+    <p>This attribute identifies parts that are to be scanned and recorded in a production environment allowing for full traceability of the part. For example in the event of a vehicle recall where it is necessary to identify vehicles with a specific part.</p>
+    <p>The value for the traceability requirement attribute depends largely on the characteristic attribute and the nature of the part.</p>
+    <p>Guidance for this value can be found in the Wiki.</p>
+    <p>ARRIVAL produced components should all have the traceability requirement attribute set as "Serial".</p>
+    </dialog>
+
+    <!--REQUIRES ELECTRICAL POWER MODAL-->
+    <dialog class="attr-modal" id="requirespower">
+    <button class="attr-modal-close" onclick="requirespower.close();checkAttrCompleted();"></button>
+    <button class="button light sm-btn not-btn tag">Depends on:</button>
+    <button class="button dark sm-btn tag" onclick="sourcingcategory.showModal();">Sourcing Category</button>
+    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
+    <h3>Requires Electrical Power</h3>
+    <p>The "requires electrical power" attribute is used to identify whether a part requires electrical power to be supplied.</p>
+    <p>The value for this attribute is a boolean yes or no. A value must be selected for all parts that have been identified as purchased parts in the Sourcing Category attribute.</p>
+    <p>Guidance for this value can be found in the Wiki.</p>
+    </dialog>
+
+    <!--SUPPLIER NAME MODAL-->
+    <dialog class="attr-modal" id="suppliername">
+    <button class="attr-modal-close" onclick="suppliername.close();checkAttrCompleted();"></button>
+    <button class="button light sm-btn not-btn tag">Depends on:</button>
+    <button class="button dark sm-btn tag" onclick="sourcingcategory.showModal();">Sourcing Category</button>
+    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
+    <h3>Supplier Name</h3>
+    <p>This attribute is used to specify the name of the part supplier. It must be populated for all custom parts that are created/manufactured by a supplier and all off-the-shelf parts.</p>
+    <p>The value for this attribute entered manually in free-text form. E.g there are no pre-populated values for this attribute.</p>
+    <p>Guidance for this value can be found in the Wiki.</p>
+    </dialog>
+
+    <!--SUPPLIER PART NUMBER MODAL-->
+    <dialog class="attr-modal" id="supplierpartnumber">
+    <button class="attr-modal-close" onclick="supplierpartnumber.close();checkAttrCompleted();"></button>
+    <button class="button light sm-btn not-btn tag">Depends on:</button>
+    <button class="button dark sm-btn tag" onclick="suppliername.showModal();">Supplier Name</button>
+    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
+    <h3>Supplier Part Number</h3>
+    <p>The supplier part number attribute is used in conjunction with the supplier name attribute. For all custom parts that are created/manufactured by a supplier and all off-the-shelf parts, a part number must be entered.</p>
+    <p>The value for this attribute entered manually in free-text form. E.g there are no pre-populated values.</p>
+    <p>Guidance for this value can be found in the Wiki.</p>
+    </dialog>
+
+    <!--MATERIAL MODAL-->
+    <dialog class="attr-modal" id="material">
+    <button class="attr-modal-close" onclick="material.close();checkAttrCompleted();"></button>
+    <button class="button error sm-btn not-btn tag">Set via Siemens NX</button>
+    <button class="button light sm-btn not-btn tag">Depends on:</button>
+    <button class="button dark sm-btn tag" onclick="developmentstrategy.showModal();">Development Strategy</button>
+    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
+    <h3>Material</h3>
+    <p>This attribute is used to specify the material that a part is made of. For all Arrival designed parts, the exact grade of material must always be specified.</p>
+    <p>Arrival designed parts are identified by the Development Strategy attribute.</p>
+    <p>Unlike other attribute values, the material attribute can only be set by Computer Aided Design (CAD) software. For example, Siemens NX. Material should be selected from the material library.</p>
+    <p>If you require a new material adding to the library, you can raise a helpdesk ticket.</p>
+    </dialog>
+
+    <!--FINISH MODAL-->
+    <dialog class="attr-modal" id="finish">
+    <button class="attr-modal-close" onclick="finish.close();checkAttrCompleted();"></button>
+    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
+    <h3>Finish</h3>
+    <p>This attribute is used to specify intended finish of the part.</p>
+    <p>The value that you enter for the finish attribute is selected from a pre-populated list in Active Workspace.</p>
+    <p>Here are a few examples of values that could be selected for the part type attribute:
+    <br>
+    <br>
+    - As Supplied
+    <br>
+    - Powder Coated
+    <br>
+    - Zinc Flake
+    <br>
+    </p>
+    </dialog>
+
+    <!--COLOUR MODAL-->
+    <dialog class="attr-modal" id="colourattr">
+    <button class="attr-modal-close" onclick="colourattr.close();checkAttrCompleted();"></button>
+    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
+    <h3>Colour</h3>
+    <p>The colour attribute provides a colour reference associated with the part.</p>
+    <p>The value for this attribute is a 3-digit code that represents a specific colour reference. The 3-digit code can be selected from a pre-populated list in Active Workspace.</p>
+    </dialog>
+
+    <!--COLOUR SENSITIVE MODAL-->
+    <dialog class="attr-modal" id="coloursensitive">
+    <button class="attr-modal-close" onclick="coloursensitive.close();checkAttrCompleted();"></button>
+    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
+    <h3>Colour Sensitive</h3>
+    <p>Specifies as “Yes” or “No” if the part is sensitive to different options of colours.</p>
+    </dialog>
+
+    <!--MEASURED MASS MODAL-->
+    <dialog class="attr-modal" id="measuredmass">
+    <button class="attr-modal-close" onclick="measuredmass.close();checkAttrCompleted();"></button>
+    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
+    <h3>Measured Mass</h3>
+    <p>This attribute is used to specify if there is a difference between the calculated mass of a part and the actual (measured) mass of a part.</p>
+    <p>Generally, mass is calculated from CAD using volume and density from the assigned material. If there is a discrepancy between the calculated mass and measured (using physical scales) mass, it can be specified by entering a value for this attribute.</p>
+    </dialog>
+
     </div>
-    <div class="column quarter purple-dark mono btn" onclick="document.getElementById('flame-important').classList.add('hide');document.getElementById('test-run').classList.remove('hide');">move forward</div><!--Close Button-->
-    </div><!--End Columns Container-->
-    
-    <div id="test-run" class="columns white animate__animated animate__slideInDown hide"><!--Columns Container-->
-    <div name="scroll" class="column fill black"><!--Start Section Container-->
-    <h2 class="mono">You must test your speed and distance on a non-critical area of the panel before proceeding to flame treat the bond path.</h2><!--Heading-->
-    </div>
-    <div class="column mini blue-light mono btn" onclick="sectionThreee()">move forward</div><!--Close Button-->
-    </div><!--End Columns Container-->
-    
-    </div><!--End Content-->
-    <!--LEARNING CONTENT END-->
     `
     ;
     // insert Html
     learningcontent.innerHTML = newcontent;
-    sectionname.innerHTML = section3; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionThreec()'); // Update with previous content
+    sectionname.innerHTML = section3 + section3indicator; // Update with section name
+    document.getElementById('i-step-back').setAttribute('onclick','sectionThreec();noTextAnimate()'); // Update with previous content
+    checkAttrVisited(); // Check local storage to see if attributes have been visted and add indicator to card
+    checkAttrCompleted();
     lastView(); // Update local storage with current page
     };
     //**********************************************************************************************************************************************************
     //
-    // ***********************************************************SECTION 3 D INTERACTION DRAG TORCH ******************************************************************************************
-    //Section 3 move flame to panel
-    $("body").on('DOMSubtreeModified', "#i-content", function() {
-    if($('#section3d').length){
-    //defines object as being draggable
-    $("#torch-with-flame").draggable();
-    $( "#bad" ).droppable({
-      tolerance: "touch"
-    });
-    $("#bad").droppable({
-    //defines what to do when object is dropped
-    over: function(event, ui) {
-    // add hover color to dropzone
-    $("#move-burner").addClass('caution-color');
-    $("#move-burner").html('<h2 class=\"mono\">the tip of the flame should be on the surface of the panel.<br><br>Approx. 3 inches away.</h2>');
-    },
-    out: function(event, ui) {
-    //remove class when object moves outside dropzone
-    $("#move-burner").removeClass('caution-color');
-    $("#move-burner").html('<h2 class=\"mono\">Move the flame to the panel</h2>');
-    }
-    });
-    $( "#panel" ).droppable({
-      tolerance: "touch"
-    });
-    $("#panel").droppable({
-    //defines what to do when object is dropped
-    over: function(event, ui) {
-    // add hover color to dropzone
-    $("#move-burner").removeClass('caution-color');
-    $("#move-burner").addClass('hide');
-    $("#move-forward").removeClass('hide');
-    },
-    out: function(event, ui) {
-    //remove class when object moves outside dropzone
-    $("#move-burner").removeClass('success');
-    $("#move-burner").removeClass('hide');
-    $("#move-burner").addClass('caution-color');
-    $("#move-forward").addClass('hide');
-    }
-    });
-    $( "#close" ).droppable({
-      tolerance: "touch"
-    });
-    $("#close").droppable({
-    //defines what to do when object is dropped
-    over: function(event, ui) {
-    // add hover color to dropzone
-    $("#move-burner").removeClass('success');
-    $("#move-burner").removeClass('hide');
-    $("#move-burner").addClass('error');
-    $("#move-burner").html('<h2 class=\"mono\">too close!</h2>');
-    $("#move-forward").addClass('hide');
-    },
-    out: function(event, ui) {
-    //remove class when object moves outside dropzone
-    $("#move-burner").removeClass('error');
-    $("#move-burner").html('<h2 class=\"mono\">the tip of the flame should be on the surface of the panel.<br><br>Approx. 3 inches away.</h2>');
-    $("#move-burner").addClass('hide');
-    $("#move-burner").addClass('success');
-    $("#move-forward").removeClass('hide');
-    }
-    });
-    }
-    });
-    //**********************************************************************************************************************************************************
-    //
-    // ***********************************************************SECTION 3 E ******************************************************************************************
-    function sectionThreee(){
+  // ***********************************************************SECTION 4 START - T....******************************************************************************************
+  function sectionFour(){
     var newcontent =
     `
-    <div name="section3e" class="container"><!--Learning Content Container-->
-    <div id="treatment" class="columns animate__animated animate__slideInUp" onclick="startFlametreat()"><!--Columns Container-->
-    
-    <div id="normal" class="column fill white mono overflow"><!--Right Video Column Container-->
-    <video id="flame-treat" playsinline muted src="Media/flame-treatment-torch.mp4"></video>
-    </div><!--End Right Video Column Container-->
-    
-    <button id="play" class="button media-action btn invisible" onclick="document.getElementById('flame-treat').play();"></button><!--re play button-->
-    
-    <div id="start-treatment" class="column quarter blue btn"><!--Start treatment button Container-->
-    <p id="start-text" class="mono">start</p>
-    <br>
-    <h2 id="process-text" class="mono">flame treat the panel</h2>
-    </div><!--End Start treatment button Container-->
-    
-    <div id="treatment-continue" class="column quarter success btn hide" onclick="document.getElementById('treatment').classList.add('hide');document.getElementById('flame-once').classList.remove('hide');"><!--Success move forward button container-->
-    <p class="mono">move forward</p>
-    <br>
-    <h2 class="mono">flame treatment complete</h2>
-    </div><!--End move forward button container-->
-    
-    </div><!--End Columns Container-->
-    
-    <div id="flame-once" class="columns white animate__animated animate__slideInRight hide"><!--Columns Container-->
-    <div name="scroll" class="column fill caution-color"><!--Start Section Container-->
-    <h2 id="caution-title" class="mono">caution</h2><!--Heading-->
-    <h2 class="mono">you can only apply flame treatment to an area once. If an error is made, the part must be recycled. Treated areas must not be touched and must be assembled within 24 hours.</h2><!--Heading-->
-    </div>
-    <div class="column quarter purple-dark mono btn" onclick="sectionThreef()">move forward</div><!--Close Button-->
-    </div><!--End Columns Container-->
-    
-    </div><!--End Learning Content Container-->
-    
-    <!--LEARNING CONTENT END-->
-    `
-    ;
-    // insert Html
-    learningcontent.innerHTML = newcontent;
-    sectionname.innerHTML = section3; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionThreed()'); // Update with previous content
-    lastView(); // Update local storage with current page
-    };
-    //**********************************************************************************************************************************************************
-    //
-    // ***********************************************************SECTION 3 E FLAME TREAT PANEL VIDEO ******************************************************************************************
-    // Section 3e flametreat video
-    function startFlametreat(){
-    var flameVideo = document.getElementById('flame-treat');
-    var treatmentContinue = document.getElementById('treatment-continue');
-    var startTreatment = document.getElementById('start-treatment');
-    var startText = document.getElementById('start-text');
-    var processText = document.getElementById('process-text');
-    var restart = document.getElementById('play');
-    flameVideo.play();
-    startTreatment.classList.remove('btn');
-    startTreatment.classList.add('blue-light');
-    startText.innerHTML = '&nbsp;';
-    processText.innerHTML = 'approx. 50cm per second';
-    flameVideo.addEventListener('ended', function () {
-    flameVideo.currentTime = 0;
-    restart.classList.remove('invisible');
-    startTreatment.classList.add('hide');
-    treatmentContinue.classList.remove('hide')
-    }, false);
-    };
-    //**********************************************************************************************************************************************************
-    //
-    // ***********************************************************SECTION 3 F ******************************************************************************************
-    function sectionThreef(){
-    var newcontent =
-    `
-    <div name="section3f" class="slide light"><!--Start Overlay-->
-    <div id="section3fslide1" class="columns light animate__animated animate__slideInRight"><!--Columns Container-->
-    <div class="column light overflow-icon"><!--Start Section Container-->
-    <h1>That's it!</h1><!--Heading-->
-    <h2>\ Flame Treatment</h2><!--Heading-->
-    <p>You have now been through the Flame Treatment process.</p>
-    <br>
-    <h3>Key things that you should remember:</h3>
-    <ul>
-    <li>Ensure you have all equipment before beginning the task</li>
-    <li>Equipment must be in serviceable condition</li>
-    <li>You must have enough supplies to complete the task e.g. propane, IPA alcohol, etc.</li>
-    <li>Inspect the composite panel prior to beginning the surface treatment</li>
-    <li>Thoroughly cleanse and wipe down the composite panel</li>
-    <li>Always wait 5 minutes for the IPA alcohol to flash off before starting Flame Treatment</li>
-    <li>Set the flame on the burner to a blue flame</li>
-    <li>The tip of the burner must be approximately 3 inches from the panel or so the tip of the blue flame makes contact with the surface of the panel</li>
-    <li>Pass the flame over the panel at approxiamtely 50cm per second</li>
-    <li>Practice speed and distance control on a non-critical area of the panel before attempting to treat the bond paths.</li>
-    <li>Pass the flame over the panel at approximately 50cm per second</li>
-    <li>A bond path can only be treated once, if an error is made, the part can no longer be used. Take care!</li>
-    </ul>
-    <p>You can find additional useful resources on the Arrival Wiki. Links to these resources are also provided in this Module.</p>
-    <h3>You can move forward to visit the resources.</h3>
-    </div>
-    <div class="column third purple-dark mono btn" onclick="sectionThreeEnd();">move forward</div><!--Close Button-->
-    </div><!--End Columns Container-->
-    
-    </div><!--End Slide Overlay-->
-    
-    <!--LEARNING CONTENT END-->
-    `
-    ;
-    // insert Html
-    learningcontent.innerHTML = newcontent;
-    sectionname.innerHTML = section3; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionThreee()'); // Update with previous content
-    lastView(); // Update local storage with current page
-    };
-    //**********************************************************************************************************************************************************
-    //
-    // ***********************************************************SECTION 3 END ******************************************************************************************
-    function sectionThreeEnd(){
-    var newcontent =
-    `
-    <div name="section3end" class="slide light"><!--Start Overlay-->
-    <div id="section3end" class="columns success animate__animated animate__slideInDown"><!--Columns Container-->
+    <div name="section4start" class="slide dark">
+    <div class="columns blue-light animate__animated animate__slideInDown"><!--Columns Container-->
     <div class="column"><!--Start Section Container-->
-    <h2 class="mono">That's it for this section.</h2><!--Heading-->
-    <p class="mono">continue to the resources or return to the topic to complete the quiz.</p>
+    <h2 class="mono">Section 4. </h2><!--Heading-->
+    <p class="mono">In this section we will take a look at some case studies to help us understand the downstream effects of missing or inaccurate part attributes.</p>
     </div><!--End Start Section -->
     </div><!--End Columns Container-->
-    
-    </div><!--End Learning Content Container-->
-    
-    <!--LEARNING CONTENT END-->
+    </div>
     `
     ;
     // insert Html
     learningcontent.innerHTML = newcontent;
-    sectionname.innerHTML = section3; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionThreef()'); // Update with previous content
+    sectionname.innerHTML = section4 + section4indicator; // Update with section name
+    document.getElementById('i-step-back').setAttribute('onclick','sectionThreed()'); // Update with previous content
     document.getElementById('i-forward').classList.remove('disabled-btn');
-    document.getElementById('i-forward').setAttribute('onclick', 'sectionFoura()');
+    document.getElementById('i-forward').innerHTML = 'Begin';
+    document.getElementById('i-forward').setAttribute('onclick', 'sectionThreed()');
     lastView(); // Update local storage with current page
     };
     //**********************************************************************************************************************************************************
