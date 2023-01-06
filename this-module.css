@@ -144,5 +144,12 @@ bottom:4px;
     .modal-wiki{
     width:100%;
     }
+    video.mobileopti{
+    width:100vw;
+    height:auto;
+    }
+    .column.fill.media-gray.vid{
+    padding:0;
+    }
  }
     
