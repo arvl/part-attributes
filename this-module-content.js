@@ -1124,7 +1124,7 @@ function startFrame(){
     </h2>
     </div>
     <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
-    <video autoplay playsinline muted src="Media/Test1.mp4"></video>
+    <video autoplay playsinline muted loop src="Media/Test1.mp4"></video>
     </div>
     </div>
     <div class="column mini blue-light mono btn" onclick="sectionThreed()">move forward</div><!--Close Button-->
