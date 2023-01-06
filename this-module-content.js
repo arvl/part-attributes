@@ -816,9 +816,9 @@ function startFrame(){
     //**********************************************************************************************************************************************************
     //
     // ***********************************************************SECTION 3 D - THE ATTRIBUTES!!!! ******************************************************************************************
-    function attrVisited(val){ // Set local storage key when attribute visited
-    localStorage.setItem(val+':Visited',true);
-    document.getElementById(val).classList.add('indicator');
+    function attrVisited(val){ // Function to set local storage key when attribute visited
+    localStorage.setItem(val+':Visited',true); // Val is the id of the card passed when user clicks the card
+    document.getElementById(val).classList.add('indicator'); // Indicator class adds visual icon to card so user knows he has viewed
     lastView(); // Update last view
     }
     function checkAttrVisited(){ // Check local storage key and update card with indicator
@@ -836,7 +836,7 @@ function startFrame(){
     if ("attr-colour-sensitive:Visited" in localStorage) {document.getElementById('attr-colour-sensitive').classList.add('indicator')};
     if ("attr-measured-mass:Visited" in localStorage) {document.getElementById('attr-measured-mass').classList.add('indicator')};
     }
-    function checkAttrCompleted(){
+    function checkAttrCompleted(){ // Function to check if all attributes have been viewed by the user by checking local storage keys
     if ("attr-part-type:Visited" in localStorage 
     && "attr-sourcing-category:Visited" in localStorage
     && "attr-development-strategy:Visited" in localStorage
@@ -851,6 +851,7 @@ function startFrame(){
     && "attr-colour-sensitive:Visited" in localStorage
     && "attr-measured-mass:Visited" in localStorage
     )
+    // If all keys are present, activbate next section button
     {document.getElementById('i-forward').classList.remove('disabled-btn');document.getElementById('i-forward').setAttribute('onclick', 'sectionFour();');lastView();}
    }
 
@@ -1098,13 +1099,49 @@ function startFrame(){
     document.getElementById('i-step-back').setAttribute('onclick','sectionThreed()'); // Update with previous content
     document.getElementById('i-forward').classList.remove('disabled-btn');
     document.getElementById('i-forward').innerHTML = 'Begin';
-    document.getElementById('i-forward').setAttribute('onclick', 'sectionThreed()');
+    document.getElementById('i-forward').setAttribute('onclick', 'sectionFoura()');
+    lastView(); // Update local storage with current page
+    };
+    //**********************************************************************************************************************************************************
+    //
+     // ***********************************************************SECTION 4 A - ..... ******************************************************************************************
+   function sectionFoura(){
+    var newcontent =
+    `
+    <div name="section4a" class="slide dark"><!--Start Overlay-->
+    <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
+    <div class="reverse overflow-icon">
+    <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+    <h2 class="mono lower">
+    <span name="animated-text" class="type-text" style="--n:83;animation-delay:3s;">
+    You should select each attribute, in any order that you prefer.
+    </span>
+    </h2>
+    <h2 class="mono lower">
+    <span name="animated-text" class="type-text" style="--n:230;animation-delay:8s;">
+    A link to the Arrival Wiki is provided after selecting each attribute. You should use the Wiki as the source of truth. Selecting the link will open Wiki in a new window (this Module will remain open).
+    </span>
+    </h2>
+    </div>
+    <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+    <video autoplay playsinline muted src="Media/Test1.mp4"></video>
+    </div>
+    </div>
+    <div class="column mini blue-light mono btn" onclick="sectionThreed()">move forward</div><!--Close Button-->
+    </div><!--End Columns Container-->
+    </div><!--End Content-->
+    `
+    ;
+    // insert Html
+    learningcontent.innerHTML = newcontent;
+    sectionname.innerHTML = section3 + section3indicator; // Update with section name
+    stepback.setAttribute('onclick','sectionThreeb();noTextAnimate()'); // Update with previous content
     lastView(); // Update local storage with current page
     };
     //**********************************************************************************************************************************************************
     //
     // ***********************************************************SECTION 4 A ******************************************************************************************
-    function sectionFoura(){
+    function sectionFourah(){
     var newcontent =
     `
     <div name="section3e" class="container"><!--Learning Content Container-->
