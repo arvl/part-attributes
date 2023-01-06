@@ -1110,7 +1110,7 @@ function startFrame(){
     `
     <div name="section4a" class="slide dark"><!--Start Overlay-->
     <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
-    <div class="reverse overflow-icon">
+    <div class="reverse">
     <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
     <h2 class="mono lower">
     <span name="animated-text" class="type-text" style="--n:83;animation-delay:3s;">
