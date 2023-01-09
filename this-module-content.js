@@ -1810,7 +1810,7 @@ lastView(); // Update local storage with current page
         <video class="mobileopti" autoplay playsinline muted loop src="Media/New-part3.mp4"></video>
         </div>
         </div>
-        <div class="column mini blue-light mono btn" onclick="sectionFivea()">move forward</div><!--Close Button-->
+        <div class="column mini blue-light mono btn" onclick="sectionFivea();noTextAnimate();">move forward</div><!--Close Button-->
         </div><!--End Columns Container-->
         </div><!--End Content-->
         `
