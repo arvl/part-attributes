@@ -1104,8 +1104,1089 @@ function startFrame(){
     };
     //**********************************************************************************************************************************************************
     //
-     // ***********************************************************SECTION 4 A - ..... ******************************************************************************************
-   function sectionFoura(){
+    // ***********************************************************SECTION 4 A ******************************************************************************************
+    function sectionFoura(){
+      var newcontent =
+      `
+      <div name="section4a" class="slide dark"><!--Start Overlay-->
+      <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
+      <div class="reverse overflow-icon">
+      <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+      <h2 class="mono lower">
+      <span name="animated-text" class="type-text" style="--n:212;animation-delay:8s;">
+      As a Design Engineer you will accurately populate the necessary part attributes on the parts that you design. But why? What is the effect if some of those attributes are missing or inaccurate?
+      </span>
+      </h2>
+      </div>
+      <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+      <video autoplay playsinline muted src="Media/Attributes-section1-2.mp4"></video>
+      </div>
+      </div>
+      <div class="column mini blue-light mono btn" onclick="sectionFourb()">move forward</div><!--Close Button-->
+      </div><!--End Columns Container-->
+      </div><!--End Content-->
+      `
+      ;
+      // insert Html
+      learningcontent.innerHTML = newcontent;
+      sectionname.innerHTML = section4 + section4indicator; // Update with section name
+      document.getElementById('i-step-back').setAttribute('onclick','sectionFour();'); // Update with previous content
+      document.getElementById('i-forward').innerHTML = 'Next Section';
+      deactivateNext(); // De-activate next section Button
+      lastView(); // Update local storage with current page
+      };
+      //**********************************************************************************************************************************************************
+      //
+      // ***********************************************************SECTION 4 B ******************************************************************************************
+      function sectionFourb(){
+        var newcontent =
+        `
+        <div name="section4b" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+        <div class="reverse overflow-icon">
+        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:160;animation-delay:8s;">
+        In this section we will take a look at a few examples to help us understand the downstream effects of missing or inaccurate part attributes.
+        </span>
+        </h2>
+        </div>
+        <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+        <video autoplay playsinline muted src="Media/Attributes-section1-2.mp4"></video>
+        </div>
+        </div>
+        <div class="column mini blue-light mono btn" onclick="sectionFourc()">move forward</div><!--Close Button-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section4 + section4indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFoura();'); // Update with previous content
+        lastView(); // Update local storage with current page
+        };
+        //**********************************************************************************************************************************************************
+        //
+
+          // ***********************************************************SECTION 4 C ******************************************************************************************
+          function sectionFourc(){
+            var newcontent =
+            `
+            <div name="section4c" class="slide dark"><!--Start Overlay-->
+            <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
+            <div class="reverse overflow-icon">
+            <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+            <h2 class="mono lower">
+            <span name="animated-text" class="type-text" style="--n:137;animation-delay:8s;">
+            You will be presented with some example cases. For each case you should select the most likely effect or consequence.
+            </span>
+            </h2>
+            <h2 class="mono lower">
+            <span name="animated-text" class="type-text" style="--n:185;animation-delay:12s;">
+            Don't worry if you select the wrong response. This is not a test. Each response that you select will provide some feedback and you can always make another selection!
+            </span>
+            </h2>
+            </div>
+            <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+            <video autoplay playsinline muted src="Media/Attributes-section1-2.mp4"></video>
+            </div>
+            </div>
+            <div class="column mini blue-light mono btn" onclick="sectionFourd()">move forward</div><!--Close Button-->
+            </div><!--End Columns Container-->
+            </div><!--End Content-->
+            `
+            ;
+            // insert Html
+            learningcontent.innerHTML = newcontent;
+            sectionname.innerHTML = section4 + section4indicator; // Update with section name
+            document.getElementById('i-step-back').setAttribute('onclick','sectionFourb();'); // Update with previous content
+            lastView(); // Update local storage with current page
+            };
+            //**********************************************************************************************************************************************************
+            //
+  // ***********************************************************SECTION 4 D First Checkpoint Question ******************************************************************************************
+   function sectionFourd(){
+      var newcontent =
+    `
+    <div name="section4d" class="slide dark"><!--Learning Content Container-->
+    <div class="columns drag animate__animated animate__slideInLeft"><!--Columns Container-->
+    <div id="cp" class="column third light"><!--Left (Desktop) Column Container-->
+    <p><strong>Case 1</strong></p>
+    <p>Can you identify the error in this assembly?</p>
+    <div class="row"><!--First row of cards-->
+    <span name="response" class="card small cp black btn" onclick="this.classList.add('cp-correct');document.getElementById('correct').classList.remove('hide');document.getElementById('option1').classList.remove('hide');document.getElementById('normal').classList.add('hide');document.getElementById('cp').classList.add('hide');document.getElementById('incorrect').classList.add('hide')"><!--Card-->
+    <p class="mono">Some child parts have a Sourcing Category of 'Purchased External'</p><!--Card mono title-->
+    </span><!--End Card-->
+    </div><!--End first row-->
+    <div class="row"><!--Second Row-->
+    <span name="response" class="card small cp black btn" onclick="this.classList.add('cp-incorrect');document.getElementById('incorrect').classList.remove('hide');document.getElementById('option2').classList.remove('hide');document.getElementById('normal').classList.add('hide');document.getElementById('cp').classList.add('hide');document.getElementById('cp-error-feedback').innerHTML = 'Consumables is a legitimate sourcing category for children of Purchased External parts. For example, fixings and bonding may be child parts of other components.'"><!--Card-->
+    <p class="mono">A child part has a Sourcing Category of 'Consumables'</p><!--Card mono title-->
+    </span><!--End Card-->
+    </div><!--End Second row-->
+    <div class="row"><!--Third Row-->
+    <span name="response" class="card small cp black btn" onclick="this.classList.add('cp-incorrect');document.getElementById('incorrect').classList.remove('hide');document.getElementById('option3').classList.remove('hide');document.getElementById('normal').classList.add('hide');document.getElementById('cp').classList.add('hide');document.getElementById('cp-error-feedback').innerHTML = 'A tier 1 part or assembly may be Purchased External. Some categories should not be used for tier 1 parts: NONE for example would mean the part could not be sourced!'"><!--Card-->
+    <p class="mono">The assembly has a Sourcing Category of 'Purchased External'</p><!--Card mono title-->
+    </span><!--End Card-->
+    </div><!--End Third row-->
+    </div><!--End Left (Desktop) Column Container-->
+    
+    <div id="option1" class="column half light hide" style="background-image:url('Media/Section4_Case1_option1.png');background-repeat:no-repeat;background-size:contain;background-position:center;"><!--Left (Desktop) Column Container-->
+    </div><!--End Left (Desktop) Column Container-->
+
+    <div id="option2" class="column half light hide" style="background-image:url('Media/Section4_Case1_option2.png');background-repeat:no-repeat;background-size:contain;background-position:center;"><!--Left (Desktop) Column Container-->
+    </div><!--End Left (Desktop) Column Container-->
+
+    <div id="option3" class="column half light hide" style="background-image:url('Media/Section4_Case1_option3.png');background-repeat:no-repeat;background-size:contain;background-position:center;"><!--Left (Desktop) Column Container-->
+    </div><!--End Left (Desktop) Column Container-->
+
+    <div id="normal" class="column fill dark mono" style="background-image:url('Media/Section4_Case1.png');background-repeat:no-repeat;background-size:contain;background-position:center;"><!--Right (Desktop) Column Container-->
+    </div><!--End Right (Desktop) Column Container-->
+    
+    <div id="incorrect" class="column fill error mono hide btn" onclick="this.classList.add('hide');document.getElementById('normal').classList.remove('hide');document.getElementById('option2').classList.add('hide');document.getElementById('option3').classList.add('hide');document.getElementById('cp').classList.remove('hide');"><!--Right (Desktop) Column Container-->
+    try again
+    <h2 class="mono">Incorrect</h2>
+    <h2 id="cp-error-feedback" class="mono"></h2>
+    </div><!--End Right (Desktop) Column Container-->
+    
+    <div id="correct" class="column fill success mono hide btn" onclick="sectionFoure()"><!--Right (Desktop) Column Container-->
+    move forward
+    <h2 class="mono">That's right!</h2>
+    <h2 class="mono">As the parent assembly is 'Purchased External', its child parts should not also have this sourcing category. This would potentially mean unneccesary purchase orders raised for parts already part of a purchased assembly.</h2>
+    </div><!--End Right (Desktop) Column Container-->
+    
+    
+    </div><!--End Columns Container-->
+    </div><!--End Learning Content Container-->
+    
+    <!--LEARNING CONTENT END-->
+    `
+    ;
+    // insert Html
+    learningcontent.innerHTML = newcontent;
+    sectionname.innerHTML = section4 + section4indicator; // Update with section name
+    document.getElementById('i-step-back').setAttribute('onclick','sectionFourd()'); // Update with previous content
+    lastView(); // Update local storage with current page
+    };
+    //**********************************************************************************************************************************************************
+    //
+  // ***********************************************************SECTION 4 E ******************************************************************************************
+  function groupAttr(){
+    const textcolumn = document.getElementById('sourcing-text');
+    const tiers = document.getElementById('tiers');
+    textcolumn.classList.add('hide');tiers.classList.remove('hide');
+
+    const selection = document.querySelectorAll('[name=selection]');
+    for (let i = 0; i < selection.length; i++) {
+    if(selection[i].classList.contains('success')){selection[i].classList.remove('success')}
+    };
+
+    const collection = document.querySelectorAll('[name=group]');
+    const notapplicable = document.getElementById('not-applicable');
+    for (let i = 0; i < collection.length; i++) {
+    if(collection[i].classList.contains('blue')){return false;}
+    else{collection[i].classList.toggle('blue');collection[i].classList.toggle('light');notapplicable.classList.add('light');notapplicable.classList.remove('blue');}}
+    };
+    function notGroupAttr(){
+      const selection = document.querySelectorAll('[name=selection]');
+      for (let i = 0; i < selection.length; i++) {
+      if(selection[i].classList.contains('success')){selection[i].classList.remove('success')}
+      };
+  
+      const collection1 = document.querySelectorAll('[name=group]');
+      const notapplicable = document.getElementById('not-applicable');
+      for (let i = 0; i < collection1.length; i++) {
+      if(collection1[i].classList.contains('blue')){collection1[i].classList.toggle('blue');collection1[i].classList.toggle('light');notapplicable.classList.remove('light');notapplicable.classList.add('blue');}
+      }
+      };
+  function sectionFoure(){
+    var newcontent =
+    `
+    <div name="section4e" class="slide dark"><!--Start Overlay-->
+    <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+    <div class="column third attr-selector white mono overflow-icon">
+    <p>Tier 1 (Purchased Assembly)</p>
+    <button name="selection" class="button dark sm-btn tag-attr" onclick="groupAttr();this.classList.toggle('success');">Purchased External</button>
+    <button name="selection" class="button dark sm-btn tag-attr" onclick="groupAttr();this.classList.toggle('success');">Purchased External - Composites</button>
+    <button name="selection" class="button dark sm-btn tag-attr" onclick="notGroupAttr();this.classList.toggle('success');">Purchased Internal - Technology</button>
+    <button name="selection" class="button dark sm-btn tag-attr" onclick="notGroupAttr();this.classList.toggle('success');">Consumables</button>
+    </div>
+    <div id="sourcing-text" class="column third attr-selector white mono overflow-icon" onclick="noTextAnimate()">
+    <h2 class="mono lower">
+    <span name="animated-text" class="type-text" style="--n:261;animation-delay:1s;">
+    Only certain Sourcing Categories should be applied to assemblies (tier 1 parts) and child parts (tier 2 and lower parts) respectively. Select each Tier 1 category to see which categories can be applied to its child parts.
+    </span>
+    </div>
+    <div id="tiers" class="column third attr-selector hide white mono overflow-icon">
+    <p>Tier 2 (Child/Sub-Assembly)</p>
+    <button name="group" class="button light sm-btn tag-attr not-btn">NONE</button>
+    <button name="group"class="button light sm-btn tag-attr not-btn">Directly sourced component - Supplier</button>
+    <button name="group"class="button light sm-btn tag-attr not-btn">Free issue to supplier</button>
+    <button name="group" class="button light sm-btn tag-attr not-btn">Consumables</button>
+    <button id="not-applicable" class="button light sm-btn tag-attr not-btn">N/A (No Child Parts)</button>
+    </div>
+    <div class="column mini blue-light mono btn" onclick="sectionFourf()">move forward</div><!--Close Button-->
+    </div><!--End Columns Container-->
+    </div><!--End Content-->
+    `
+    ;
+    // insert Html
+    learningcontent.innerHTML = newcontent;
+    sectionname.innerHTML = section4 + section4indicator; // Update with section name
+    document.getElementById('i-step-back').setAttribute('onclick','sectionFourd();'); // Update with previous content
+    lastView(); // Update local storage with current page
+    };
+    //**********************************************************************************************************************************************************
+    //
+// ***********************************************************SECTION 4 F Second Checkpoint Question ******************************************************************************************
+ function sectionFourf(){
+    var newcontent =
+  `
+  <div name="section4f" class="slide dark"><!--Learning Content Container-->
+  <div class="columns drag animate__animated animate__slideInDown"><!--Columns Container-->
+  <div class="column third light"><!--Left (Desktop) Column Container-->
+  <p><strong>Case 2</strong></p>
+  <p>According to the Development Strategy attribute, a part has been identified as off-the-shelf however the supplier attributes have not been entered correctly. What scenario is possible?</p>
+  <div class="row"><!--First row of cards-->
+  <span name="response" class="card small cp black btn" onclick="this.classList.add('cp-correct');document.getElementById('correct').classList.remove('hide');document.getElementById('normal').classList.add('hide');document.getElementById('cp-correct-feedback').innerHTML = 'It is possible that an incorrect part number could lead to the ordering of incorrect parts. It is also possible that parts may be ordered from the wrong supplier.';"><!--Card-->
+  <p class="mono">Incorrect parts ordered</p><!--Card mono title-->
+  </span><!--End Card-->
+  </div><!--End first row-->
+  <div class="row"><!--Second Row-->
+  <span name="response" class="card small cp black btn" onclick="this.classList.add('cp-correct');document.getElementById('correct').classList.remove('hide');document.getElementById('normal').classList.add('hide');document.getElementById('cp-correct-feedback').innerHTML = 'If more than one supplier provides the same part, the part could be ordered from the wrong supplier. It is also possible that an incorrect part number could lead to the ordering of incorrect parts.';"><!--Card-->
+  <p class="mono">Parts ordered from wrong supplier</p><!--Card mono title-->
+  </span><!--End Card-->
+  </div><!--End Second row-->
+  </div><!--End Left (Desktop) Column Container-->
+  
+  <div id="normal" class="column fill dark mono" style="background-image:url('Media/Checkpoint-bg.png');background-repeat:no-repeat;background-size:contain;background-position:center;"><!--Right (Desktop) Column Container-->
+  </div><!--End Right (Desktop) Column Container-->
+  
+  
+  <div id="correct" class="column fill success mono hide btn" onclick="sectionFourg()"><!--Right (Desktop) Column Container-->
+  move forward
+  <h2 class="mono">That's right!</h2>
+  <h2 id="cp-correct-feedback" class="mono">It is strongly recommended to use Active Workspace to enter or update Attributes.</h2>
+  </div><!--End Right (Desktop) Column Container-->
+  
+  
+  </div><!--End Columns Container-->
+  </div><!--End Learning Content Container-->
+  
+  <!--LEARNING CONTENT END-->
+  `
+  ;
+  // insert Html
+  learningcontent.innerHTML = newcontent;
+  sectionname.innerHTML = section4 + section4indicator; // Update with section name
+  document.getElementById('i-step-back').setAttribute('onclick','sectionFoure();'); // Update with previous content
+  lastView(); // Update local storage with current page
+  };
+  //**********************************************************************************************************************************************************
+  //
+  // ***********************************************************SECTION 4 G Third Checkpoint Question ******************************************************************************************
+ function sectionFourg(){
+  var newcontent =
+`
+<div name="section4g" class="slide dark"><!--Learning Content Container-->
+<div class="columns drag animate__animated animate__slideInLeft"><!--Columns Container-->
+<div class="column third light"><!--Left (Desktop) Column Container-->
+<p><strong>Case 3</strong></p>
+<p>A vehicle recall has been issued but the affected part did not have the Traceability Requirement attribute populated when the part was released. What issue could this cause?</p>
+<div class="row"><!--First row of cards-->
+<span name="response" class="card small cp black btn" onclick="this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('normal').classList.add('hide');document.getElementById('cp-error-feedback').innerHTML = 'The Traceability Requirement attribute has no relationship with the finish of the part.';"><!--Card-->
+<p class="mono">Replacement parts ordered with incorrect 'finish'</p><!--Card mono title-->
+</span><!--End Card-->
+</div><!--End first row-->
+<div class="row"><!--Second Row-->
+<span name="response" class="card small cp black btn" onclick="this.classList.add('cp-correct');document.getElementById('correct').classList.remove('hide');document.getElementById('incorrect').classList.add('hide');document.getElementById('normal').classList.add('hide');"><!--Card-->
+<p class="mono">Unable to locate all affected parts</p><!--Card mono title-->
+</span><!--End Card-->
+</div><!--End Second row-->
+<div class="row"><!--Third Row-->
+<span name="response" class="card small cp black btn" onclick="this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('normal').classList.add('hide');document.getElementById('cp-error-feedback').innerHTML = 'The DFMEA would have been completed prior to production. The severity score is reflected in the Characteristic part attribute..';"><!--Card-->
+<p class="mono">Incorrect severity score calculated in DFMEA</p><!--Card mono title-->
+</span><!--End Card-->
+</div><!--End Third row-->
+</div><!--End Left (Desktop) Column Container-->
+
+<div id="normal" class="column fill dark mono" style="background-image:url('Media/Checkpoint-bg.png');background-repeat:no-repeat;background-size:contain;background-position:center;"><!--Right (Desktop) Column Container-->
+</div><!--End Right (Desktop) Column Container-->
+
+<div id="correct" class="column fill success mono hide btn" onclick="sectionFourh()"><!--Right (Desktop) Column Container-->
+move forward
+<h2 class="mono">That's right!</h2>
+<h2 class="mono">Without this attribute, it's possible that the part was not correctly recorded in a production environment. This would make it extremely challenging to locate vehicles with affected parts to satisfy the recall campaign.</h2>
+</div><!--End Right (Desktop) Column Container-->
+
+<div id="incorrect" class="column fill error mono hide"><!--Right (Desktop) Column Container-->
+try again
+<h2 class="mono">Incorrect</h2>
+<h2 id="cp-error-feedback" class="mono"></h2>
+</div><!--End Right (Desktop) Column Container-->
+
+</div><!--End Columns Container-->
+</div><!--End Learning Content Container-->
+
+<!--LEARNING CONTENT END-->
+`
+;
+// insert Html
+learningcontent.innerHTML = newcontent;
+sectionname.innerHTML = section4 + section4indicator; // Update with section name
+document.getElementById('i-step-back').setAttribute('onclick','sectionFourf();'); // Update with previous content
+lastView(); // Update local storage with current page
+};
+//**********************************************************************************************************************************************************
+//
+
+  // ***********************************************************SECTION 4 h Fourth Checkpoint Question ******************************************************************************************
+  function sectionFourh(){
+    var newcontent =
+  `
+  <div name="section4g" class="slide dark"><!--Learning Content Container-->
+  <div class="columns drag animate__animated animate__slideInRight"><!--Columns Container-->
+  <div class="column third light"><!--Left (Desktop) Column Container-->
+  <p><strong>Case 4</strong></p>
+  <p>A part has been designed but an incorrect material has been assigned. What effect could this have?</p>
+  <div class="row"><!--First row of cards-->
+  <span name="response" class="card small cp black btn" onclick="this.classList.add('cp-correct');document.getElementById('correct').classList.remove('hide');document.getElementById('incorrect').classList.add('hide');document.getElementById('normal').classList.add('hide');"><!--Card-->
+  <p class="mono">Incorrect mass calculation</p><!--Card mono title-->
+  </span><!--End Card-->
+  </div><!--End first row-->
+  <div class="row"><!--Second Row-->
+  <span name="response" class="card small cp black btn" onclick="this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('normal').classList.add('hide');document.getElementById('cp-error-feedback').innerHTML = 'Colour can be indicated using a 3 digit code on the colour part attribute. In this case, assigning an incorrect material would have no effect on the colour attribute.';"><!--Card-->
+  <p class="mono">Wrong colour of part ordered</p><!--Card mono title-->
+  </span><!--End Card-->
+  </div><!--End Second row-->
+  <div class="row"><!--Third Row-->
+  <span name="response" class="card small cp black btn" onclick="this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('normal').classList.add('hide');document.getElementById('cp-error-feedback').innerHTML = 'An incorrect material assignment would not prevent entering a value for the measured mass. Measured Mass is an attribute that is populated if there is a discrepancy between the calculated mass and measured (phyically weighted with scales) mass.';"><!--Card-->
+  <p class="mono">Inability to enter a measured mass</p><!--Card mono title-->
+  </span><!--End Card-->
+  </div><!--End Third row-->
+  </div><!--End Left (Desktop) Column Container-->
+  
+  <div id="normal" class="column fill dark mono" style="background-image:url('Media/Checkpoint-bg.png');background-repeat:no-repeat;background-size:contain;background-position:center;"><!--Right (Desktop) Column Container-->
+  </div><!--End Right (Desktop) Column Container-->
+  
+  <div id="correct" class="column fill success mono hide btn" onclick="sectionFouri()"><!--Right (Desktop) Column Container-->
+  move forward
+  <h2 class="mono">That's right!</h2>
+  <h2 class="mono">Mass is calculated using volume and density of the assigned material. If an incorrect material is assigned it is possible that the mass calculation will be inaccurate. This could lead to issues when, for example, analysing mass of total part in the BOM.</h2>
+  </div><!--End Right (Desktop) Column Container-->
+  
+  <div id="incorrect" class="column fill error mono hide"><!--Right (Desktop) Column Container-->
+  try again
+  <h2 class="mono">Incorrect</h2>
+  <h2 id="cp-error-feedback" class="mono"></h2>
+  </div><!--End Right (Desktop) Column Container-->
+  
+  </div><!--End Columns Container-->
+  </div><!--End Learning Content Container-->
+  
+  <!--LEARNING CONTENT END-->
+  `
+  ;
+  // insert Html
+  learningcontent.innerHTML = newcontent;
+  sectionname.innerHTML = section4 + section4indicator; // Update with section name
+  document.getElementById('i-step-back').setAttribute('onclick','sectionFourg();'); // Update with previous content
+  lastView(); // Update local storage with current page
+  };
+  //**********************************************************************************************************************************************************
+  //
+    // ***********************************************************SECTION 4 i ******************************************************************************************
+    function sectionFouri(){
+      var newcontent =
+      `
+      <div name="section4i" class="slide dark"><!--Start Overlay-->
+      <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
+      <div class="reverse overflow-icon">
+      <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+      <h2 class="mono lower">
+      <span name="animated-text" class="type-text" style="--n:172;animation-delay:8s;">
+      You have explored some of the effects and consequences of missing or incorrect part attributes. Small pieces of data can have a large impact downstream!
+      </span>
+      </h2>
+      <h2 class="mono lower">
+      <span name="animated-text" class="type-text" style="--n:302;animation-delay:15s;">
+      You can play a big role in ensuring Arrival has quality part data and help to avoid cases such as those we have explored in this section. Correctly populating and checking your part attributes will help Arrival to be more efficient and may help to avoid those unnecessary scenarios.
+      </span>
+      </h2>
+      </div>
+      <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+      <video autoplay playsinline muted src="Media/Attributes-section1-2.mp4"></video>
+      </div>
+      </div>
+      <div class="column mini blue-light mono btn" onclick="sectionFourEnd()">move forward</div><!--Close Button-->
+      </div><!--End Columns Container-->
+      </div><!--End Content-->
+      `
+      ;
+      // insert Html
+      learningcontent.innerHTML = newcontent;
+      sectionname.innerHTML = section4 + section4indicator; // Update with section name
+      document.getElementById('i-step-back').setAttribute('onclick','sectionFourh();'); // Update with previous content
+      lastView(); // Update local storage with current page
+      };
+      //**********************************************************************************************************************************************************
+      //
+    // ***********************************************************SECTION 1 END ******************************************************************************************
+    function sectionFourEnd(){
+      var newcontent =
+      `
+      <div name="section4end" class="slide dark">
+      <div class="columns success animate__animated animate__slideInUp"><!--Columns Container-->
+      <div class="column"><!--Start Section Container-->
+      <h2 class="mono">That's it for this section!</h2><!--Heading-->
+      <p class="mono">select next section to continue.</p>
+      </div><!--End Start Section -->
+      </div><!--End Columns Container-->
+      </div>
+      `
+      ;
+      // insert Html
+      learningcontent.innerHTML = newcontent;
+      sectionname.innerHTML = section1; // Update with section name
+      document.getElementById('i-step-back').setAttribute('onclick','sectionFouri();noTextAnimate()'); // Update with previous content
+      document.getElementById('i-forward').classList.remove('disabled-btn');
+      document.getElementById('i-forward').setAttribute('onclick', 'sectionFive()');
+      lastView(); // Update local storage with current page
+      };
+      //**********************************************************************************************************************************************************
+      //
+  // ***********************************************************SECTION 5 START - T....******************************************************************************************
+  function sectionFive(){
+    var newcontent =
+    `
+    <div name="section5start" class="slide dark">
+    <div class="columns blue-light animate__animated animate__slideInDown"><!--Columns Container-->
+    <div class="column"><!--Start Section Container-->
+    <h2 class="mono">Section 5. </h2><!--Heading-->
+    <p class="mono">In this section we will take a look at how to enter and update part attributes.</p>
+    </div><!--End Start Section -->
+    </div><!--End Columns Container-->
+    </div>
+    `
+    ;
+    // insert Html
+    learningcontent.innerHTML = newcontent;
+    sectionname.innerHTML = section5 + section5indicator; // Update with section name
+    document.getElementById('i-step-back').setAttribute('onclick','sectionFourEnd'); // Update with previous content
+    document.getElementById('i-forward').classList.remove('disabled-btn');
+    document.getElementById('i-forward').innerHTML = 'Begin';
+    document.getElementById('i-forward').setAttribute('onclick', 'sectionFiveStartCheckpoint()');
+    lastView(); // Update local storage with current page
+    };
+    //**********************************************************************************************************************************************************
+    //
+  // ***********************************************************SECTION 5 First Checkpoint Question ******************************************************************************************
+   function sectionFiveStartCheckpoint(){
+      var newcontent =
+    `
+    <div name="section5checkpointstart" class="slide dark"><!--Learning Content Container-->
+    <div class="columns drag animate__animated animate__slideInLeft"><!--Columns Container-->
+    <div class="column third light"><!--Left (Desktop) Column Container-->
+    <p>Why is is preferable to edit attributes in AWC compared to NX?</p>
+    <div class="row"><!--First row of cards-->
+    <span name="response" class="card small cp black btn" onclick="disableCpResponse();this.classList.add('cp-correct');document.getElementById('correct').classList.remove('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.add('hide')"><!--Card-->
+    <p class="mono">You can customise the view to show only relevant attributes</p><!--Card mono title-->
+    </span><!--End Card-->
+    <span name="response" class="card small cp black btn" onclick="disableCpResponse();this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('cp-error-feedback').innerHTML = 'It is the responsibility of the Design Engineer to ensure that attributes are correctly populated.'"><!--Card-->
+    <p class="mono">Attributes are pre-populated in AWC</p><!--Card mono title-->
+    </span><!--End Card-->
+    </div><!--End first row-->
+    <div class="row"><!--Second Row-->
+    <span name="response" class="card small cp black btn" onclick="disableCpResponse();this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('cp-error-feedback').innerHTML = 'It is possible to enter or update attributes in NX but it is not a method we promote.'"><!--Card-->
+    <p class="mono">Attribute fields are not formatted correctly in NX</p><!--Card mono title-->
+    </span><!--End Card-->
+    <span name="response" class="card small cp black btn" onclick="disableCpResponse();this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('cp-error-feedback').innerHTML = 'This is not the reason.'"><!--Card-->
+    <p class="mono">There is a built-in spellchecker in AWC</p><!--Card mono title-->
+    </span><!--End Card-->
+    </div><!--End Second row-->
+    </div><!--End Left (Desktop) Column Container-->
+    
+    <div id="normal" class="column fill dark mono" style="background-image:url('Media/Checkpoint-bg.png');background-repeat:no-repeat;background-size:contain;background-position:center;"><!--Right (Desktop) Column Container-->
+    </div><!--End Right (Desktop) Column Container-->
+    
+    <div id="incorrect" class="column fill error mono hide btn" onclick="sectionFivea()"><!--Right (Desktop) Column Container-->
+    move forward
+    <h2 class="mono">Incorrect</h2>
+    <h2 id="cp-error-feedback" class="mono"></h2>
+    </div><!--End Right (Desktop) Column Container-->
+    
+    <div id="correct" class="column fill success mono hide btn" onclick="sectionFiveSecondCheckpoint()"><!--Right (Desktop) Column Container-->
+    move forward
+    <h2 class="mono">That's right!</h2>
+    <h2 class="mono">AWC HAS MORE CUSTOMISATION OPTIONS FOR THE USER'S VIEW THAN NX. RATHER THAN VIEWING ALL ATTRIBUTES FOR EACH PART, YOU CAN DISPLAY JUST THOSE YOU NEED TO EDIT.</h2>
+    </div><!--End Right (Desktop) Column Container-->
+    
+    
+    </div><!--End Columns Container-->
+    </div><!--End Learning Content Container-->
+    
+    <!--LEARNING CONTENT END-->
+    `
+    ;
+    // insert Html
+    learningcontent.innerHTML = newcontent;
+    sectionname.innerHTML = section5 + section5indicator; // Update with section name
+    document.getElementById('i-step-back').setAttribute('onclick','sectionFiveSecondCheckpoint()'); // Update with previous content
+    document.getElementById('i-forward').innerHTML = 'Next Section';
+    deactivateNext(); //De-activate next section button
+    lastView(); // Update local storage with current page
+    };
+    //**********************************************************************************************************************************************************
+    //
+  // ***********************************************************SECTION 5 Second Checkpoint Question ******************************************************************************************
+  function secFivecorrectCpResponse(){
+    var correctresponseone = document.querySelector('[data-response="one"]');
+    var nextsection = document.getElementById('i-forward');
+    if (correctresponseone.classList.contains('cp-correct')){document.getElementById('normal').classList.add('hide');document.getElementById('correct').classList.remove('hide');nextsection.classList.remove('disabled-btn');}
+    }
+  function sectionFiveSecondCheckpoint(){
+      var newcontent =
+    `
+    <div name="section5checkpointstart" class="slide dark"><!--Learning Content Container-->
+    <div class="columns drag animate__animated animate__slideInRight"><!--Columns Container-->
+    <div class="column third light"><!--Left (Desktop) Column Container-->
+    <p>How do you copy one value to multiple parts in AWC?</p>
+    <div class="row"><!--First row of cards-->
+    <span name="response" data-response="one" class="card small cp black btn" onclick="this.classList.add('cp-correct');secFivecorrectCpResponse();disableCpResponse();"><!--Card-->
+    <p class="mono">Click the bottom-right corner of a cell and drag</p><!--Card mono title-->
+    </span><!--End Card-->
+    <span name="response" class="card small cp black btn" onclick="disableCpResponse();this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('cp-error-feedback').innerHTML = 'This is not correct response'"><!--Card-->
+    <p class="mono">It is not possible to set an attribute for multiple parts</p><!--Card mono title-->
+    </span><!--End Card-->
+    </div><!--End first row-->
+    <div class="row"><!--Second Row-->
+    <span name="response" class="card small cp black btn" onclick="disableCpResponse();this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('cp-error-feedback').innerHTML = 'This is not correct response'"><!--Card-->
+    <p class="mono">Select the 'Clone' tool and drag</p><!--Card mono title-->
+    </span><!--End Card-->
+    <span name="response" class="card small cp black btn" onclick="disableCpResponse();this.classList.add('cp-incorrect');document.getElementById('correct').classList.add('hide');document.getElementById('normal').classList.add('hide');document.getElementById('incorrect').classList.remove('hide');document.getElementById('cp-error-feedback').innerHTML = 'This is not correct response'"><!--Card-->
+    <p class="mono">Select the cell below and press Ctrl + M</p><!--Card mono title-->
+    </span><!--End Card-->
+    </div><!--End Second row-->
+    </div><!--End Left (Desktop) Column Container-->
+    
+    <div id="normal" class="column fill dark mono" style="background-image:url('Media/Checkpoint-bg.png');background-repeat:no-repeat;background-size:contain;background-position:center;"><!--Right (Desktop) Column Container-->
+    </div><!--End Right (Desktop) Column Container-->
+    
+    <div id="incorrect" class="column fill error mono hide btn" onclick="sectionFivea()"><!--Right (Desktop) Column Container-->
+    move forward
+    <h2 class="mono">Incorrect</h2>
+    <h2 id="cp-error-feedback" class="mono"></h2>
+    </div><!--End Right (Desktop) Column Container-->
+    
+    <div id="correct" class="column fill success mono hide btn" onclick="sectionFivea()"><!--Right (Desktop) Column Container-->
+    move forward
+    <h2 class="mono">That's right!</h2>
+    <h2 class="mono">IT APPEARS THAT YOU HAVE A GOOD KNOWLEDGE OF THIS SECTION!</h2>
+    <h2 class="mono">YOU CAN CONTINUE TO VIEW THIS SECTION BY CLICKING HERE OR MOVE TO THE NEXT USING THE BUTTON BELOW.</h2>
+    </div><!--End Right (Desktop) Column Container-->
+    
+    
+    </div><!--End Columns Container-->
+    </div><!--End Learning Content Container-->
+    
+    <!--LEARNING CONTENT END-->
+    `
+    ;
+    // insert Html
+    learningcontent.innerHTML = newcontent;
+    sectionname.innerHTML = section5 + section5indicator; // Update with section name
+    document.getElementById('i-step-back').setAttribute('onclick','sectionFiveStartCheckpoint()'); // Update with previous content
+    document.getElementById('i-forward').setAttribute('onclick', 'sectionSix()');
+    lastView(); // Update local storage with current page
+    };
+    //**********************************************************************************************************************************************************
+    //
+      // ***********************************************************SECTION 5 a ******************************************************************************************
+      function sectionFivea(){
+        var newcontent =
+        `
+        <div name="section5a" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
+        <div class="reverse overflow-icon">
+        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:182;animation-delay:1s;">
+        Parts can be created in CAD software, such as NX, or in AWC itself. Attributes may be added and modified in NX too, but as a task this should be performed in AWC.
+        </span>
+        </h2>
+        </div>
+        <div class="column mini purple-dark mono btn" onclick="sectionFiveai()">adding attributes on part creation</div><!--Adding Attributes-->
+        <div class="column mini blue-light mono btn" onclick="sectionFiveb()">updating attributes</div><!--Updating Attributes-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section5 + section5indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFive();'); // Update with previous content
+        lastView(); // Update local storage with current page
+        };
+        //**********************************************************************************************************************************************************
+        //
+      // ***********************************************************SECTION 5 a i - adding attributes path ******************************************************************************************
+      function sectionFiveai(){
+        var newcontent =
+        `
+        <div name="section5ai" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
+        <div class="reverse">
+        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:116;animation-delay:3s;">
+        Attributes can be applied to a part as it is created in AWC. Here, they are called 'Properties'.
+        </span>
+        </h2>
+        </div>
+        <div id="normal" class="column fill media-gray vid mono overflow"><!--Start Section Container-->
+        <video class="mobileopti" autoplay playsinline muted loop src="Media/New-part1.mp4"></video>
+        </div>
+        </div>
+        <div class="column mini blue-light mono btn" onclick="sectionFiveaii()">move forward</div><!--Close Button-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section5 + section5indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivea();'); // Update with previous content
+        lastView(); // Update local storage with current page
+        };
+        //**********************************************************************************************************************************************************
+        //
+      // ***********************************************************SECTION 5 a ii - adding attributes path ******************************************************************************************
+      function sectionFiveaii(){
+        var newcontent =
+        `
+        <div name="section5aii" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+        <div class="reverse">
+        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:139;animation-delay:3s;">
+        You are required to fill in some properties, such as a name, Part Type, or Sourcing Category, before a part is created.
+        </span>
+        </h2>
+        </div>
+        <div id="normal" class="column fill media-gray vid mono overflow"><!--Start Section Container-->
+        <video class="mobileopti" autoplay playsinline muted loop src="Media/New-part2.mp4"></video>
+        </div>
+        </div>
+        <div class="column mini blue-light mono btn" onclick="sectionFiveaiii()">move forward</div><!--Close Button-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section5 + section5indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFiveai();'); // Update with previous content
+        lastView(); // Update local storage with current page
+        };
+        //**********************************************************************************************************************************************************
+        //
+
+      // ***********************************************************SECTION 5 a iii - adding attributes path ******************************************************************************************
+      function sectionFiveaiii(){
+        var newcontent =
+        `
+        <div name="section5aiii" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
+        <div class="reverse">
+        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:167;animation-delay:3s;">
+        You may fill in all relevant properties at this stage. However, it may be easier to edit and compare the properties of multiple parts in tree view.
+        </span>
+        </h2>
+        </div>
+        <div id="normal" class="column fill media-gray vid mono overflow"><!--Start Section Container-->
+        <video class="mobileopti" autoplay playsinline muted loop src="Media/New-part3.mp4"></video>
+        </div>
+        </div>
+        <div class="column mini blue-light mono btn" onclick="sectionFivea()">move forward</div><!--Close Button-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section5 + section5indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFiveaii();'); // Update with previous content
+        lastView(); // Update local storage with current page
+        };
+        //**********************************************************************************************************************************************************
+        //
+
+      // ***********************************************************SECTION 5 a iv - adding attributes path ******************************************************************************************
+      function sectionFiveb(){
+        var newcontent =
+        `
+        <div name="section5b" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
+        <div class="reverse">
+        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:167;animation-delay:3s;">
+        Editing attributes in AWC is preferable for several reasons:
+        <br>
+        <br>
+        - The view may be customised to show only relevant fields
+        <br>
+        - You can see and compare attributes for different parts
+        <br>
+        -<br>Attributes can be applied to multiple parts at once
+        </span>
+        </h2>
+        </div>
+        <div id="normal" class="column fill media-gray vid mono overflow"><!--Start Section Container-->
+        <video class="mobileopti" autoplay playsinline muted loop src="Media/Test1.mp4"></video>
+        </div>
+        </div>
+        <div class="column mini blue-light mono btn" onclick="sectionFivebi()">move forward</div><!--Close Button-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section5 + section5indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivea();'); // Update with previous content
+        lastView(); // Update local storage with current page
+        };
+        //**********************************************************************************************************************************************************
+        //
+      // ***********************************************************SECTION 5 b i - adding attributes path ******************************************************************************************
+      function sectionFivebi(){
+        var newcontent =
+        `
+        <div name="section5bi" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+        <div class="reverse">
+        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:227;animation-delay:3s;">
+        There are a few different places where attributes can be edited, but we're going to focus on one -- the tree view.
+        <br>
+        <br>
+        This view enables you to see and edit attributes for multiple assemblies and parts in one go.
+        </span>
+        </h2>
+        </div>
+        <div id="normal" class="column fill media-gray vid mono overflow"><!--Start Section Container-->
+        <video class="mobileopti" autoplay playsinline muted loop src="Media/Test1.mp4"></video>
+        </div>
+        </div>
+        <div class="column mini blue-light mono btn" onclick="sectionFivebii()">move forward</div><!--Close Button-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section5 + section5indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFiveb();'); // Update with previous content
+        lastView(); // Update local storage with current page
+        };
+        //**********************************************************************************************************************************************************
+        //
+        function sectionFivebii(){
+          var newcontent =
+          `
+          <div name="section5bii" class="slide dark"><!--Start Overlay-->
+          <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
+          <div class="reverse">
+          <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+          <h2 class="mono lower">
+          <span name="animated-text" class="type-text" style="--n:102;animation-delay:3s;">
+          First, let's log in to AWC and navigate to the assembly or parts you need to edit.
+          </span>
+          </h2>
+          </div>
+          <div id="normal" class="column fill media-gray vid mono overflow"><!--Start Section Container-->
+          <video class="mobileopti" autoplay playsinline muted loop src="Media/How-to1.mp4"></video>
+          </div>
+          </div>
+          <div class="column mini blue-light mono btn" onclick="sectionFivebiii()">move forward</div><!--Close Button-->
+          </div><!--End Columns Container-->
+          </div><!--End Content-->
+          `
+          ;
+          // insert Html
+          learningcontent.innerHTML = newcontent;
+          sectionname.innerHTML = section5 + section5indicator; // Update with section name
+          document.getElementById('i-step-back').setAttribute('onclick','sectionFivebi();'); // Update with previous content
+          lastView(); // Update local storage with current page
+          };
+          //**********************************************************************************************************************************************************
+          //
+          function sectionFivebiii(){
+            var newcontent =
+            `
+            <div name="section5biii" class="slide dark"><!--Start Overlay-->
+            <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
+            <div class="reverse">
+            <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+            <h2 class="mono lower">
+            <span name="animated-text" class="type-text" style="--n:102;animation-delay:3s;">
+            Using Tree view enables you to see as many attribute columns as possible at once.
+            </span>
+            </h2>
+            </div>
+            <div id="normal" class="column fill media-gray vid mono overflow"><!--Start Section Container-->
+            <video class="mobileopti" autoplay playsinline muted loop src="Media/How-to2.mp4"></video>
+            </div>
+            </div>
+            <div class="column mini blue-light mono btn" onclick="sectionFivebiv()">move forward</div><!--Close Button-->
+            </div><!--End Columns Container-->
+            </div><!--End Content-->
+            `
+            ;
+            // insert Html
+            learningcontent.innerHTML = newcontent;
+            sectionname.innerHTML = section5 + section5indicator; // Update with section name
+            document.getElementById('i-step-back').setAttribute('onclick','sectionFivebii();'); // Update with previous content
+            lastView(); // Update local storage with current page
+            };
+            //**********************************************************************************************************************************************************
+            //
+      // ***********************************************************SECTION 5 b iv - adding attributes path ******************************************************************************************
+      function sectionFivebiv(){
+        var newcontent =
+        `
+        <div name="section5iv" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+        <div class="reverse">
+        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:172;animation-delay:3s;">
+        By selecting Arrange from the options at the top-right, you can choose just the columns relevant to you, as well as save that arrangement for later use.
+        </span>
+        </h2>
+        </div>
+        <div id="normal" class="column fill media-gray vid mono overflow"><!--Start Section Container-->
+        <video class="mobileopti" autoplay playsinline muted loop src="Media/How-to3.mp4"></video>
+        </div>
+        </div>
+        <div class="column mini blue-light mono btn" onclick="sectionFivebv()">move forward</div><!--Close Button-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section5 + section5indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebiii();'); // Update with previous content
+        lastView(); // Update local storage with current page
+        };
+        //**********************************************************************************************************************************************************
+        //
+      // ***********************************************************SECTION 5 b v - adding attributes path ******************************************************************************************
+      function sectionFivebv(){
+        var newcontent =
+        `
+        <div name="section5v" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
+        <div class="reverse">
+        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:160;animation-delay:3s;">
+        You can edit attribute fields by either double-clicking on an individual field, or by selecting the Edit button, which activates all fields.
+        </span>
+        </h2>
+        </div>
+        <div id="normal" class="column fill media-gray vid mono overflow"><!--Start Section Container-->
+        <video class="mobileopti" autoplay playsinline muted loop src="Media/How-to4.mp4"></video>
+        </div>
+        </div>
+        <div class="column mini blue-light mono btn" onclick="sectionFivebvi()">move forward</div><!--Close Button-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section5 + section5indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebiv();'); // Update with previous content
+        lastView(); // Update local storage with current page
+        };
+        //**********************************************************************************************************************************************************
+        //
+      // ***********************************************************SECTION 5 b vi - adding attributes path ******************************************************************************************
+      function sectionFivebvi(){
+        var newcontent =
+        `
+        <div name="section5vi" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
+        <div class="reverse">
+        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:245;animation-delay:3s;">
+        Each field is either free text entry, or a dropdown list.
+        <br>
+        <br>
+        Dropdown lists are searchable. Begin typing in the field to narrow down the list.
+        <br>
+        <br>
+        If you attempt to enter a value not available from a list, AWC will let you know that the value is invalid.
+        </span>
+        </h2>
+        </div>
+        <div id="normal" class="column fill media-gray vid mono overflow"><!--Start Section Container-->
+        <video class="mobileopti" autoplay playsinline muted loop src="Media/How-to5.mp4"></video>
+        </div>
+        </div>
+        <div class="column mini blue-light mono btn" onclick="sectionFivebvii()">move forward</div><!--Close Button-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section5 + section5indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebv();'); // Update with previous content
+        lastView(); // Update local storage with current page
+        };
+        //**********************************************************************************************************************************************************
+        //
+      // ***********************************************************SECTION 5 b vi - adding attributes path ******************************************************************************************
+      function sectionFivebvii(){
+        var newcontent =
+        `
+        <div name="section5vii" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+        <div class="reverse">
+        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:142;animation-delay:3s;">
+        Enter the correct value, then click away from the field to save the entry.
+        <br>
+        <br>
+        Repeat for the other attributes you need to set.
+        </span>
+        </h2>
+        </div>
+        <div id="normal" class="column fill media-gray vid mono overflow"><!--Start Section Container-->
+        <video class="mobileopti" autoplay playsinline muted loop src="Media/How-to6.mp4"></video>
+        </div>
+        </div>
+        <div class="column mini blue-light mono btn" onclick="sectionFivebviii()">move forward</div><!--Close Button-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section5 + section5indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebvi();'); // Update with previous content
+        lastView(); // Update local storage with current page
+        };
+        //**********************************************************************************************************************************************************
+        //
+      // ***********************************************************SECTION 5 b vi - adding attributes path ******************************************************************************************
+      function sectionFivebviii(){
+        var newcontent =
+        `
+        <div name="section5viii" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+        <div class="reverse">
+        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:180;animation-delay:3s;">
+        In some situations you may need to apply the same attribute to a number of parts. A series of child parts may all have the same Sourcing Category, for instance.
+        </span>
+        </h2>
+        </div>
+        <div id="normal" class="column fill media-gray vid mono overflow"><!--Start Section Container-->
+        <video class="mobileopti" autoplay playsinline muted loop src="Media/How-to7.mp4"></video>
+        </div>
+        </div>
+        <div class="column mini blue-light mono btn" onclick="sectionFivebix()">move forward</div><!--Close Button-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section5 + section5indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebvii();'); // Update with previous content
+        lastView(); // Update local storage with current page
+        };
+        //**********************************************************************************************************************************************************
+        //
+      // ***********************************************************SECTION 5 b vi - adding attributes path ******************************************************************************************
+      function sectionFivebix(){
+        var newcontent =
+        `
+        <div name="section5bix" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+        <div class="reverse">
+        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:272;animation-delay:3s;">
+        In this scenario, you may click on the small grey square at the bottom-right of the highlighted cell. Your cursor will become a crosshair. Click and drag to copy the attribute to the cells below it.
+        <br>
+        <br>
+        The entries will be saved when you release the cursor.
+        </span>
+        </h2>
+        </div>
+        <div id="normal" class="column fill media-gray vid mono overflow"><!--Start Section Container-->
+        <video class="mobileopti" autoplay playsinline muted loop src="Media/How-to8.mp4"></video>
+        </div>
+        </div>
+        <div class="column mini blue-light mono btn" onclick="sectionFivebx()">move forward</div><!--Close Button-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section5 + section5indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebviii();'); // Update with previous content
+        lastView(); // Update local storage with current page
+        };
+        //**********************************************************************************************************************************************************
+        //
+      // ***********************************************************SECTION 5 b vi - adding attributes path ******************************************************************************************
+      function sectionFivebx(){
+        var newcontent =
+        `
+        <div name="section5bx" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
+        <div class="reverse">
+        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:141;animation-delay:3s;">
+        Take care when copying elements like Sourcing Category, where the child parts may not have the same values as the parent.
+        </span>
+        </h2>
+        </div>
+        <div id="normal" class="column fill media-gray vid mono overflow"><!--Start Section Container-->
+        <video class="mobileopti" autoplay playsinline muted loop src="Media/How-to8.mp4"></video>
+        </div>
+        </div>
+        <div class="column mini blue-light mono btn" onclick="sectionFivebxi()">move forward</div><!--Close Button-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section5 + section5indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebvix();'); // Update with previous content
+        lastView(); // Update local storage with current page
+        };
+        //**********************************************************************************************************************************************************
+        //
+     // ***********************************************************SECTION 5 A - ..... ******************************************************************************************
+   function sectionFiveaadjusted(){
     var newcontent =
     `
     <div name="section4a" class="slide dark"><!--Start Overlay-->
@@ -1144,35 +2225,28 @@ function startFrame(){
     function sectionFourah(){
     var newcontent =
     `
-    <div name="section3e" class="container"><!--Learning Content Container-->
-    <div class="columns animate__animated animate__slideInLeft"><!--Columns Container-->
-    <div class="column third light"><!--Start resources Container-->
-    <h2 class="mono">resources</h2>
-    <div class="row"><!--First row of cards-->
-    <span id="vid-btn" class="card small black btn" onclick="toggleFlamevideo()"><!--Card-->
-    <p class="mono">Flame Treatment Video</p><!--Card mono title-->
-    </span><!--End Card-->
-    </div><!--End first row-->
-    
-    <div class="row"><!--Second row of cards-->
-    <span id="st25-btn" class="card small black btn" onclick="this.classList.add('blue-light');window.open('https://wiki.arrival.com/display/VEHICLEPLATFORMS/ARVL+ST-25+Surface+Treatment+of+PPGF+for+Sikaflex+Adhesive+Bonding')"><!--Card-->
-    <p class="mono">wiki link - ARVL ST-25 Surface Treatment of PPGF</p><!--Card mono title-->
-    </span><!--End Card-->
-    <span class="card small black btn" onclick="this.classList.add('blue-light');window.open('https://wiki.arrival.com/display/public/VEHICLEPLATFORMS/ARVL+ST-6+Flame+Treatment+of+Composites');"><!--Card-->
-    <p class="mono">wiki link - ARVL ST-6 Flame Treatment of Composites</p><!--Card mono title-->
-    </span><!--End Card-->
-    </div><!--End second row-->
-    
-    </div><!--End resources Container-->
-    
-    <div id="arvl-flame-treat" class="column fill white mono overflow hide"><!--Right Video Column Container-->
-    <video autoplay playsinline muted src="Media/arvl-flame-treat.mp4"></video>
-    </div><!--End Right Video Column Container-->
-    
+    <div name="section3c" class="slide dark"><!--Start Overlay-->
+    <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
+    <div class="reverse overflow-icon">
+    <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+    <h2 class="mono lower">
+    <span name="animated-text" class="type-text" style="--n:83;animation-delay:3s;">
+    You should select each attribute, in any order that you prefer.
+    </span>
+    </h2>
+    <h2 class="mono lower">
+    <span name="animated-text" class="type-text" style="--n:230;animation-delay:8s;">
+    A link to the Arrival Wiki is provided after selecting each attribute. You should use the Wiki as the source of truth. Selecting the link will open Wiki in a new window (this Module will remain open).
+    </span>
+    </h2>
+    </div>
+    <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
+    <video autoplay playsinline muted src="Media/Attributes-section1-2.mp4"></video>
+    </div>
+    </div>
+    <div class="column mini blue-light mono btn" onclick="sectionThreed()">move forward</div><!--Close Button-->
     </div><!--End Columns Container-->
-    </div><!--End Learning Content Container-->
-    
-    <!--LEARNING CONTENT END-->
+    </div><!--End Content-->
     `
     ;
     // insert Html
