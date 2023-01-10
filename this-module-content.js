@@ -1113,7 +1113,7 @@ function startFrame(){
       <div class="reverse overflow-icon">
       <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
       <h2 class="mono lower">
-      <span name="animated-text" class="type-text" style="--n:212;animation-delay:8s;">
+      <span name="animated-text" class="type-text" style="--n:232;animation-delay:8s;">
       As a Design Engineer you will accurately populate the necessary part attributes on the parts that you design. But why? What is the effect if some of those attributes are missing or inaccurate?
       </span>
       </h2>
@@ -1183,7 +1183,7 @@ function startFrame(){
             </span>
             </h2>
             <h2 class="mono lower">
-            <span name="animated-text" class="type-text" style="--n:185;animation-delay:12s;">
+            <span name="animated-text" class="type-text" style="--n:185;animation-delay:16s;">
             Don't worry if you select the wrong response. This is not a test. Each response that you select will provide some feedback and you can always make another selection!
             </span>
             </h2>
@@ -1265,7 +1265,7 @@ function startFrame(){
     // insert Html
     learningcontent.innerHTML = newcontent;
     sectionname.innerHTML = section4 + section4indicator; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionFourd()'); // Update with previous content
+    document.getElementById('i-step-back').setAttribute('onclick','sectionFourc()'); // Update with previous content
     lastView(); // Update local storage with current page
     };
     //**********************************************************************************************************************************************************
