@@ -1163,7 +1163,7 @@ function startFrame(){
         // insert Html
         learningcontent.innerHTML = newcontent;
         sectionname.innerHTML = section4 + section4indicator; // Update with section name
-        document.getElementById('i-step-back').setAttribute('onclick','sectionFoura();'); // Update with previous content
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFoura();noTextAnimate();'); // Update with previous content
         lastView(); // Update local storage with current page
         };
         //**********************************************************************************************************************************************************
@@ -1200,7 +1200,7 @@ function startFrame(){
             // insert Html
             learningcontent.innerHTML = newcontent;
             sectionname.innerHTML = section4 + section4indicator; // Update with section name
-            document.getElementById('i-step-back').setAttribute('onclick','sectionFourb();'); // Update with previous content
+            document.getElementById('i-step-back').setAttribute('onclick','sectionFourb();noTextAnimate();'); // Update with previous content
             lastView(); // Update local storage with current page
             };
             //**********************************************************************************************************************************************************
@@ -1265,7 +1265,7 @@ function startFrame(){
     // insert Html
     learningcontent.innerHTML = newcontent;
     sectionname.innerHTML = section4 + section4indicator; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionFourc()'); // Update with previous content
+    document.getElementById('i-step-back').setAttribute('onclick','sectionFourc();noTextAnimate();'); // Update with previous content
     lastView(); // Update local storage with current page
     };
     //**********************************************************************************************************************************************************
@@ -1333,7 +1333,7 @@ function startFrame(){
     // insert Html
     learningcontent.innerHTML = newcontent;
     sectionname.innerHTML = section4 + section4indicator; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionFourd();'); // Update with previous content
+    document.getElementById('i-step-back').setAttribute('onclick','sectionFourd();noTextAnimate();'); // Update with previous content
     lastView(); // Update local storage with current page
     };
     //**********************************************************************************************************************************************************
@@ -1379,7 +1379,7 @@ function startFrame(){
   // insert Html
   learningcontent.innerHTML = newcontent;
   sectionname.innerHTML = section4 + section4indicator; // Update with section name
-  document.getElementById('i-step-back').setAttribute('onclick','sectionFoure();'); // Update with previous content
+  document.getElementById('i-step-back').setAttribute('onclick','sectionFoure();noTextAnimate();'); // Update with previous content
   lastView(); // Update local storage with current page
   };
   //**********************************************************************************************************************************************************
@@ -1434,7 +1434,7 @@ try again
 // insert Html
 learningcontent.innerHTML = newcontent;
 sectionname.innerHTML = section4 + section4indicator; // Update with section name
-document.getElementById('i-step-back').setAttribute('onclick','sectionFourf();'); // Update with previous content
+document.getElementById('i-step-back').setAttribute('onclick','sectionFourf();noTextAnimate();'); // Update with previous content
 lastView(); // Update local storage with current page
 };
 //**********************************************************************************************************************************************************
@@ -1490,7 +1490,7 @@ lastView(); // Update local storage with current page
   // insert Html
   learningcontent.innerHTML = newcontent;
   sectionname.innerHTML = section4 + section4indicator; // Update with section name
-  document.getElementById('i-step-back').setAttribute('onclick','sectionFourg();'); // Update with previous content
+  document.getElementById('i-step-back').setAttribute('onclick','sectionFourg();noTextAnimate();'); // Update with previous content
   lastView(); // Update local storage with current page
   };
   //**********************************************************************************************************************************************************
@@ -1526,7 +1526,7 @@ lastView(); // Update local storage with current page
       // insert Html
       learningcontent.innerHTML = newcontent;
       sectionname.innerHTML = section4 + section4indicator; // Update with section name
-      document.getElementById('i-step-back').setAttribute('onclick','sectionFourh();'); // Update with previous content
+      document.getElementById('i-step-back').setAttribute('onclick','sectionFourh();noTextAnimate();'); // Update with previous content
       lastView(); // Update local storage with current page
       };
       //**********************************************************************************************************************************************************
@@ -1547,7 +1547,7 @@ lastView(); // Update local storage with current page
       ;
       // insert Html
       learningcontent.innerHTML = newcontent;
-      sectionname.innerHTML = section1; // Update with section name
+      sectionname.innerHTML = section4 + section4indicator; // Update with section name
       document.getElementById('i-step-back').setAttribute('onclick','sectionFouri();noTextAnimate()'); // Update with previous content
       document.getElementById('i-forward').classList.remove('disabled-btn');
       document.getElementById('i-forward').setAttribute('onclick', 'sectionFive()');
@@ -1702,12 +1702,22 @@ lastView(); // Update local storage with current page
     //**********************************************************************************************************************************************************
     //
       // ***********************************************************SECTION 5 a ******************************************************************************************
+      function addAttrVisited(val){ // Function to set local storage key when attribute visited
+        localStorage.setItem(val+':Visited',true); // Val is the id of the card passed when user clicks the card
+        lastView(); // Update last view
+        }
+        function checkaddAttrVisited(){ // Check local storage key and update card with indicator
+        if ("add-attributes:Visited" in localStorage) {document.getElementById('add-attributes').classList.remove('purple-dark');document.getElementById('add-attributes').classList.add('white')};
+        if ("updating-attributes:Visited" in localStorage) {document.getElementById('updating-attributes').classList.remove('blue-light');document.getElementById('updating-attributes').classList.add('media-gray')};
+        if ("add-attributes:Visited" in localStorage 
+          && "updating-attributes:Visited" in localStorage)
+          {document.getElementById('i-forward').classList.remove('disabled-btn');document.getElementById('i-forward').setAttribute('onclick', 'sectionSix();');lastView();}
+        }
       function sectionFivea(){
         var newcontent =
         `
         <div name="section5a" class="slide dark"><!--Start Overlay-->
         <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
-        <div class="reverse overflow-icon">
         <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
         <span name="animated-text" class="type-text" style="--n:182;animation-delay:1s;">
@@ -1715,8 +1725,8 @@ lastView(); // Update local storage with current page
         </span>
         </h2>
         </div>
-        <div class="column mini purple-dark mono btn" onclick="sectionFiveai()">adding attributes on part creation</div><!--Adding Attributes-->
-        <div class="column mini blue-light mono btn" onclick="sectionFiveb()">updating attributes</div><!--Updating Attributes-->
+        <div id="add-attributes" class="column mini purple-dark mono btn" onclick="addAttrVisited(this.id);sectionFiveai();">adding attributes on part creation</div><!--Adding Attributes-->
+        <div id="updating-attributes" class="column mini blue-light mono btn" onclick="addAttrVisited(this.id);sectionFiveb();">updating attributes</div><!--Updating Attributes-->
         </div><!--End Columns Container-->
         </div><!--End Content-->
         `
@@ -1725,6 +1735,7 @@ lastView(); // Update local storage with current page
         learningcontent.innerHTML = newcontent;
         sectionname.innerHTML = section5 + section5indicator; // Update with section name
         document.getElementById('i-step-back').setAttribute('onclick','sectionFive();'); // Update with previous content
+        checkaddAttrVisited()
         lastView(); // Update local storage with current page
         };
         //**********************************************************************************************************************************************************
@@ -1755,7 +1766,7 @@ lastView(); // Update local storage with current page
         // insert Html
         learningcontent.innerHTML = newcontent;
         sectionname.innerHTML = section5 + section5indicator; // Update with section name
-        document.getElementById('i-step-back').setAttribute('onclick','sectionFivea();'); // Update with previous content
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivea();noTextAnimate();'); // Update with previous content
         lastView(); // Update local storage with current page
         };
         //**********************************************************************************************************************************************************
@@ -1786,7 +1797,7 @@ lastView(); // Update local storage with current page
         // insert Html
         learningcontent.innerHTML = newcontent;
         sectionname.innerHTML = section5 + section5indicator; // Update with section name
-        document.getElementById('i-step-back').setAttribute('onclick','sectionFiveai();'); // Update with previous content
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFiveai();noTextAnimate();'); // Update with previous content
         lastView(); // Update local storage with current page
         };
         //**********************************************************************************************************************************************************
@@ -1818,7 +1829,7 @@ lastView(); // Update local storage with current page
         // insert Html
         learningcontent.innerHTML = newcontent;
         sectionname.innerHTML = section5 + section5indicator; // Update with section name
-        document.getElementById('i-step-back').setAttribute('onclick','sectionFiveaii();'); // Update with previous content
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFiveaii();noTextAnimate();'); // Update with previous content
         lastView(); // Update local storage with current page
         };
         //**********************************************************************************************************************************************************
@@ -1857,7 +1868,7 @@ lastView(); // Update local storage with current page
         // insert Html
         learningcontent.innerHTML = newcontent;
         sectionname.innerHTML = section5 + section5indicator; // Update with section name
-        document.getElementById('i-step-back').setAttribute('onclick','sectionFivea();'); // Update with previous content
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivea();noTextAnimate();'); // Update with previous content
         lastView(); // Update local storage with current page
         };
         //**********************************************************************************************************************************************************
@@ -1891,7 +1902,7 @@ lastView(); // Update local storage with current page
         // insert Html
         learningcontent.innerHTML = newcontent;
         sectionname.innerHTML = section5 + section5indicator; // Update with section name
-        document.getElementById('i-step-back').setAttribute('onclick','sectionFiveb();'); // Update with previous content
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFiveb();noTextAnimate();'); // Update with previous content
         lastView(); // Update local storage with current page
         };
         //**********************************************************************************************************************************************************
@@ -1921,7 +1932,7 @@ lastView(); // Update local storage with current page
           // insert Html
           learningcontent.innerHTML = newcontent;
           sectionname.innerHTML = section5 + section5indicator; // Update with section name
-          document.getElementById('i-step-back').setAttribute('onclick','sectionFivebi();'); // Update with previous content
+          document.getElementById('i-step-back').setAttribute('onclick','sectionFivebi();noTextAnimate();'); // Update with previous content
           lastView(); // Update local storage with current page
           };
           //**********************************************************************************************************************************************************
@@ -1951,7 +1962,7 @@ lastView(); // Update local storage with current page
             // insert Html
             learningcontent.innerHTML = newcontent;
             sectionname.innerHTML = section5 + section5indicator; // Update with section name
-            document.getElementById('i-step-back').setAttribute('onclick','sectionFivebii();'); // Update with previous content
+            document.getElementById('i-step-back').setAttribute('onclick','sectionFivebii();noTextAnimate();'); // Update with previous content
             lastView(); // Update local storage with current page
             };
             //**********************************************************************************************************************************************************
@@ -1982,7 +1993,7 @@ lastView(); // Update local storage with current page
         // insert Html
         learningcontent.innerHTML = newcontent;
         sectionname.innerHTML = section5 + section5indicator; // Update with section name
-        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebiii();'); // Update with previous content
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebiii();noTextAnimate();'); // Update with previous content
         lastView(); // Update local storage with current page
         };
         //**********************************************************************************************************************************************************
@@ -2013,7 +2024,7 @@ lastView(); // Update local storage with current page
         // insert Html
         learningcontent.innerHTML = newcontent;
         sectionname.innerHTML = section5 + section5indicator; // Update with section name
-        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebiv();'); // Update with previous content
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebiv();noTextAnimate();'); // Update with previous content
         lastView(); // Update local storage with current page
         };
         //**********************************************************************************************************************************************************
@@ -2050,7 +2061,7 @@ lastView(); // Update local storage with current page
         // insert Html
         learningcontent.innerHTML = newcontent;
         sectionname.innerHTML = section5 + section5indicator; // Update with section name
-        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebv();'); // Update with previous content
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebv();noTextAnimate();'); // Update with previous content
         lastView(); // Update local storage with current page
         };
         //**********************************************************************************************************************************************************
@@ -2084,7 +2095,7 @@ lastView(); // Update local storage with current page
         // insert Html
         learningcontent.innerHTML = newcontent;
         sectionname.innerHTML = section5 + section5indicator; // Update with section name
-        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebvi();'); // Update with previous content
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebvi();noTextAnimate();'); // Update with previous content
         lastView(); // Update local storage with current page
         };
         //**********************************************************************************************************************************************************
@@ -2094,7 +2105,7 @@ lastView(); // Update local storage with current page
         var newcontent =
         `
         <div name="section5viii" class="slide dark"><!--Start Overlay-->
-        <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+        <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
         <div class="reverse">
         <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
@@ -2115,7 +2126,7 @@ lastView(); // Update local storage with current page
         // insert Html
         learningcontent.innerHTML = newcontent;
         sectionname.innerHTML = section5 + section5indicator; // Update with section name
-        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebvii();'); // Update with previous content
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebvii();noTextAnimate();'); // Update with previous content
         lastView(); // Update local storage with current page
         };
         //**********************************************************************************************************************************************************
@@ -2125,7 +2136,7 @@ lastView(); // Update local storage with current page
         var newcontent =
         `
         <div name="section5bix" class="slide dark"><!--Start Overlay-->
-        <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+        <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
         <div class="reverse">
         <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
@@ -2149,7 +2160,7 @@ lastView(); // Update local storage with current page
         // insert Html
         learningcontent.innerHTML = newcontent;
         sectionname.innerHTML = section5 + section5indicator; // Update with section name
-        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebviii();'); // Update with previous content
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebviii();noTextAnimate();'); // Update with previous content
         lastView(); // Update local storage with current page
         };
         //**********************************************************************************************************************************************************
@@ -2159,7 +2170,7 @@ lastView(); // Update local storage with current page
         var newcontent =
         `
         <div name="section5bx" class="slide dark"><!--Start Overlay-->
-        <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
+        <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
         <div class="reverse">
         <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
@@ -2172,7 +2183,7 @@ lastView(); // Update local storage with current page
         <video class="mobileopti" autoplay playsinline muted loop src="Media/How-to8.mp4"></video>
         </div>
         </div>
-        <div class="column mini blue-light mono btn" onclick="sectionFivebxi()">move forward</div><!--Close Button-->
+        <div class="column mini blue-light mono btn" onclick="sectionFivea();noTextAnimate();">move forward</div><!--Close Button-->
         </div><!--End Columns Container-->
         </div><!--End Content-->
         `
@@ -2180,7 +2191,7 @@ lastView(); // Update local storage with current page
         // insert Html
         learningcontent.innerHTML = newcontent;
         sectionname.innerHTML = section5 + section5indicator; // Update with section name
-        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebvix();'); // Update with previous content
+        document.getElementById('i-step-back').setAttribute('onclick','sectionFivebvix();noTextAnimate();'); // Update with previous content
         lastView(); // Update local storage with current page
         };
         //**********************************************************************************************************************************************************
