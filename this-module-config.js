@@ -8,4 +8,4 @@ const section2 = 'The What'; // Name of your second section
 const section3 = 'The Attributes'; // Name of your third section
 const section4 = 'The What If'; // Name of your fourth section
 const section5 = 'The How'; // Name of your fourth section
-const section6 = 'Section 6 Name'; // Name of your fourth section
+const section6 = 'The Help'; // Name of your fourth section

@@ -104,7 +104,7 @@ var newcontent =
 <div class="row wrap"><!--Second row of cards-->
 <span class="card small btn light" onclick="sectionFour();hideOverlays();"><p class="mono">Section 4</p><p id="menu-section4"></p></span><!--Section-->
 <span class="card small btn light" onclick="sectionFive();hideOverlays();"><p class="mono">Section 5</p><p id="menu-section5"></p></span><!--Section-->
-<span class="card small btn light"onclick="hideOverlays();"><p class="mono">Section 6</p><p id="menu-section6"></p></span><!--Section-->
+<span class="card small btn light"onclick="sectionSix();hideOverlays();"><p class="mono">Section 6</p><p id="menu-section6"></p></span><!--Section-->
 </div><!--End Second row of cards-->
 </div><!--End Section Cards Container-->
 </div><!--End Columns Container-->

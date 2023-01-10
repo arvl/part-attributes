@@ -115,6 +115,7 @@ display:inline-block;
   height:48px;
   margin-bottom:8px;
   font-size:0.8em;
+  z-index:1;
   }
 .column.third.attr-selector{
   margin: auto;

@@ -1278,7 +1278,7 @@ function startFrame(){
 
     const selection = document.querySelectorAll('[name=selection]');
     for (let i = 0; i < selection.length; i++) {
-    if(selection[i].classList.contains('success')){selection[i].classList.remove('success')}
+    if(selection[i].classList.contains('success')){selection[i].classList.remove('success');}
     };
 
     const collection = document.querySelectorAll('[name=group]');
@@ -1824,7 +1824,7 @@ lastView(); // Update local storage with current page
         //**********************************************************************************************************************************************************
         //
 
-      // ***********************************************************SECTION 5 a iv - adding attributes path ******************************************************************************************
+      // ***********************************************************SECTION 5 B ******************************************************************************************
       function sectionFiveb(){
         var newcontent =
         `
@@ -2185,91 +2185,140 @@ lastView(); // Update local storage with current page
         };
         //**********************************************************************************************************************************************************
         //
-     // ***********************************************************SECTION 5 A - ..... ******************************************************************************************
-   function sectionFiveaadjusted(){
+  // ***********************************************************SECTION 6 START - The Help******************************************************************************************
+  function sectionSix(){
     var newcontent =
     `
-    <div name="section4a" class="slide dark"><!--Start Overlay-->
-    <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
-    <div class="reverse">
-    <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
-    <h2 class="mono lower">
-    <span name="animated-text" class="type-text" style="--n:83;animation-delay:3s;">
-    You should select each attribute, in any order that you prefer.
-    </span>
-    </h2>
-    <h2 class="mono lower">
-    <span name="animated-text" class="type-text" style="--n:230;animation-delay:8s;">
-    A link to the Arrival Wiki is provided after selecting each attribute. You should use the Wiki as the source of truth. Selecting the link will open Wiki in a new window (this Module will remain open).
-    </span>
-    </h2>
-    </div>
-    <div id="normal" class="column fill media-gray vid mono overflow"><!--Start Section Container-->
-    <video class="mobileopti" autoplay playsinline muted loop src="Media/Test1.mp4"></video>
-    </div>
-    </div>
-    <div class="column mini blue-light mono btn" onclick="sectionThreed()">move forward</div><!--Close Button-->
+    <div name="section6start" class="slide dark">
+    <div class="columns blue-light animate__animated animate__slideInDown"><!--Columns Container-->
+    <div class="column"><!--Start Section Container-->
+    <h2 class="mono">Section 6. </h2><!--Heading-->
+    <p class="mono">It is ok to need help! In this section we will provide you with some useful links should you require support.</p>
+    </div><!--End Start Section -->
     </div><!--End Columns Container-->
-    </div><!--End Content-->
+    </div>
     `
     ;
     // insert Html
     learningcontent.innerHTML = newcontent;
-    sectionname.innerHTML = section3 + section3indicator; // Update with section name
-    stepback.setAttribute('onclick','sectionThreeb();noTextAnimate()'); // Update with previous content
+    sectionname.innerHTML = section6 + section6indicator; // Update with section name
+    document.getElementById('i-step-back').setAttribute('onclick','sectionFiveb()'); // Update with previous content
+    document.getElementById('i-forward').classList.remove('disabled-btn');
+    document.getElementById('i-forward').innerHTML = 'Begin';
+    document.getElementById('i-forward').setAttribute('onclick', 'sectionSixa()');
     lastView(); // Update local storage with current page
     };
     //**********************************************************************************************************************************************************
     //
-    // ***********************************************************SECTION 4 A ******************************************************************************************
-    function sectionFourah(){
-    var newcontent =
-    `
-    <div name="section3c" class="slide dark"><!--Start Overlay-->
-    <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
-    <div class="reverse overflow-icon">
-    <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
-    <h2 class="mono lower">
-    <span name="animated-text" class="type-text" style="--n:83;animation-delay:3s;">
-    You should select each attribute, in any order that you prefer.
-    </span>
-    </h2>
-    <h2 class="mono lower">
-    <span name="animated-text" class="type-text" style="--n:230;animation-delay:8s;">
-    A link to the Arrival Wiki is provided after selecting each attribute. You should use the Wiki as the source of truth. Selecting the link will open Wiki in a new window (this Module will remain open).
-    </span>
-    </h2>
-    </div>
-    <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
-    <video autoplay playsinline muted src="Media/Attributes-section1-2.mp4"></video>
-    </div>
-    </div>
-    <div class="column mini blue-light mono btn" onclick="sectionThreed()">move forward</div><!--Close Button-->
-    </div><!--End Columns Container-->
-    </div><!--End Content-->
-    `
-    ;
-    // insert Html
-    learningcontent.innerHTML = newcontent;
-    sectionname.innerHTML = section4; // Update with section name
-    document.getElementById('i-step-back').setAttribute('onclick','sectionThreeEnd()'); // Update with previous content
-    deactivateNext(); // De-activate next section Button
-    lastView(); // Update local storage with current page
-    };
-    //**********************************************************************************************************************************************************
-    //
-    // ***********************************************************SECTION 4 A FLAME VIDEO ******************************************************************************************
-    function toggleFlamevideo() {
-    var video = document.getElementById("arvl-flame-treat");
-    var videobutton = document.getElementById("vid-btn");
-    if (video.classList.contains('hide')) {
-    video.classList.remove('hide');
-    videobutton.classList.add('blue-light');
-    } else {
-    video.classList.add('hide');
-    videobutton.classList.remove('blue-light');
-    }
-    }
-    //**********************************************************************************************************************************************************
-    //
+      // ***********************************************************SECTION 6a ******************************************************************************************
+      function sectionSixa(){
+        var newcontent =
+        `
+        <div name="section6a" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
+        <div class="column third light mono overflow-icon" onclick="noTextAnimate()">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:212;animation-delay:1s;">
+        Should you require any support, in the first instance you should visit the Teamcenter Wiki pages and use the search facility. A link to the support process is provided here.
+        </span>
+        </h2>
+        </div>
+        <div class="column third purple-dark mono btn" onclick="window.open('https://wiki.arrival.com/display/STP/Support+Model+and+FAQs', '_blank').focus()">Wiki support page</div><!--Wiki Support page Link-->
+        <div class="column mini blue-light mono btn" onclick="sectionSixb()">move forward</div><!--Move Forward-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section6 + section6indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionSix();'); // Update with previous content
+        document.getElementById('i-forward').innerHTML = 'Back to Topic';
+        deactivateNext(); // De-activate next section Button
+        lastView(); // Update local storage with current page
+        };
+        //**********************************************************************************************************************************************************
+        //
+      // ***********************************************************SECTION 6b ******************************************************************************************
+      function sectionSixb(){
+        var newcontent =
+        `
+        <div name="section6b" class="slide dark"><!--Start Overlay-->
+        <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
+        <div class="column third light mono overflow-icon" onclick="noTextAnimate()">
+        <h2 class="mono lower">
+        <span name="animated-text" class="type-text" style="--n:212;animation-delay:1s;">
+        If you can't find what you are looking for, you can also post a message in the NX and Teamcenter Telegram groups.
+        </span>
+        </h2>
+        </div>
+        <div class="column mini purple-light mono btn" onclick="window.open('https://t.me/joinchat/_FnvHLyOlIgxZjMy', '_blank').focus()">Arrival Teamcenter User's Group</div><!--Teamcenter TG Group-->
+        <div class="column mini purple-dark mono btn" onclick="window.open('https://t.me/joinchat/UxkzFDg7AqTNm6Oe', '_blank').focus()">Arrival NX User's Group</div><!--NX TG Group-->
+        <div class="column mini blue-light mono btn" onclick="sectionSixc()">move forward</div><!--Move Forward-->
+        </div><!--End Columns Container-->
+        </div><!--End Content-->
+        `
+        ;
+        // insert Html
+        learningcontent.innerHTML = newcontent;
+        sectionname.innerHTML = section6 + section6indicator; // Update with section name
+        document.getElementById('i-step-back').setAttribute('onclick','sectionSixa();noTextAnimate()'); // Update with previous content
+        lastView(); // Update local storage with current page
+        };
+        //**********************************************************************************************************************************************************
+        //
+        // ***********************************************************SECTION 6b ******************************************************************************************
+        function sectionSixc(){
+          var newcontent =
+          `
+          <div name="section6c" class="slide dark"><!--Start Overlay-->
+          <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
+          <div class="column third light mono overflow-icon" onclick="noTextAnimate()">
+          <h2 class="mono lower">
+          <span name="animated-text" class="type-text" style="--n:262;animation-delay:1s;">
+          Finally, if you still require assistance, you can raise a support ticket via the helpdesk portal. 
+          <br>
+          <br>
+          When submitting a support request, please provide as much information as possible.
+          </span>
+          </h2>
+          </div>
+          <div class="column third purple-dark mono btn" onclick="window.open('https://jira.arrival.com/servicedesk/customer/user/login?destination=plugins/servlet/desk/portal/4%3FrequestGroup%3D27', '_blank').focus()">Raise a helpdesk ticket</div><!--Helpdesk Portal Link-->
+          <div class="column mini blue-light mono btn" onclick="sectionSixEnd()">move forward</div><!--Move Forward-->
+          </div><!--End Columns Container-->
+          </div><!--End Content-->
+          `
+          ;
+          // insert Html
+          learningcontent.innerHTML = newcontent;
+          sectionname.innerHTML = section6 + section6indicator; // Update with section name
+          document.getElementById('i-step-back').setAttribute('onclick','sectionSixb();noTextAnimate()'); // Update with previous content
+          lastView(); // Update local storage with current page
+          };
+          //**********************************************************************************************************************************************************
+          //
+    // ***********************************************************SECTION 6 END ******************************************************************************************
+    function sectionSixEnd(){
+      var newcontent =
+      `
+      <div name="section6end" class="slide dark">
+      <div class="columns success animate__animated animate__slideInUp"><!--Columns Container-->
+      <div class="column"><!--Start Section Container-->
+      <h2 class="mono">That's it for this Topic! You can now return to the Topic and complete the Quiz.</h2><!--Heading-->
+      <p class="mono">select 'back to topic' to continue.</p>
+      </div><!--End Start Section -->
+      </div><!--End Columns Container-->
+      </div>
+      `
+      ;
+      // insert Html
+      learningcontent.innerHTML = newcontent;
+      sectionname.innerHTML = section6 + section6indicator; // Update with section name
+      document.getElementById('i-step-back').setAttribute('onclick','sectionSixc();noTextAnimate()'); // Update with previous content
+      document.getElementById('i-forward').classList.remove('disabled-btn');
+      document.getElementById('i-forward').setAttribute('onclick', 'closeImoduleFrame()');
+      lastView(); // Update local storage with current page
+      };
+      //**********************************************************************************************************************************************************
+      //
     
