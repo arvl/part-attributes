@@ -1339,37 +1339,55 @@ function startFrame(){
     //**********************************************************************************************************************************************************
     //
 // ***********************************************************SECTION 4 F Second Checkpoint Question ******************************************************************************************
- function sectionFourf(){
+function checkSecFourResponse(val){
+  localStorage.setItem(val+':Correct',true); // Val is the id of the card passed when user clicks the card
+  const correctresponses = document.getElementById('correct');
+  if ("sec-four-correct-one:Correct" in localStorage 
+  && "sec-four-correct-two:Correct" in localStorage)
+  {document.getElementById('move-forward').innerHTML = 'move forward';correctresponses.classList.remove('no-btn');correctresponses.classList.add('btn');correctresponses.setAttribute('onclick','sectionFourg();')}
+  lastView(); // Update last view
+} 
+function sectionFourf(){
     var newcontent =
   `
   <div name="section4f" class="slide dark"><!--Learning Content Container-->
   <div class="columns drag animate__animated animate__slideInDown"><!--Columns Container-->
   <div class="column third light"><!--Left (Desktop) Column Container-->
   <p><strong>Case 2</strong></p>
-  <p>According to the Development Strategy attribute, a part has been identified as off-the-shelf however the supplier attributes have not been entered correctly. What scenario is possible?</p>
+  <p>According to the Development Strategy attribute, a part has been identified as off-the-shelf however the supplier attributes have not been entered correctly. Which of these scenarios is possible?</p>
   <div class="row"><!--First row of cards-->
-  <span name="response" class="card small cp black btn" onclick="this.classList.add('cp-correct');document.getElementById('correct').classList.remove('hide');document.getElementById('normal').classList.add('hide');document.getElementById('cp-correct-feedback').innerHTML = 'It is possible that an incorrect part number could lead to the ordering of incorrect parts. It is also possible that parts may be ordered from the wrong supplier.';"><!--Card-->
+  <span id="sec-four-correct-one" name="response" class="card small cp black btn" onclick="checkSecFourResponse(this.id);this.classList.add('cp-correct');document.getElementById('correct').classList.remove('hide');document.getElementById('incorrect').classList.add('hide');document.getElementById('normal').classList.add('hide');document.getElementById('cp-correct-feedback').innerHTML = 'It is possible that an incorrect part number could lead to the ordering of incorrect parts. It is also possible that parts may be ordered from the wrong supplier.';"><!--Card-->
   <p class="mono">Incorrect parts ordered</p><!--Card mono title-->
   </span><!--End Card-->
   </div><!--End first row-->
   <div class="row"><!--Second Row-->
-  <span name="response" class="card small cp black btn" onclick="this.classList.add('cp-correct');document.getElementById('correct').classList.remove('hide');document.getElementById('normal').classList.add('hide');document.getElementById('cp-correct-feedback').innerHTML = 'If more than one supplier provides the same part, the part could be ordered from the wrong supplier. It is also possible that an incorrect part number could lead to the ordering of incorrect parts.';"><!--Card-->
+  <span id="sec-four-correct-two" name="response" class="card small cp black btn" onclick="checkSecFourResponse(this.id);this.classList.add('cp-correct');document.getElementById('correct').classList.remove('hide');document.getElementById('incorrect').classList.add('hide');document.getElementById('normal').classList.add('hide');document.getElementById('cp-correct-feedback').innerHTML = 'If more than one supplier provides the same part, the part could be ordered from the wrong supplier. It is also possible that an incorrect part number could lead to the ordering of incorrect parts.';"><!--Card-->
   <p class="mono">Parts ordered from wrong supplier</p><!--Card mono title-->
   </span><!--End Card-->
   </div><!--End Second row-->
+  <div class="row"><!--Third Row-->
+  <span name="response" class="card small cp black btn" onclick="this.classList.add('cp-incorrect');document.getElementById('incorrect').classList.remove('hide');document.getElementById('normal').classList.add('hide');document.getElementById('correct').classList.add('hide');document.getElementById('cp-correct-feedback').innerHTML = 'If more than one supplier provides the same part, the part could be ordered from the wrong supplier. It is also possible that an incorrect part number could lead to the ordering of incorrect parts.';"><!--Card-->
+  <p class="mono">Too many parts are ordered</p><!--Card mono title-->
+  </span><!--End Card-->
+  </div><!--End Third row-->
   </div><!--End Left (Desktop) Column Container-->
   
   <div id="normal" class="column fill dark mono" style="background-image:url('Media/Checkpoint-bg.png');background-repeat:no-repeat;background-size:contain;background-position:center;"><!--Right (Desktop) Column Container-->
   </div><!--End Right (Desktop) Column Container-->
   
   
-  <div id="correct" class="column fill success mono hide btn" onclick="sectionFourg()"><!--Right (Desktop) Column Container-->
-  move forward
+  <div id="correct" class="column fill success mono hide no-btn" onclick=""><!--Right (Desktop) Column Container-->
+  <span id="move-forward">Anything else?</span>
   <h2 class="mono">That's right!</h2>
   <h2 id="cp-correct-feedback" class="mono">It is strongly recommended to use Active Workspace to enter or update Attributes.</h2>
   </div><!--End Right (Desktop) Column Container-->
   
-  
+  <div id="incorrect" class="column fill error mono hide"><!--Right (Desktop) Column Container-->
+try again
+<h2 class="mono">Incorrect</h2>
+<h2 id="cp-error-feedback" class="mono">The quantity of parts ordered should not be affected.</h2>
+</div><!--End Right (Desktop) Column Container-->
+
   </div><!--End Columns Container-->
   </div><!--End Learning Content Container-->
   
