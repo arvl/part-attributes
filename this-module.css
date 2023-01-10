@@ -202,5 +202,8 @@ right:4px;
     width:100vw;
     height:auto;
     }
+    [name="how-to"].column.larger {
+      flex:1 0 45%;
+    }
 }
     
