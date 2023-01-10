@@ -1119,7 +1119,7 @@ function startFrame(){
       </h2>
       </div>
       <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
-      <video autoplay playsinline muted src="Media/Attributes-section1-2.mp4"></video>
+      <video autoplay playsinline muted src="Media/Section4-1.mp4"></video>
       </div>
       </div>
       <div class="column mini blue-light mono btn" onclick="sectionFourb()">move forward</div><!--Close Button-->
@@ -1146,13 +1146,13 @@ function startFrame(){
         <div class="reverse overflow-icon">
         <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
-        <span name="animated-text" class="type-text" style="--n:160;animation-delay:8s;">
+        <span name="animated-text" class="type-text" style="--n:160;animation-delay:3.5s;">
         In this section we will take a look at a few examples to help us understand the downstream effects of missing or inaccurate part attributes.
         </span>
         </h2>
         </div>
         <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
-        <video autoplay playsinline muted src="Media/Attributes-section1-2.mp4"></video>
+        <video autoplay playsinline muted src="Media/Section4-2.mp4"></video>
         </div>
         </div>
         <div class="column mini blue-light mono btn" onclick="sectionFourc()">move forward</div><!--Close Button-->
@@ -1189,7 +1189,7 @@ function startFrame(){
             </h2>
             </div>
             <div id="normal" class="column fill media-gray mono overflow"><!--Start Section Container-->
-            <video autoplay playsinline muted src="Media/Attributes-section1-2.mp4"></video>
+            <video autoplay playsinline muted src="Media/Section4-3.mp4"></video>
             </div>
             </div>
             <div class="column mini blue-light mono btn" onclick="sectionFourd()">move forward</div><!--Close Button-->
