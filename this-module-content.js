@@ -1798,7 +1798,7 @@ lastView(); // Update local storage with current page
         <div class="reverse">
         <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
-        <span name="animated-text" class="type-text" style="--n:139;animation-delay:3s;">
+        <span name="animated-text" class="type-text" style="--n:139;animation-delay:4s;">
         You are required to fill in some properties, such as a name, Part Type, or Sourcing Category, before a part is created.
         </span>
         </h2>
@@ -1830,7 +1830,7 @@ lastView(); // Update local storage with current page
         <div class="reverse">
         <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
-        <span name="animated-text" class="type-text" style="--n:167;animation-delay:3s;">
+        <span name="animated-text" class="type-text" style="--n:167;animation-delay:10s;">
         You may fill in all relevant properties at this stage. However, it may be easier to edit and compare the properties of multiple parts in tree view.
         </span>
         </h2>
@@ -1862,15 +1862,17 @@ lastView(); // Update local storage with current page
         <div class="reverse">
         <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
-        <span name="animated-text" class="type-text" style="--n:167;animation-delay:3s;">
+        <span name="animated-text" class="type-text" style="--n:267;animation-delay:3s;">
         Editing attributes in AWC is preferable for several reasons:
         <br>
         <br>
         - The view may be customised to show only relevant fields
         <br>
+        <br>
         - You can see and compare attributes for different parts
         <br>
-        -<br>Attributes can be applied to multiple parts at once
+        <br>
+        - Attributes can be applied to multiple parts at once
         </span>
         </h2>
         </div>
@@ -1900,7 +1902,7 @@ lastView(); // Update local storage with current page
         <div class="reverse">
         <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
-        <span name="animated-text" class="type-text" style="--n:227;animation-delay:3s;">
+        <span name="animated-text" class="type-text" style="--n:247;animation-delay:3s;">
         There are a few different places where attributes can be edited, but we're going to focus on one -- the tree view.
         <br>
         <br>
@@ -2056,7 +2058,7 @@ lastView(); // Update local storage with current page
         <div class="reverse">
         <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
-        <span name="animated-text" class="type-text" style="--n:245;animation-delay:3s;">
+        <span name="animated-text" class="type-text" style="--n:285;animation-delay:3s;">
         Each field is either free text entry, or a dropdown list.
         <br>
         <br>
@@ -2158,7 +2160,7 @@ lastView(); // Update local storage with current page
         <div class="reverse">
         <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
-        <span name="animated-text" class="type-text" style="--n:272;animation-delay:3s;">
+        <span name="animated-text" class="type-text" style="--n:312;animation-delay:3s;">
         In this scenario, you may click on the small grey square at the bottom-right of the highlighted cell. Your cursor will become a crosshair. Click and drag to copy the attribute to the cells below it.
         <br>
         <br>
