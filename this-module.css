@@ -203,7 +203,7 @@ right:4px;
     height:auto;
     }
     [name="how-to"].column.larger {
-      flex:1 0 45%;
+      flex:0 0 44%;
     }
 }
     
