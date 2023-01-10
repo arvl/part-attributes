@@ -544,6 +544,12 @@ flex-wrap:wrap;
 margin-bottom:0.5em;
 margin-right:0em;
 }
+.row {
+display:flex;
+width:100%;
+flex:1;
+padding:0.25em 0em 0.25em 0em;
+  }
 .column.mini {
 flex:0 0 12.5%;
 }

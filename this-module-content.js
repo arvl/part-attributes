@@ -1183,7 +1183,7 @@ function startFrame(){
             </span>
             </h2>
             <h2 class="mono lower">
-            <span name="animated-text" class="type-text" style="--n:185;animation-delay:16s;">
+            <span name="animated-text" class="type-text" style="--n:185;animation-delay:17s;">
             Don't worry if you select the wrong response. This is not a test. Each response that you select will provide some feedback and you can always make another selection!
             </span>
             </h2>
@@ -1240,7 +1240,7 @@ function startFrame(){
     <div id="option3" class="column half light hide" style="background-image:url('Media/Section4_Case1_option3.png');background-repeat:no-repeat;background-size:contain;background-position:center;"><!--Left (Desktop) Column Container-->
     </div><!--End Left (Desktop) Column Container-->
 
-    <div id="normal" class="column fill dark mono" style="background-image:url('Media/Section4_Case1.png');background-repeat:no-repeat;background-size:contain;background-position:center;"><!--Right (Desktop) Column Container-->
+    <div id="normal" class="column fill light mono" style="background-image:url('Media/Section4_Case1.png');background-repeat:no-repeat;background-size:contain;background-position:center;"><!--Right (Desktop) Column Container-->
     </div><!--End Right (Desktop) Column Container-->
     
     <div id="incorrect" class="column fill error mono hide btn" onclick="this.classList.add('hide');document.getElementById('normal').classList.remove('hide');document.getElementById('option2').classList.add('hide');document.getElementById('option3').classList.add('hide');document.getElementById('cp').classList.remove('hide');"><!--Right (Desktop) Column Container-->
@@ -1252,7 +1252,7 @@ function startFrame(){
     <div id="correct" class="column fill success mono hide btn" onclick="sectionFoure()"><!--Right (Desktop) Column Container-->
     move forward
     <h2 class="mono">That's right!</h2>
-    <h2 class="mono">As the parent assembly is 'Purchased External', its child parts should not also have this sourcing category. This would potentially mean unneccesary purchase orders raised for parts already part of a purchased assembly.</h2>
+    <h2 class="mono">As the parent assembly is 'Purchased External', it's child parts should not also have this sourcing category. This would potentially mean unneccesary purchase orders raised for parts already part of a purchased assembly.</h2>
     </div><!--End Right (Desktop) Column Container-->
     
     
@@ -1501,7 +1501,7 @@ lastView(); // Update local storage with current page
       `
       <div name="section4i" class="slide dark"><!--Start Overlay-->
       <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
-      <div class="reverse overflow-icon">
+      <div class="reverse">
       <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
       <h2 class="mono lower">
       <span name="animated-text" class="type-text" style="--n:172;animation-delay:8s;">
@@ -1531,7 +1531,7 @@ lastView(); // Update local storage with current page
       };
       //**********************************************************************************************************************************************************
       //
-    // ***********************************************************SECTION 1 END ******************************************************************************************
+    // ***********************************************************SECTION 4 END ******************************************************************************************
     function sectionFourEnd(){
       var newcontent =
       `
