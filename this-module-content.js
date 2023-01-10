@@ -818,23 +818,23 @@ function startFrame(){
     // ***********************************************************SECTION 3 D - THE ATTRIBUTES!!!! ******************************************************************************************
     function attrVisited(val){ // Function to set local storage key when attribute visited
     localStorage.setItem(val+':Visited',true); // Val is the id of the card passed when user clicks the card
-    document.getElementById(val).classList.add('indicator'); // Indicator class adds visual icon to card so user knows he has viewed
+    document.getElementById(val).classList.add('indicator','light');document.getElementById(val).classList.remove('blue'); // Indicator class adds visual icon to card so user knows he has viewed
     lastView(); // Update last view
     }
     function checkAttrVisited(){ // Check local storage key and update card with indicator
-    if ("attr-part-type:Visited" in localStorage) {document.getElementById('attr-part-type').classList.add('indicator')};
-    if ("attr-sourcing-category:Visited" in localStorage) {document.getElementById('attr-sourcing-category').classList.add('indicator')};
-    if ("attr-development-strategy:Visited" in localStorage) {document.getElementById('attr-development-strategy').classList.add('indicator')};
-    if ("attr-characteristic:Visited" in localStorage) {document.getElementById('attr-characteristic').classList.add('indicator')};
-    if ("attr-traceability:Visited" in localStorage) {document.getElementById('attr-traceability').classList.add('indicator')};
-    if ("attr-requires-power:Visited" in localStorage) {document.getElementById('attr-requires-power').classList.add('indicator')};
-    if ("attr-supplier-name:Visited" in localStorage) {document.getElementById('attr-supplier-name').classList.add('indicator')};
-    if ("attr-supplier-part-number:Visited" in localStorage) {document.getElementById('attr-supplier-part-number').classList.add('indicator')};
-    if ("attr-material:Visited" in localStorage) {document.getElementById('attr-material').classList.add('indicator')};
-    if ("attr-finish:Visited" in localStorage) {document.getElementById('attr-finish').classList.add('indicator')};
-    if ("attr-colour:Visited" in localStorage) {document.getElementById('attr-colour').classList.add('indicator')};
-    if ("attr-colour-sensitive:Visited" in localStorage) {document.getElementById('attr-colour-sensitive').classList.add('indicator')};
-    if ("attr-measured-mass:Visited" in localStorage) {document.getElementById('attr-measured-mass').classList.add('indicator')};
+    if ("attr-part-type:Visited" in localStorage) {document.getElementById('attr-part-type').classList.add('indicator','light');document.getElementById(val).classList.remove('blue')};
+    if ("attr-sourcing-category:Visited" in localStorage) {document.getElementById('attr-sourcing-category').classList.add('indicator','light');document.getElementById(val).classList.remove('blue')};
+    if ("attr-development-strategy:Visited" in localStorage) {document.getElementById('attr-development-strategy').classList.add('indicator','light');document.getElementById(val).classList.remove('blue')};
+    if ("attr-characteristic:Visited" in localStorage) {document.getElementById('attr-characteristic').classList.add('indicator','light');document.getElementById(val).classList.remove('blue')};
+    if ("attr-traceability:Visited" in localStorage) {document.getElementById('attr-traceability').classList.add('indicator','light');document.getElementById(val).classList.remove('blue')};
+    if ("attr-requires-power:Visited" in localStorage) {document.getElementById('attr-requires-power').classList.add('indicator','light');document.getElementById(val).classList.remove('blue')};
+    if ("attr-supplier-name:Visited" in localStorage) {document.getElementById('attr-supplier-name').classList.add('indicator','light');document.getElementById(val).classList.remove('blue')};
+    if ("attr-supplier-part-number:Visited" in localStorage) {document.getElementById('attr-supplier-part-number').classList.add('indicator','light');document.getElementById(val).classList.remove('blue')};
+    if ("attr-material:Visited" in localStorage) {document.getElementById('attr-material').classList.add('indicator','light');document.getElementById(val).classList.remove('blue')};
+    if ("attr-finish:Visited" in localStorage) {document.getElementById('attr-finish').classList.add('indicator','light');document.getElementById(val).classList.remove('blue')};
+    if ("attr-colour:Visited" in localStorage) {document.getElementById('attr-colour').classList.add('indicator','light');document.getElementById(val).classList.remove('blue')};
+    if ("attr-colour-sensitive:Visited" in localStorage) {document.getElementById('attr-colour-sensitive').classList.add('indicator','light');document.getElementById(val).classList.remove('blue')};
+    if ("attr-measured-mass:Visited" in localStorage) {document.getElementById('attr-measured-mass').classList.add('indicator','light');document.getElementById(val).classList.remove('blue')};
     }
     function checkAttrCompleted(){ // Function to check if all attributes have been viewed by the user by checking local storage keys
     if ("attr-part-type:Visited" in localStorage 
@@ -862,23 +862,23 @@ function startFrame(){
     <div class="columns animate__animated animate__slideInRight"><!--Columns Container-->
     <div class="column fill white overflow"><!--Section Cards Container-->
     <div class="row wrap"><!--First row of cards-->
-    <span id="attr-part-type" class="card small btn light" onclick="parttype.showModal();attrVisited(this.id);"><p class="mono">Part Type</p></span>
-    <span id="attr-sourcing-category" class="card small btn light" onclick="sourcingcategory.showModal();attrVisited(this.id);"><p class="mono">Sourcing Category</p></span>
-    <span id="attr-development-strategy" class="card small btn light" onclick="developmentstrategy.showModal();attrVisited(this.id);"><p class="mono">Development Strategy</p></span>
-    <span id="attr-characteristic" class="card small btn light" onclick="characteristic.showModal();attrVisited(this.id);"><p class="mono">Characteristic</p></span>
-    <span id="attr-traceability" class="card small btn light" onclick="traceability.showModal();attrVisited(this.id);"><p class="mono">Traceability Requirement</p></span>
+    <span id="attr-part-type" class="card small btn blue" onclick="parttype.showModal();attrVisited(this.id);"><p class="mono">Part Type</p></span>
+    <span id="attr-sourcing-category" class="card small btn blue" onclick="sourcingcategory.showModal();attrVisited(this.id);"><p class="mono">Sourcing Category</p></span>
+    <span id="attr-development-strategy" class="card small btn blue" onclick="developmentstrategy.showModal();attrVisited(this.id);"><p class="mono">Development Strategy</p></span>
+    <span id="attr-characteristic" class="card small btn blue" onclick="characteristic.showModal();attrVisited(this.id);"><p class="mono">Characteristic</p></span>
+    <span id="attr-traceability" class="card small btn blue" onclick="traceability.showModal();attrVisited(this.id);"><p class="mono">Traceability Requirement</p></span>
     </div><!--End First row of cards-->
     <div class="row wrap"><!--Second row of cards-->
-    <span id="attr-requires-power" class="card small btn light" onclick="requirespower.showModal();attrVisited(this.id);"><p class="mono">Requires Electrical Power</p></span><!--Section-->
-    <span id="attr-supplier-name" class="card small btn light" onclick="suppliername.showModal();attrVisited(this.id);"><p class="mono">Supplier Name</p></span><!--Section-->
-    <span id="attr-supplier-part-number" class="card small btn light"onclick="supplierpartnumber.showModal();attrVisited(this.id);"><p class="mono">Supplier Part Number</p></span><!--Section-->
-    <span id="attr-material" class="card small btn light"onclick="material.showModal();attrVisited(this.id);"><p class="mono">Material</p></span><!--Section-->
-    <span id="attr-finish" class="card small btn light"onclick="finish.showModal();attrVisited(this.id);"><p class="mono">Finish</p></span><!--Section-->
+    <span id="attr-requires-power" class="card small btn blue" onclick="requirespower.showModal();attrVisited(this.id);"><p class="mono">Requires Electrical Power</p></span><!--Section-->
+    <span id="attr-supplier-name" class="card small btn blue" onclick="suppliername.showModal();attrVisited(this.id);"><p class="mono">Supplier Name</p></span><!--Section-->
+    <span id="attr-supplier-part-number" class="card small btn blue"onclick="supplierpartnumber.showModal();attrVisited(this.id);"><p class="mono">Supplier Part Number</p></span><!--Section-->
+    <span id="attr-material" class="card small btn blue"onclick="material.showModal();attrVisited(this.id);"><p class="mono">Material</p></span><!--Section-->
+    <span id="attr-finish" class="card small btn blue"onclick="finish.showModal();attrVisited(this.id);"><p class="mono">Finish</p></span><!--Section-->
     </div><!--End Second row of cards-->
     <div class="row wrap"><!--Third row of cards-->
-    <span id="attr-colour" class="card small btn light" onclick="colourattr.showModal();attrVisited(this.id);"><p class="mono">Colour</p></span><!--Section-->
-    <span id="attr-colour-sensitive" class="card small btn light" onclick="coloursensitive.showModal();attrVisited(this.id);"><p class="mono">Colour Sensitive</p></span><!--Section-->
-    <span id="attr-measured-mass" class="card small btn light"onclick="measuredmass.showModal();attrVisited(this.id);"><p class="mono">Measured Mass</p></span><!--Section-->
+    <span id="attr-colour" class="card small btn blue" onclick="colourattr.showModal();attrVisited(this.id);"><p class="mono">Colour</p></span><!--Section-->
+    <span id="attr-colour-sensitive" class="card small btn blue" onclick="coloursensitive.showModal();attrVisited(this.id);"><p class="mono">Colour Sensitive</p></span><!--Section-->
+    <span id="attr-measured-mass" class="card small btn blue"onclick="measuredmass.showModal();attrVisited(this.id);"><p class="mono">Measured Mass</p></span><!--Section-->
     <span style="visibility:hidden" class="card small btn light"><p class="mono"></p></span><!--Section-->
     <span style="visibility:hidden" class="card small btn light"><p class="mono"></p></span><!--Section-->
     </div><!--End third row of cards-->
