@@ -167,6 +167,9 @@ right:4px;
     [name="static-img"].column.larger {
     flex:1 0 35%;
     }
+    [name="how-to"].column.larger {
+      flex:1 1 40%;
+    }
     .attr-modal{
     width:100%;
     margin-left:auto;
@@ -177,10 +180,6 @@ right:4px;
     }
     .modal-wiki{
     width:100%;
-    }
-    video.mobileopti{
-    width:100vw;
-    height:auto;
     }
     .column.fill.media-gray.vid{
     padding:0;
@@ -198,4 +197,10 @@ right:4px;
     border-top: 30px solid transparent;
     }
  }
+ @media only screen and (max-width: 468px){
+  video.mobileopti{
+    width:100vw;
+    height:auto;
+    }
+}
     

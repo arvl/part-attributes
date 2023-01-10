@@ -1737,7 +1737,7 @@ lastView(); // Update local storage with current page
         `
         <div name="section5a" class="slide dark"><!--Start Overlay-->
         <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
-        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <div name="how-to" class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
         <span name="animated-text" class="type-text" style="--n:182;animation-delay:1s;">
         Parts can be created in CAD software, such as NX, or in AWC itself. Attributes may be added and modified in NX too, but as a task this should be performed in AWC.
@@ -1766,7 +1766,7 @@ lastView(); // Update local storage with current page
         <div name="section5ai" class="slide dark"><!--Start Overlay-->
         <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
         <div class="reverse">
-        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <div name="how-to" class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
         <span name="animated-text" class="type-text" style="--n:116;animation-delay:3s;">
         Attributes can be applied to a part as it is created in AWC. Here, they are called 'Properties'.
@@ -1797,7 +1797,7 @@ lastView(); // Update local storage with current page
         <div name="section5aii" class="slide dark"><!--Start Overlay-->
         <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
         <div class="reverse">
-        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <div name="how-to" class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
         <span name="animated-text" class="type-text" style="--n:139;animation-delay:4s;">
         You are required to fill in some properties, such as a name, Part Type, or Sourcing Category, before a part is created.
@@ -1829,7 +1829,7 @@ lastView(); // Update local storage with current page
         <div name="section5aiii" class="slide dark"><!--Start Overlay-->
         <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
         <div class="reverse">
-        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <div name="how-to" class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
         <span name="animated-text" class="type-text" style="--n:167;animation-delay:10s;">
         You may fill in all relevant properties at this stage. However, it may be easier to edit and compare the properties of multiple parts in tree view.
@@ -1861,7 +1861,7 @@ lastView(); // Update local storage with current page
         <div name="section5b" class="slide dark"><!--Start Overlay-->
         <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
         <div class="reverse">
-        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <div name="how-to" class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
         <span name="animated-text" class="type-text" style="--n:267;animation-delay:3s;">
         Editing attributes in AWC is preferable for several reasons:
@@ -1901,7 +1901,7 @@ lastView(); // Update local storage with current page
         <div name="section5bi" class="slide dark"><!--Start Overlay-->
         <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
         <div class="reverse">
-        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <div name="how-to" class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
         <span name="animated-text" class="type-text" style="--n:247;animation-delay:3s;">
         There are a few different places where attributes can be edited, but we're going to focus on one -- the tree view.
@@ -1934,7 +1934,7 @@ lastView(); // Update local storage with current page
           <div name="section5bii" class="slide dark"><!--Start Overlay-->
           <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
           <div class="reverse">
-          <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+          <div name="how-to" class="column larger light mono overflow-icon" onclick="noTextAnimate()">
           <h2 class="mono lower">
           <span name="animated-text" class="type-text" style="--n:102;animation-delay:3s;">
           First, let's log in to AWC and navigate to the assembly or parts you need to edit.
@@ -1964,7 +1964,7 @@ lastView(); // Update local storage with current page
             <div name="section5biii" class="slide dark"><!--Start Overlay-->
             <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
             <div class="reverse">
-            <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+            <div name="how-to" class="column larger light mono overflow-icon" onclick="noTextAnimate()">
             <h2 class="mono lower">
             <span name="animated-text" class="type-text" style="--n:102;animation-delay:3s;">
             Using Tree view enables you to see as many attribute columns as possible at once.
@@ -1995,7 +1995,7 @@ lastView(); // Update local storage with current page
         <div name="section5iv" class="slide dark"><!--Start Overlay-->
         <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
         <div class="reverse">
-        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <div name="how-to" class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
         <span name="animated-text" class="type-text" style="--n:172;animation-delay:3s;">
         By selecting Arrange from the options at the top-right, you can choose just the columns relevant to you, as well as save that arrangement for later use.
@@ -2026,7 +2026,7 @@ lastView(); // Update local storage with current page
         <div name="section5v" class="slide dark"><!--Start Overlay-->
         <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
         <div class="reverse">
-        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <div name="how-to" class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
         <span name="animated-text" class="type-text" style="--n:160;animation-delay:3s;">
         You can edit attribute fields by either double-clicking on an individual field, or by selecting the Edit button, which activates all fields.
@@ -2057,7 +2057,7 @@ lastView(); // Update local storage with current page
         <div name="section5vi" class="slide dark"><!--Start Overlay-->
         <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
         <div class="reverse">
-        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <div name="how-to" class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
         <span name="animated-text" class="type-text" style="--n:285;animation-delay:3s;">
         Each field is either free text entry, or a dropdown list.
@@ -2094,7 +2094,7 @@ lastView(); // Update local storage with current page
         <div name="section5vii" class="slide dark"><!--Start Overlay-->
         <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
         <div class="reverse">
-        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <div name="how-to" class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
         <span name="animated-text" class="type-text" style="--n:142;animation-delay:3s;">
         Enter the correct value, then click away from the field to save the entry.
@@ -2128,7 +2128,7 @@ lastView(); // Update local storage with current page
         <div name="section5viii" class="slide dark"><!--Start Overlay-->
         <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
         <div class="reverse">
-        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <div name="how-to" class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
         <span name="animated-text" class="type-text" style="--n:180;animation-delay:3s;">
         In some situations you may need to apply the same attribute to a number of parts. A series of child parts may all have the same Sourcing Category, for instance.
@@ -2159,7 +2159,7 @@ lastView(); // Update local storage with current page
         <div name="section5bix" class="slide dark"><!--Start Overlay-->
         <div class="columns white animate__animated animate__slideInLeft"><!--Columns Container-->
         <div class="reverse">
-        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <div name="how-to" class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
         <span name="animated-text" class="type-text" style="--n:312;animation-delay:3s;">
         In this scenario, you may click on the small grey square at the bottom-right of the highlighted cell. Your cursor will become a crosshair. Click and drag to copy the attribute to the cells below it.
@@ -2193,7 +2193,7 @@ lastView(); // Update local storage with current page
         <div name="section5bx" class="slide dark"><!--Start Overlay-->
         <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
         <div class="reverse">
-        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <div name="how-to" class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
         <span name="animated-text" class="type-text" style="--n:141;animation-delay:3s;">
         Take care when copying elements like Sourcing Category, where the child parts may not have the same values as the parent.
