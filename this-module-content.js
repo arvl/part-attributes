@@ -1737,7 +1737,7 @@ lastView(); // Update local storage with current page
         `
         <div name="section5a" class="slide dark"><!--Start Overlay-->
         <div class="columns white animate__animated animate__slideInDown"><!--Columns Container-->
-        <div name="how-to" class="column larger light mono overflow-icon" onclick="noTextAnimate()">
+        <div class="column larger light mono overflow-icon" onclick="noTextAnimate()">
         <h2 class="mono lower">
         <span name="animated-text" class="type-text" style="--n:182;animation-delay:1s;">
         Parts can be created in CAD software, such as NX, or in AWC itself. Attributes may be added and modified in NX too, but as a task this should be performed in AWC.
