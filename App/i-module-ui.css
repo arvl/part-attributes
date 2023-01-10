@@ -144,6 +144,9 @@ color:var(--white);
 margin-left:0.5em;
 content:url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjQzOTQgOC41MDAwNEw5LjI5MjkzIDExLjY0NjVMMTAgMTIuMzUzNkwxNC4zNTM2IDguMDAwMDRMMTAgMy42NDY0OEw5LjI5MjkzIDQuMzUzNTlMMTIuNDM5NCA3LjUwMDA0SDEuNjQ2NDhWOC41MDAwNEgxMi40Mzk0WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==')
 }
+.nav-btn.forward.light::after{
+  content: url("data:image/svg+xml,%0A%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.4394 8.50004L9.29293 11.6465L10 12.3536L14.3536 8.00004L10 3.64648L9.29293 4.35359L12.4394 7.50004H1.64648V8.50004H12.4394Z' fill='black'/%3E%3C/svg%3E");
+}
 /* Color style for Active Blue - adds background and text color*/
 .blue{
 background-color:var(--active-blue)!important;

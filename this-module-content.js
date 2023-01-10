@@ -891,7 +891,7 @@ function startFrame(){
     <button class="button error sm-btn not-btn tag">Mandatory on creation</button>
     <button class="button light sm-btn not-btn tag">Depends on:</button>
     <button class="button dark sm-btn tag" onclick="sourcingcategory.showModal();">Sourcing Category</button>
-    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts#:~:text=Examples%20and%20Special%20Use%20Cases', '_blank').focus()">Exceptions and special use cases</button>
+    <button class="button nav-btn forward light modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts#:~:text=Examples%20and%20Special%20Use%20Cases', '_blank').focus()">Exceptions and special use cases</button>
     <h3>Part Type (Commodity)</h3>
     <p>This attribute should be populated on all parts with the exception of those that have a Sourcing Category set to None. In this scenario, it is still acceptable for the part type to be populated however it is not mandated.</p>
     <p>The attribute describes the type of part based on its type, raw materials and manufacturing process.</p>
@@ -917,7 +917,7 @@ function startFrame(){
     <dialog class="attr-modal" id="sourcingcategory">
     <button class="attr-modal-close" onclick="sourcingcategory.close();checkAttrCompleted();"></button>
     <button class="button error sm-btn not-btn tag">Mandatory on creation</button>
-    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts#:~:text=The%20values%20for%20Sourcing%20Category%20will%20depend%20upon%20the%20Tier%20of%20the%20supplier%3A', '_blank').focus()">Sourcing Category Supplier Tier Table</button>
+    <button class="button nav-btn forward light modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts#:~:text=The%20values%20for%20Sourcing%20Category%20will%20depend%20upon%20the%20Tier%20of%20the%20supplier%3A', '_blank').focus()">Sourcing Category Supplier Tier Table</button>
     <h3>Sourcing Category</h3>
     <p>This attribute should be populated if a part needs a Purchase Order (PO) raised for it.</p>
     <p>The value that you enter for this attribute will depend on the Tier of the supplier. For example, Tier 1 supplier, Tier 2 supplier.</p>
@@ -940,7 +940,7 @@ function startFrame(){
     <button class="attr-modal-close" onclick="developmentstrategy.close();checkAttrCompleted();"></button>
     <button class="button light sm-btn not-btn tag">Depends on:</button>
     <button class="button dark sm-btn tag" onclick="sourcingcategory.showModal();">Sourcing Category</button>
-    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts#:~:text=Definition-,1A,-%2D%20Arrival%20IP%20%7C%20Arrival', '_blank').focus()">Development Strategy Table</button>
+    <button class="button nav-btn forward light modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts#:~:text=Definition-,1A,-%2D%20Arrival%20IP%20%7C%20Arrival', '_blank').focus()">Development Strategy Table</button>
     <h3>Development Strategy</h3>
     <p>The development strategy attribute identifies if a part is <strong>designed by Arrival</strong>, <strong>designed for Arrival</strong> or if it is an <strong>off-the-shelf</strong> part or component.</p>
     <p>This attribute must be correctly populated on all parts except when the Sourcing Category is "None".</p>
@@ -951,7 +951,7 @@ function startFrame(){
     <button class="attr-modal-close" onclick="characteristic.close();checkAttrCompleted();"></button>
     <button class="button light sm-btn not-btn tag">Depends on:</button>
     <button class="button dark sm-btn tag" onclick="sourcingcategory.showModal();">Sourcing Category</button>
-    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts#:~:text=Should%20be%20set%20on%20Purchased%20Parts.', '_blank').focus()">Notes for populating characteristic attribute</button>
+    <button class="button nav-btn forward light modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts#:~:text=Should%20be%20set%20on%20Purchased%20Parts.', '_blank').focus()">Notes for populating characteristic attribute</button>
     <h3>Characteristic</h3>
     <p>This attribute is used to identify if a failure of the part could contribute to a  safety, regulatory or performance issue.</p>
     <p>A value for this attribute should be set on all purchased parts. The value is selected based on the severity score of the Design Failure Mode and Effect Analysis (DFMEA).</p>
@@ -963,7 +963,7 @@ function startFrame(){
     <button class="attr-modal-close" onclick="traceability.close();checkAttrCompleted();"></button>
     <button class="button light sm-btn not-btn tag">Depends on:</button>
     <button class="button dark sm-btn tag" onclick="characteristic.showModal();">Characteristic</button>
-    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts#:~:text=Example-,Serial,-Individual%20serial%20numbers', '_blank').focus()">Traceability value guidance</button>
+    <button class="button nav-btn forward light modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts#:~:text=Example-,Serial,-Individual%20serial%20numbers', '_blank').focus()">Traceability value guidance</button>
     <h3>Traceability Requirement</h3>
     <p>This attribute identifies parts that are to be scanned and recorded in a production environment allowing for full traceability of the part. For example in the event of a vehicle recall where it is necessary to identify vehicles with a specific part.</p>
     <p>The value for the traceability requirement attribute depends largely on the characteristic attribute and the nature of the part.</p>
@@ -976,7 +976,7 @@ function startFrame(){
     <button class="attr-modal-close" onclick="requirespower.close();checkAttrCompleted();"></button>
     <button class="button light sm-btn not-btn tag">Depends on:</button>
     <button class="button dark sm-btn tag" onclick="sourcingcategory.showModal();">Sourcing Category</button>
-    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
+    <button class="button nav-btn forward light modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
     <h3>Requires Electrical Power</h3>
     <p>The "requires electrical power" attribute is used to identify whether a part requires electrical power to be supplied.</p>
     <p>The value for this attribute is a boolean yes or no. A value must be selected for all parts that have been identified as purchased parts in the Sourcing Category attribute.</p>
@@ -988,7 +988,7 @@ function startFrame(){
     <button class="attr-modal-close" onclick="suppliername.close();checkAttrCompleted();"></button>
     <button class="button light sm-btn not-btn tag">Depends on:</button>
     <button class="button dark sm-btn tag" onclick="sourcingcategory.showModal();">Sourcing Category</button>
-    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
+    <button class="button nav-btn forward light modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
     <h3>Supplier Name</h3>
     <p>This attribute is used to specify the name of the part supplier. It must be populated for all custom parts that are created/manufactured by a supplier and all off-the-shelf parts.</p>
     <p>The value for this attribute entered manually in free-text form. E.g there are no pre-populated values for this attribute.</p>
@@ -1000,7 +1000,7 @@ function startFrame(){
     <button class="attr-modal-close" onclick="supplierpartnumber.close();checkAttrCompleted();"></button>
     <button class="button light sm-btn not-btn tag">Depends on:</button>
     <button class="button dark sm-btn tag" onclick="suppliername.showModal();">Supplier Name</button>
-    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
+    <button class="button nav-btn forward light modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
     <h3>Supplier Part Number</h3>
     <p>The supplier part number attribute is used in conjunction with the supplier name attribute. For all custom parts that are created/manufactured by a supplier and all off-the-shelf parts, a part number must be entered.</p>
     <p>The value for this attribute entered manually in free-text form. E.g there are no pre-populated values.</p>
@@ -1013,7 +1013,7 @@ function startFrame(){
     <button class="button error sm-btn not-btn tag">Set via Siemens NX</button>
     <button class="button light sm-btn not-btn tag">Depends on:</button>
     <button class="button dark sm-btn tag" onclick="developmentstrategy.showModal();">Development Strategy</button>
-    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
+    <button class="button nav-btn forward light modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
     <h3>Material</h3>
     <p>This attribute is used to specify the material that a part is made of. For all Arrival designed parts, the exact grade of material must always be specified.</p>
     <p>Arrival designed parts are identified by the Development Strategy attribute.</p>
@@ -1024,7 +1024,7 @@ function startFrame(){
     <!--FINISH MODAL-->
     <dialog class="attr-modal" id="finish">
     <button class="attr-modal-close" onclick="finish.close();checkAttrCompleted();"></button>
-    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
+    <button class="button nav-btn forward light modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
     <h3>Finish</h3>
     <p>This attribute is used to specify intended finish of the part.</p>
     <p>The value that you enter for the finish attribute is selected from a pre-populated list in Active Workspace.</p>
@@ -1043,7 +1043,7 @@ function startFrame(){
     <!--COLOUR MODAL-->
     <dialog class="attr-modal" id="colourattr">
     <button class="attr-modal-close" onclick="colourattr.close();checkAttrCompleted();"></button>
-    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
+    <button class="button nav-btn forward light odal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
     <h3>Colour</h3>
     <p>The colour attribute provides a colour reference associated with the part.</p>
     <p>The value for this attribute is a 3-digit code that represents a specific colour reference. The 3-digit code can be selected from a pre-populated list in Active Workspace.</p>
@@ -1052,7 +1052,7 @@ function startFrame(){
     <!--COLOUR SENSITIVE MODAL-->
     <dialog class="attr-modal" id="coloursensitive">
     <button class="attr-modal-close" onclick="coloursensitive.close();checkAttrCompleted();"></button>
-    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
+    <button class="button nav-btn forward light modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
     <h3>Colour Sensitive</h3>
     <p>Specifies as “Yes” or “No” if the part is sensitive to different options of colours.</p>
     </dialog>
@@ -1060,7 +1060,7 @@ function startFrame(){
     <!--MEASURED MASS MODAL-->
     <dialog class="attr-modal" id="measuredmass">
     <button class="attr-modal-close" onclick="measuredmass.close();checkAttrCompleted();"></button>
-    <button class="button nav-btn forward modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
+    <button class="button nav-btn forward light modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
     <h3>Measured Mass</h3>
     <p>This attribute is used to specify if there is a difference between the calculated mass of a part and the actual (measured) mass of a part.</p>
     <p>Generally, mass is calculated from CAD using volume and density from the assigned material. If there is a discrepancy between the calculated mass and measured (using physical scales) mass, it can be specified by entering a value for this attribute.</p>
