@@ -197,7 +197,7 @@ right:4px;
     border-top: 30px solid transparent;
     }
  }
- @media only screen and (max-width: 468px){
+ @media only screen and (max-width: 568px){
   video.mobileopti{
     width:100vw;
     height:auto;
