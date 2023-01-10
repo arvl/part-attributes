@@ -1273,32 +1273,24 @@ function startFrame(){
   // ***********************************************************SECTION 4 E ******************************************************************************************
   function groupAttr(){
     const textcolumn = document.getElementById('sourcing-text');
+    const tiers1 = document.getElementById('tiers1');
     const tiers = document.getElementById('tiers');
-    textcolumn.classList.add('hide');tiers.classList.remove('hide');
-
+    textcolumn.classList.add('hide');tiers1.classList.add('hide');tiers.classList.remove('hide');
+  };
+  function groupAttrTwo(){
+    const textcolumn = document.getElementById('sourcing-text');
+    const tiers = document.getElementById('tiers');
+    const tiers1 = document.getElementById('tiers1');
+    textcolumn.classList.add('hide');tiers1.classList.remove('hide');tiers.classList.add('hide');
+  };
+  function pointToggle(val){
     const selection = document.querySelectorAll('[name=selection]');
     for (let i = 0; i < selection.length; i++) {
-    if(selection[i].classList.contains('success')){selection[i].classList.remove('success');}
+    if(selection[i].classList.contains('point','blue')){selection[i].classList.remove('point','blue')}
+    }
+    const clickedbutton = document.getElementById(val);
+    clickedbutton.classList.remove('light');clickedbutton.classList.add('point','blue');
     };
-
-    const collection = document.querySelectorAll('[name=group]');
-    const notapplicable = document.getElementById('not-applicable');
-    for (let i = 0; i < collection.length; i++) {
-    if(collection[i].classList.contains('blue')){return false;}
-    else{collection[i].classList.toggle('blue');collection[i].classList.toggle('light');notapplicable.classList.add('light');notapplicable.classList.remove('blue');}}
-    };
-    function notGroupAttr(){
-      const selection = document.querySelectorAll('[name=selection]');
-      for (let i = 0; i < selection.length; i++) {
-      if(selection[i].classList.contains('success')){selection[i].classList.remove('success')}
-      };
-  
-      const collection1 = document.querySelectorAll('[name=group]');
-      const notapplicable = document.getElementById('not-applicable');
-      for (let i = 0; i < collection1.length; i++) {
-      if(collection1[i].classList.contains('blue')){collection1[i].classList.toggle('blue');collection1[i].classList.toggle('light');notapplicable.classList.remove('light');notapplicable.classList.add('blue');}
-      }
-      };
   function sectionFoure(){
     var newcontent =
     `
@@ -1306,10 +1298,11 @@ function startFrame(){
     <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
     <div class="column third attr-selector white mono overflow-icon">
     <p>Tier 1 (Purchased Assembly)</p>
-    <button name="selection" class="button dark sm-btn tag-attr" onclick="groupAttr();this.classList.toggle('success');">Purchased External</button>
-    <button name="selection" class="button dark sm-btn tag-attr" onclick="groupAttr();this.classList.toggle('success');">Purchased External - Composites</button>
-    <button name="selection" class="button dark sm-btn tag-attr" onclick="notGroupAttr();this.classList.toggle('success');">Purchased Internal - Technology</button>
-    <button name="selection" class="button dark sm-btn tag-attr" onclick="notGroupAttr();this.classList.toggle('success');">Consumables</button>
+    <button id="btn-one" name="selection" class="button light sm-btn tag-attr" onclick="groupAttr();pointToggle(this.id);">Purchased External</button>
+    <button id="btn-two" name="selection" class="button light sm-btn tag-attr" onclick="groupAttr();pointToggle(this.id);">Purchased External - Composites</button>
+    <button id="btn-three" name="selection" class="button light sm-btn tag-attr" onclick="groupAttrTwo();pointToggle(this.id);">Purchased Internal - Technology</button>
+    <button id="btn-four" name="selection" class="button light sm-btn tag-attr" onclick="groupAttrTwo();pointToggle(this.id);">Consumables</button>
+    <button style="visibility:hidden" class="button light sm-btn tag-attr">Empty</button>
     </div>
     <div id="sourcing-text" class="column third attr-selector white mono overflow-icon" onclick="noTextAnimate()">
     <h2 class="mono lower">
@@ -1317,13 +1310,21 @@ function startFrame(){
     Only certain Sourcing Categories should be applied to assemblies (tier 1 parts) and child parts (tier 2 and lower parts) respectively. Select each Tier 1 category to see which categories can be applied to its child parts.
     </span>
     </div>
-    <div id="tiers" class="column third attr-selector hide white mono overflow-icon">
+    <div id="tiers" class="column third attr-selector hide media-gray mono overflow-icon">
     <p>Tier 2 (Child/Sub-Assembly)</p>
-    <button name="group" class="button light sm-btn tag-attr not-btn">NONE</button>
-    <button name="group"class="button light sm-btn tag-attr not-btn">Directly sourced component - Supplier</button>
-    <button name="group"class="button light sm-btn tag-attr not-btn">Free issue to supplier</button>
-    <button name="group" class="button light sm-btn tag-attr not-btn">Consumables</button>
-    <button id="not-applicable" class="button light sm-btn tag-attr not-btn">N/A (No Child Parts)</button>
+    <button name="group" class="button black sm-btn tag-attr not-btn">NONE</button>
+    <button name="group"class="button black sm-btn tag-attr not-btn">Directly sourced component - Supplier</button>
+    <button name="group"class="button black sm-btn tag-attr not-btn">Free issue to supplier</button>
+    <button name="group" class="button black sm-btn tag-attr not-btn">Consumables</button>
+    <button style="opacity:0.2" id="not-applicable" class="button white sm-btn tag-attr not-btn">N/A (No Child Parts)</button>
+    </div>
+    <div id="tiers1" class="column third attr-selector hide media-gray mono overflow-icon">
+    <p>Tier 2 (Child/Sub-Assembly)</p>
+    <button style="opacity:0.2" class="button white sm-btn tag-attr not-btn">NONE</button>
+    <button style="opacity:0.2" class="button white sm-btn tag-attr not-btn">Directly sourced component - Supplier</button>
+    <button style="opacity:0.2" class="button white sm-btn tag-attr not-btn">Free issue to supplier</button>
+    <button style="opacity:0.2" class="button white sm-btn tag-attr not-btn">Consumables</button>
+    <button id="not-applicable" class="button black sm-btn tag-attr not-btn">N/A (No Child Parts)</button>
     </div>
     <div class="column mini blue-light mono btn" onclick="sectionFourf()">move forward</div><!--Close Button-->
     </div><!--End Columns Container-->

@@ -116,6 +116,19 @@ display:inline-block;
   margin-bottom:8px;
   font-size:0.8em;
   z-index:1;
+  position:relative;
+  }
+  .tag-attr.point::after{
+    content: '';
+    position: absolute;
+    right: -3.5em;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid #000000;
+    border-top: 20px solid transparent;
+    transform: rotate(-45deg);
+    clear: both;
   }
 .column.third.attr-selector{
   margin: auto;
@@ -125,6 +138,7 @@ display:inline-block;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height:100%;
 }
 .column.third.attr-selector.hide{
   display: none;
@@ -173,6 +187,15 @@ right:4px;
     }
     .column.third.attr-selector{
     width:100%;
+    }
+    .tag-attr.point::after{
+    position: fixed;
+    top: 35%;
+    right: 50%;
+    transform: rotate(45deg);
+    border-left: 30px solid transparent;
+    border-right: 30px solid #000000;
+    border-top: 30px solid transparent;
     }
  }
     
