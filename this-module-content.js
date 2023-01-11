@@ -1298,8 +1298,8 @@ function startFrame(){
     <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
     <div class="column third attr-selector white mono overflow-icon">
     <p>Tier 1 (Purchased Assembly)</p>
-    <button id="btn-one" name="selection" class="button light sm-btn tag-attr" onclick="groupAttr();pointToggle(this.id);">Purchased External</button>
-    <button id="btn-two" name="selection" class="button light sm-btn tag-attr" onclick="groupAttr();pointToggle(this.id);">Purchased External - Composites</button>
+    <button id="btn-one" name="selection" class="button light sm-btn tag-attr" onclick="groupAttr();pointToggle(this.id);document.getElementById('directlysourced').innerHTML = 'Directly sourced component - Supplier'">Purchased External</button>
+    <button id="btn-two" name="selection" class="button light sm-btn tag-attr" onclick="groupAttr();pointToggle(this.id);document.getElementById('directlysourced').innerHTML = 'Directly sourced component - Composities'">Purchased External - Composites</button>
     <button id="btn-three" name="selection" class="button light sm-btn tag-attr" onclick="groupAttrTwo();pointToggle(this.id);">Purchased Internal - Technology</button>
     <button id="btn-four" name="selection" class="button light sm-btn tag-attr" onclick="groupAttrTwo();pointToggle(this.id);">Consumables</button>
     <button style="visibility:hidden" class="button light sm-btn tag-attr">Empty</button>
@@ -1313,7 +1313,7 @@ function startFrame(){
     <div id="tiers" class="column third attr-selector hide media-gray mono overflow-icon">
     <p>Tier 2 (Child/Sub-Assembly)</p>
     <button name="group" class="button black sm-btn tag-attr not-btn">NONE</button>
-    <button name="group"class="button black sm-btn tag-attr not-btn">Directly sourced component - Supplier</button>
+    <button id="directlysourced" name="group"class="button black sm-btn tag-attr not-btn">Directly sourced component - Supplier</button>
     <button name="group"class="button black sm-btn tag-attr not-btn">Free issue to supplier</button>
     <button name="group" class="button black sm-btn tag-attr not-btn">Consumables</button>
     <button style="opacity:0.2" id="not-applicable" class="button white sm-btn tag-attr not-btn">N/A (No Child Parts)</button>
