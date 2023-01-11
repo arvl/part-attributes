@@ -28,7 +28,7 @@ if (namefield.value !== ''){localStorage.setItem("ReviewerName", namevalue);moda
 
 function feedbackForm(val){ // 'val' is passed from localstorage or from the textarea input in startReview function
 
-if(document.getElementById('reviewerfeedback')){reviewerfeedback.showModal()} // If html element already exists in DOM show the dialog element
+if(document.getElementById('reviewerfeedback')){reviewerfeedback.showModal();getScreenDimensions()} // If html element already exists in DOM show the dialog element and start screendimension function
 
 else{ // If html element does not exist in DOM e.g first click of button
 const contentarea = document.getElementById('i-content'); // Get the contetn area
@@ -46,7 +46,7 @@ sendbutton.setAttribute('onclick','sendFeedback()'); // Add onclick function to 
 const closebutton = document.createElement('button'); // Create a button to close our dialog
 formarea.appendChild(closebutton); // Append our button to the dialog element
 closebutton.classList.add('feedback-modal-close'); // Style the button
-closebutton.setAttribute('onclick', 'reviewerfeedback.close();') // Add onclick function to the button to close the dialog
+closebutton.setAttribute('onclick', 'reviewerfeedback.close();stop();') // Add onclick function to the button to close the dialog and stop screenwidth function
 
 let frame = contentarea.firstElementChild.getAttribute('name'); // Get the first element inside the content area which is the dynamically updated content
 const framereference = document.createElement('p'); // Create a Paragragh element
@@ -76,16 +76,23 @@ formarea.appendChild(currentscreenheight);  // Append to the dialog element
 currentscreenheight.id = 'screenheight'; // Set id of text area
 currentscreenheight.classList.add('no-show'); // Add some placeholder text to the text area
 
+getScreenDimensions();
 reviewerfeedback.showModal()}; // Show the dialog element and all child elements we have created
 }
 
-setInterval(
+var intervalID; // Variable for interval
+function getScreenDimensions(){ // Function to get screendimensions for debugging user problems
+intervalID = setInterval(
 function screenSize(){
-var w = window.innerWidth;
-var h = window.innerHeight;
-if(document.getElementById('screenwidth'))
-{document.getElementById('screenwidth').innerText = w;document.getElementById('screenheight').innerText = h}
-},3000);
+var w = window.innerWidth; // Screen width
+var h = window.innerHeight; // Screen height
+if(document.getElementById('screenwidth')) // If element exists in DOM
+{document.getElementById('screenwidth').innerText = w;document.getElementById('screenheight').innerText = h} // Update with values
+},3000); // Every 3 seconds
+};
+function stop(){
+clearInterval(intervalID); // Stop calculating screen width when feedback dialog closed
+}
 
 function sendFeedback(){  // Send feedback to Airtable
 const project = document.getElementById('i-module-name').innerText; // Get the name of the Topic/Module/Project
