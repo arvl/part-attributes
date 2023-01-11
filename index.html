@@ -6,11 +6,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <link rel="stylesheet" href="App/i-module-ui.css"><!--interface stylesheet-->
 <link rel="stylesheet" href="this-module.css"><!--this module stylesheet-->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
 
 <!--HEADER-->
 <header id="ui-header"><!--Header Fixed-->
+    <button class="button black" id="cake">Take Screeny</button>
 <button class="button black-contrast back sm-btn" onclick="closeImoduleFrame()"></button>
 <button id="i-module-name" class="button black sm-btn not-btn not-mobile" style="color:#868787"></button>
 <button id="i-section-name" class="button black sm-btn not-btn"></button>
@@ -24,8 +26,10 @@
 <!--MENU OVERLAY END-->
 
 
+<canvas style="visibility:hidden" id="fake"></canvas>
 <!-- CONTENT -->
 <div id="i-content"><!--Learning Content Container-->
+    
 </div><!--End Learning Content Container-->
 <!-- CONTENT END -->
 
@@ -42,6 +46,7 @@
 <script src="this-module-config.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="App/iscript.js"  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="this-module-content.js"  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="App/review.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 </body>
