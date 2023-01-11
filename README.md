@@ -109,7 +109,7 @@ lastView(); // Update local storage with current page
 //
 ```
 
-First the function is defined:
+First the function is defined (you edit the function name with your specific frame/section e.g sectionOnea(), sectionTwo() - just be sure to keep them unique.):
 
 ```
 function sectionOne(){
@@ -158,12 +158,145 @@ They include information about a part's:
 <video autoplay playsinline muted src="Media/Attributes-intro-1.mp4"></video>
 </div>
 </div>
-<div class="column mini blue-light mono btn" onclick="sectionOnea()">move forward</div><!--Close Button-->
+<div class="column mini blue-light mono btn" onclick="sectionOnea()">move forward</div><!--Move Forward Button-->
 </div><!--End Columns Container-->
 </div><!--End Content-->
 `
 ```
 
+The basic content starts with:
+
+```
+<div name="intro1" class="slide dark">
+```
+You should give the div a 'name' to identify the section/frame. The class 'slide dark' should be suitable in most cases.
+
+Next we have a container for our columns (based on flexbox):
+
+```
+<div class="columns white animate__animated animate__slideInRight">
+```
+Animate.css is used for slide transitions/animations (https://animate.style/). You can change the animation but changing the class e.g animate__slideInRight > animate__backInUp.
+
+Then we have our column (this is where your content will go):
+
+```
+<div class="column third light">
+```
+The size of the column can be changed. In this example we have the class 'column third' which is a 33.33% layout. For example this is good if you want 3 columns.
+In the css, the following column size classes are defined:
+
+```
+.column.half{
+flex:1 0 50%;
+}
+.column.quarter {
+flex:1 0 25%;
+}
+.column.mini {
+flex:1 0 20%;
+}
+.column.larger {
+flex:1 0 35%;
+}
+.column.third {
+flex:1 0 33.33%;
+}
+.column.fill {
+flex:100%;
+}
+```
+
+The class 'white' defines the background-color of the column. This can be changed e.g remove white and change to 'light'.
+
+In the css, the following colour classes are defined:
+
+```
+/* Color style for Active Blue - adds background and text color*/
+.blue{
+background-color:var(--active-blue)!important;
+color:var(--white)!important;
+}
+/* Color style for Gray - adds background and text color*/
+.gray{
+background-color:var(--medium-gray);
+color:var(--black);
+}
+/* Color style for Media BG Gray - adds background and text color*/
+.media-gray{
+background-color:var(--media-bg-gray);
+color:var(--black);
+  }
+.dark{
+background-color:var(--dark-gray);
+color:var(--white);
+}
+.light{
+background-color:var(--light-gray)!important;
+color:var(--black)!important;
+}
+/* Color style for Black - adds background and text color*/
+.black{
+background-color:var(--black);
+color:var(--white);
+}
+/* Color style for White - adds background and text color*/
+.white{
+background-color:var(--white);
+color:var(--black);
+}
+/* Color style for White - adds background and text color*/
+.cyan-light{
+background-color:var(--cyan-light);
+color:var(--black);
+}
+.cyan-dark{
+background-color:var(--cyan-dark);
+color:var(--white);
+}
+.purple-light{
+background-color:var(--purple-light);
+color:var(--black);
+}
+.purple-dark{
+background-color:var(--purple-dark);
+color:var(--white);
+}
+.success{
+background-color:var(--success)!important;
+color:var(--white);
+}
+.error{
+background-color:var(--error)!important;
+color:var(--white);
+}
+.blue-light{
+background-color:var(--light-blue)!important;
+color:var(--white);
+}
+.caution-color{
+background-color:var(--caution);
+color:var(--black);
+}
+.caution-color-light{
+background-color:var(--caution-light);
+color:var(--black);
+}
+```
+If you have text heavy content you can also add 'overflow-icon' class. This will allow scrolling on mobile and display an icon. E.g:
+
+```
+<div class="column half white overflow-icon">
+```
+
+Generally, a column is used as a navigation button to move forward to the next frame/section:
+
+```
+<div class="column mini blue-light mono btn" onclick="sectionOnea()">move forward</div><!--Move Forward Button-->
+```
+Here you should change the onclick to reflect one of your sections in this-module-content.js. E.g. this determines the content to tbe loaded next when clicked.
+
+## Experimenting
 Use the templating.html file to experiment with content. Just add content between these tags:
 
 `<div id="i-content-template"><!--Test your content between these tags-->`
