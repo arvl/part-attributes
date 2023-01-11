@@ -1942,7 +1942,7 @@ First, let's log in to AWC and navigate to the assembly or parts you need to edi
 </h2>
 </div>
 <div id="normal" class="column fill media-gray vid mono overflow"><!--Start Section Container-->
-<video class="mobileopti" autoplay playsinline muted src="Media/How-to1.mp4"></video>
+<video class="mobileopti" autoplay playsinline muted src="Media/How-to1_1.mp4"></video>
 </div>
 </div>
 <div class="column mini blue-light mono btn" onclick="sectionFivebiii()">move forward</div><!--Close Button-->
@@ -2212,7 +2212,7 @@ Take care when copying elements like Sourcing Category, where the child parts ma
 // insert Html
 learningcontent.innerHTML = newcontent;
 sectionname.innerHTML = section5 + section5indicator; // Update with section name
-document.getElementById('i-step-back').setAttribute('onclick','sectionFivebvix();noTextAnimate();'); // Update with previous content
+document.getElementById('i-step-back').setAttribute('onclick','sectionFivebix();noTextAnimate();'); // Update with previous content
 lastView(); // Update local storage with current page
 };
 //**********************************************************************************************************************************************************
