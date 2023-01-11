@@ -1043,7 +1043,7 @@ function startFrame(){
     <!--COLOUR MODAL-->
     <dialog class="attr-modal" id="colourattr">
     <button class="attr-modal-close" onclick="colourattr.close();checkAttrCompleted();"></button>
-    <button class="button nav-btn forward light odal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
+    <button class="button nav-btn forward light modal-wiki" onclick="window.open('https://wiki.arrival.com/display/MH/Attributes+for+Parts+and+Standard+Parts', '_blank').focus()">Attributes for Parts and Standard Parts</button>
     <h3>Colour</h3>
     <p>The colour attribute provides a colour reference associated with the part.</p>
     <p>The value for this attribute is a 3-digit code that represents a specific colour reference. The 3-digit code can be selected from a pre-populated list in Active Workspace.</p>
