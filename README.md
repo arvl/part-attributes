@@ -1,7 +1,8 @@
 # part-attributes
 Set up this-module-config.js file
 
-`let reviewmode = 'true'; // Set to 'true' to enable Reviewer Feedback mode
+```
+let reviewmode = 'true'; // Set to 'true' to enable Reviewer Feedback mode
 
 const thismodulename = 'Part Attributes'; // Enter name of Module here e.g 'My New Module &#47;'
 const thismoduleshortname = 'partattr'; // Enter a unique short name for your Module
@@ -21,7 +22,7 @@ var script = document.createElement("script");
 script.src = "App/review.js"; 
 document.body.appendChild(script);
 }
-`
+```
 
 Include all media files (images, videos, etc) in the Media folder.
 
