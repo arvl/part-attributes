@@ -65,14 +65,35 @@ formarea.appendChild(feedbacktext);  // Append to the dialog element
 feedbacktext.id = 'reviewerfeedbacktext'; // Set id of text area
 feedbacktext.setAttribute('placeholder','Enter your feedback'); // Add some placeholder text to the text area
 
+const currentscreenwidth = document.createElement('p'); // Create a text area for the feedback
+formarea.appendChild(currentscreenwidth);  // Append to the dialog element
+currentscreenwidth.id = 'screenwidth'; // Set id of text area
+currentscreenwidth.classList.add('no-show'); // Add some placeholder text to the text area
+
+const currentscreenheight = document.createElement('p'); // Create a text area for the feedback
+var h = window.innerHeight;
+formarea.appendChild(currentscreenheight);  // Append to the dialog element
+currentscreenheight.id = 'screenheight'; // Set id of text area
+currentscreenheight.classList.add('no-show'); // Add some placeholder text to the text area
+
 reviewerfeedback.showModal()}; // Show the dialog element and all child elements we have created
 }
+
+setInterval(
+function screenSize(){
+var w = window.innerWidth;
+var h = window.innerHeight;
+if(document.getElementById('screenwidth'))
+{document.getElementById('screenwidth').innerText = w;document.getElementById('screenheight').innerText = h}
+},3000);
 
 function sendFeedback(){  // Send feedback to Airtable
 const project = document.getElementById('i-module-name').innerText; // Get the name of the Topic/Module/Project
 const currentframe = document.getElementById('feedbackframereference'); // Get the name of the current frame to give feedback on
 const currentreviewer = document.getElementById('enteredreviewername'); // Get the name of the reviewer
 const currentfeedback = document.getElementById('reviewerfeedbacktext'); // Get the feedback
+const userscreenwidth = document.getElementById('screenwidth');
+const userscreenheight = document.getElementById('screenheight');
 const savedate = new Date(); // Create date
 const headers_ = {
 'Authorization': 'Bearer patCR1qHWIrHBqkfW.40ee20b719cec3a3c384f2df8c760a4040200da351d7a2973aa3bf87132c6293',
@@ -85,6 +106,7 @@ axios.post('https://api.airtable.com/v0/appcpzVnNsxWNY3kz/Feedback-Review', // A
 "Reference": currentframe.innerText,
 "ReviewerName":currentreviewer.value,
 "Comment": currentfeedback.value,
+"DeviceScreenWidth": userscreenwidth.innerHTML + 'x' + userscreenheight.innerHTML,
 "Date": savedate
     }
     }, {headers: headers_}

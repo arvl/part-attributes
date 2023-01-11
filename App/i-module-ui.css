@@ -604,6 +604,10 @@ flex-direction:row;
           background-color:var(--black)!important;
           color:white!important;
             }
+  .no-show{
+  visibility:hidden;
+  opacity:0;
+  }
 @media only screen and (max-width: 768px){
 .columns {
 flex-direction:column;
