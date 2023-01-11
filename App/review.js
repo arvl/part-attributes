@@ -41,7 +41,7 @@ const sendbutton = document.createElement('button'); // Create a button to submi
 formarea.appendChild(sendbutton); // Append our button to the dialog element
 sendbutton.classList.add('button', 'nav-btn', 'forward', 'feedback-button'); // Style the button
 sendbutton.innerText = 'send feedback'; // Add text to the button
-sendbutton.setAttribute('onclick','sendFeedback()'); // Add onclick function to the button
+sendbutton.setAttribute('onclick','sendFeedback();stop()'); // Add onclick function to the button
 
 const closebutton = document.createElement('button'); // Create a button to close our dialog
 formarea.appendChild(closebutton); // Append our button to the dialog element
