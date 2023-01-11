@@ -521,6 +521,49 @@ flex-grow:0;
 display:flex;
 flex-direction:row;
 }
+/* Review Feedback Mode*/
+.feedback-modal{
+  margin-top:4rem;
+  padding-top:3em;
+  width:30%;
+  margin-right:50%;
+  border:none;
+  outline:0;
+  height:calc(100% - 7rem);
+  font-size:0.75em;
+  overflow-y:auto;
+    }
+  .feedback-button{
+  height:3rem;
+  width:30%;
+  position:fixed;
+  bottom:0;
+  left:0;
+  }
+  .feedback-modal-close{
+  position:fixed;
+  left:8px;
+  top:4.5rem;
+  width:32px;
+  height:32px;
+  background-image: url("data:image/svg+xml,%3Csvg width='100pt' height='100pt' version='1.1' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath d='m100 50c0 27.613-22.387 50-50 50s-50-22.387-50-50 22.387-50 50-50 50 22.387 50 50' fill='%230f1011'/%3E%3Cpath d='m33.688 66.312c0.25 0.25 0.56641 0.37891 0.88281 0.37891 0.31641 0 0.62891-0.125 0.88281-0.37891l14.547-14.551 14.547 14.547c0.25 0.25 0.56641 0.37891 0.88281 0.37891 0.31641 0 0.62891-0.125 0.88281-0.37891 0.50391-0.50391 0.50391-1.2578 0-1.7617l-14.551-14.547 14.547-14.547c0.50391-0.50391 0.50391-1.2578 0-1.7617s-1.2578-0.50391-1.7617 0l-14.547 14.547-14.547-14.551c-0.50391-0.50391-1.2578-0.50391-1.7617 0s-0.50391 1.2578 0 1.7617l14.547 14.551-14.551 14.547c-0.50391 0.50391-0.50391 1.2617 0 1.7656z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:32px 32px;
+  background-color:transparent;
+  background-repeat:no-repeat;
+  border:none;
+  outline:0;
+  cursor:pointer;
+    }
+    #reviewerfeedbacktext{
+    width:100%;
+    height:70%;
+    margin-top:2em;
+    padding:1em;
+    border-radius:8px;
+    border:none;
+    outline:0;
+    background-color:#f4f4f4;
+    }
 @media only screen and (max-width: 768px){
 .columns {
 flex-direction:column;

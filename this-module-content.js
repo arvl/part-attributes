@@ -2,11 +2,6 @@
 function startFrame(){
     var newcontent =
     `
-    <button class="button black" id="cake">Take Screeny</button>
-
-<br />
-
-<canvas id="fake"></canvas>
     <div name="start" class="overlay hide show animate pop"><!--Start Overlay-->
     <div class="columns"><!--Columns Container-->
     <div class="column white overflow-icon"><!--Start Section Container-->
