@@ -289,12 +289,32 @@ If you have text heavy content you can also add 'overflow-icon' class. This will
 <div class="column half white overflow-icon">
 ```
 
-Generally, a column is used as a navigation button to move forward to the next frame/section:
+Generally, a column is used as a navigation button to move forward to the next frame/section. It is the last column element inside you 'columns' container.:
 
 ```
 <div class="column mini blue-light mono btn" onclick="sectionOnea()">move forward</div><!--Move Forward Button-->
 ```
 Here you should change the onclick to reflect one of your sections in this-module-content.js. E.g. this determines the content to tbe loaded next when clicked.
+
+When you have added your content, the rest of the function is straightforward:
+
+```
+learningcontent.innerHTML = newcontent;
+sectionname.innerHTML = section1 + section1indicator; // Update with section name
+stepback.setAttribute('onclick','startFrame()'); // Update with previous content
+lastView(); // Update local storage with current page
+```
+
+```
+sectionname.innerHTML = section1 + section1indicator; // Update with section name
+```
+Update this with the number of your section. It determines what title/text is displayed in the header.
+
+```
+stepback.setAttribute('onclick','startFrame()'); // Update with previous content
+```
+Update this with where you want the back button to point to. E.g instead of 'stepback.setAttribute('onclick','startFrame()');' > 'stepback.setAttribute('onclick','sectionThreea()');'
+
 
 ## Experimenting
 Use the templating.html file to experiment with content. Just add content between these tags:
