@@ -75,7 +75,7 @@ const currentreviewer = document.getElementById('enteredreviewername'); // Get t
 const currentfeedback = document.getElementById('reviewerfeedbacktext'); // Get the feedback
 const savedate = new Date(); // Create date
 const headers_ = {
-'Authorization': 'Bearer keyRMAjziDIJHyhQ7',
+'Authorization': 'Bearer patCR1qHWIrHBqkfW.40ee20b719cec3a3c384f2df8c760a4040200da351d7a2973aa3bf87132c6293',
 'Content-Type': 'application/json'
 };
 axios.post('https://api.airtable.com/v0/appcpzVnNsxWNY3kz/Feedback-Review', // Airtable base
