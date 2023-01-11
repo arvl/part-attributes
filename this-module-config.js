@@ -1,4 +1,4 @@
-let reviewmode = 'true'; // Set to 'true' to enable Reviewer Feedback mode
+const reviewmode = 'true'; // Set to 'true' to enable Reviewer Feedback mode
 
 const thismodulename = 'Part Attributes'; // Enter name of Module here e.g 'My New Module &#47;'
 const thismoduleshortname = 'partattr'; // Enter a unique short name for your Module
