@@ -2255,7 +2255,7 @@ Should you require any support, in the first instance you should visit the Teamc
 </span>
 </h2>
 </div>
-<div class="column third purple-dark mono btn" onclick="window.open('https://wiki.arrival.com/display/STP/Support+Model+and+FAQs', '_blank').focus()">Wiki support page</div><!--Wiki Support page Link-->
+<div class="column third purple-light mono btn arvlwiki-icon" onclick="window.open('https://wiki.arrival.com/display/STP/Support+Model+and+FAQs', '_blank').focus()">Wiki support page</div><!--Wiki Support page Link-->
 <div class="column mini blue-light mono btn" onclick="sectionSixb()">move forward</div><!--Move Forward-->
 </div><!--End Columns Container-->
 </div><!--End Content-->
@@ -2277,15 +2277,15 @@ var newcontent =
 `
 <div name="section6b" class="slide dark"><!--Start Overlay-->
 <div class="columns white animate__animated animate__slideInRight"><!--Columns Container-->
-<div class="column third light mono overflow-icon" onclick="noTextAnimate()">
+<div class="column quarter light mono overflow-icon" onclick="noTextAnimate()">
 <h2 class="mono lower">
 <span name="animated-text" class="type-text" style="--n:212;animation-delay:1s;">
 If you can't find what you are looking for, you can also post a message in the NX and Teamcenter Telegram groups.
 </span>
 </h2>
 </div>
-<div class="column mini purple-light mono btn" onclick="window.open('https://t.me/joinchat/_FnvHLyOlIgxZjMy', '_blank').focus()">Arrival Teamcenter User's Group</div><!--Teamcenter TG Group-->
-<div class="column mini purple-dark mono btn" onclick="window.open('https://t.me/joinchat/UxkzFDg7AqTNm6Oe', '_blank').focus()">Arrival NX User's Group</div><!--NX TG Group-->
+<div class="column quarter purple-light mono btn tg-icon" onclick="window.open('https://t.me/joinchat/_FnvHLyOlIgxZjMy', '_blank').focus()">Arrival Teamcenter User's Group</div><!--Teamcenter TG Group-->
+<div class="column quarter purple-dark mono btn tg-icon" onclick="window.open('https://t.me/joinchat/UxkzFDg7AqTNm6Oe', '_blank').focus()">Arrival NX User's Group</div><!--NX TG Group-->
 <div class="column mini blue-light mono btn" onclick="sectionSixc()">move forward</div><!--Move Forward-->
 </div><!--End Columns Container-->
 </div><!--End Content-->
@@ -2315,7 +2315,7 @@ When submitting a support request, please provide as much information as possibl
 </span>
 </h2>
 </div>
-<div class="column third purple-dark mono btn" onclick="window.open('https://jira.arrival.com/servicedesk/customer/user/login?destination=plugins/servlet/desk/portal/4%3FrequestGroup%3D27', '_blank').focus()">Raise a helpdesk ticket</div><!--Helpdesk Portal Link-->
+<div class="column third purple-light mono btn helpdesk-icon" onclick="window.open('https://jira.arrival.com/servicedesk/customer/user/login?destination=plugins/servlet/desk/portal/4%3FrequestGroup%3D27', '_blank').focus()">Raise a helpdesk ticket</div><!--Helpdesk Portal Link-->
 <div class="column mini blue-light mono btn" onclick="sectionSixEnd()">move forward</div><!--Move Forward-->
 </div><!--End Columns Container-->
 </div><!--End Content-->

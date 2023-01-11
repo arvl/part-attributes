@@ -160,6 +160,21 @@ position:absolute;
 bottom:4px;
 right:4px;
 }
+.arvlwiki-icon{
+  background-image:url('Media/Help-Wiki2.svg');
+  background-repeat:no-repeat;
+  background-position:5% 50%;
+  }
+.tg-icon{
+background-image:url('Media/Help-Telegram2.svg');
+background-repeat:no-repeat;
+background-position:5% 50%;
+}
+.helpdesk-icon{
+  background-image:url('Media/Help-Helpdesk2.svg');
+  background-repeat:no-repeat;
+  background-position:5% 50%;
+  }
   /* Media Queries*/
   @media only screen and (max-width: 768px){
     h2.mono.lower{
@@ -197,6 +212,9 @@ right:4px;
     border-right: 30px solid #000000;
     border-top: 30px solid transparent;
     }
+    .tg-icon{
+      background-position:95% 50%;
+      }
  }
  @media only screen and (max-width: 568px){
   video.mobileopti{
